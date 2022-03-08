@@ -1,0 +1,14 @@
+.form-control.ng-touched.ng-invalid{
+    border-color: red;
+}
+
+.form-control.ng-touched.ng-invalid:focus{
+    box-shadow: 0 0 2px 2px rgb(255, 181, 181); 
+}
+
+.form-control.ng-touched.ng-valid{
+    border-color: green;
+}
+.form-control.ng-touched.ng-valid:focus{
+    box-shadow: 0 0 2px 2px rgb(191, 223, 191);
+}

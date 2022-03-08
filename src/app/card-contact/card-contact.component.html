@@ -1,10 +1,10 @@
-
-        <div *ngFor="let contact of contacts" class="card">
-                <div class="card-body">
-                        <h5 class="card-title">{{contact.id}}</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">{{contact.firstName}} {{contact.lastName}}</h6>
-                        <p class="card-text">{{contact.phoneNumber}} </p>
-                        <a href="#" class="card-link">View More</a>
-                        <a href="#" class="card-link">Edit Contact</a>
-                </div>
+<div class="card">
+        <div class="card-body">
+                <h5 class="card-title">{{contact.id}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{contact.firstName}} {{contact.lastName}}</h6>
+                <p class="card-text">{{contact.phoneNumber}} </p>
+                <a href="#" class="card-link">View More</a>
+                <a href="#" class="card-link">Edit Contact</a>
+                <button class="btn" (click)="onDelete(contact)"><fa-icon [ngStyle]="{color: 'red'}" [icon]="faTrash" aria-label="delete"></fa-icon></button>
         </div>
+</div>
