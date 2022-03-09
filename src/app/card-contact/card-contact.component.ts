@@ -1,7 +1,7 @@
 import { Component, OnInit,Input, Output, EventEmitter } from '@angular/core';
 import { Contact } from '../Contact';
 import { CONTACTS } from '../mock-contacts';
-import { faTrashAlt } from '@fortawesome/free-regular-svg-icons';
+import { faWindowClose } from '@fortawesome/free-regular-svg-icons';
 @Component({
   selector: 'app-card-contact',
   templateUrl: './card-contact.component.html',
@@ -10,9 +10,10 @@ import { faTrashAlt } from '@fortawesome/free-regular-svg-icons';
 export class CardContactComponent implements OnInit {
   @Input() contact!: Contact;
   @Output() onDeleteContact: EventEmitter<Contact> = new EventEmitter();
-  faTrash = faTrashAlt;
+  faTrash = faWindowClose;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

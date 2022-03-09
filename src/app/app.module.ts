@@ -12,6 +12,9 @@ import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
 import { EditContactComponent } from './edit-contact/edit-contact.component';
+import { ViewCardDetailsComponent } from './view-card-details/view-card-details.component';
+import { FooterComponent } from './footer/footer.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +25,9 @@ import { EditContactComponent } from './edit-contact/edit-contact.component';
     HomeComponent,
     ContactFormComponent,
     EditContactComponent,
+    ViewCardDetailsComponent,
+    FooterComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,

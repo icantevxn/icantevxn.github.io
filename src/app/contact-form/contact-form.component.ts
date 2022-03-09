@@ -1,7 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Contact } from '../Contact';
-import { CONTACTS } from '../mock-contacts';
-import { ContactService } from '../contact.service';
+import { faCamera } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-contact-form',
   templateUrl: './contact-form.component.html',
@@ -19,7 +18,8 @@ export class ContactFormComponent implements OnInit {
   }
 
   onSubmit(contact: Contact) {
-      this.onSubmitEdited.emit(contact);
+    this.onSubmitEdited.emit(contact);
+    this.onSubmitAdded.emit(contact);
   }
 
   

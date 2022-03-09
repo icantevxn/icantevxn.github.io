@@ -1,11 +1,7 @@
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-  <h5 class="my-0 mr-md-auto font-weight-normal">Company name</h5>
+  <a routerLink="/home" class="my-0 mr-md-auto"><img src="assets/visa_logo.png" alt="visa-logo" aria-label="visa-logo"></a>
   <nav class="my-2 my-md-0 mr-md-3">
-    <a class="p-2 text-dark" routerLink="">View Contact List</a>
+    <a class="p-2 text-dark" routerLink="/home">View Contact List</a>
   </nav>
-  <button class="btn btn-outline-primary" (click)="onClick()">Add New</button>
+  <button class="btn btn-outline-primary" (click)="onClick()" routerLink="/add">Add New</button>
 </div>
-
-<!-- <header>
-  <h1 class="my-0 mr-md-auto">{{title}}</h1>
-</header> -->
