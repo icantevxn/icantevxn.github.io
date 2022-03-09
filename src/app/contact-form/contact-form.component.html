@@ -1,16 +1,16 @@
-<form #contactForm="ngForm">
+<form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm.value)">
     <div class="form-row">
         <div class="col-md-4 mb-3">
             <label for="firstName">First Name
             </label>
-            <input required ngModel name="firstName" #firstName="ngModel" id="firstName" type="text" class="form-control">
+            <input required [(ngModel)]="contact.firstName" name="firstName" #firstName="ngModel" id="firstName" type="text" class="form-control">
             <div class="alert alert-danger" *ngIf="!firstName.valid && firstName.touched">
                  First name is required
             </div>
         </div>
         <div class="col-md-4 mb-3">
             <label for="firstName">Last Name</label>
-            <input required ngModel name="lastName" #lastName="ngModel" id="" type="text" class="form-control">
+            <input required [(ngModel)]="contact.lastName" name="lastName" #lastName="ngModel" id="" type="text" class="form-control">
             <div class="alert alert-danger" *ngIf="!lastName.valid && lastName.touched">
                  Last name is required
             </div>
@@ -18,7 +18,7 @@
     </div>
     <div class="form-group">
         <label for="phoneNumber">Phone Number </label>
-        <input required ngModel name="phoneNumber" #phoneNumber="ngModel" id="phoneNumber" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form-control" placeholder="123-456-7890">
+        <input required [(ngModel)]="contact.phoneNumber" name="phoneNumber" #phoneNumber="ngModel" id="phoneNumber" type="tel" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" class="form-control" placeholder="ex: 123-456-7890">
         <div class="alert alert-danger" *ngIf="phoneNumber.touched && !phoneNumber.valid">
             <div *ngIf="phoneNumber.errors?.required"> Phone Number is required</div> 
             <div *ngIf="phoneNumber.errors?.pattern"> Phone Number should be in the 123-456-7890 format</div>
@@ -28,11 +28,11 @@
     <div class="form-group">
         <label for="email">Email
         </label>
-        <input required ngModel name="email" #email="ngModel" id="email" type="email" class="form-control" pattern="^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$">
+        <input required [(ngModel)]="contact.email" name="email" #email="ngModel" id="email" type="email" class="form-control" pattern="^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$">
         <div class="alert alert-danger" *ngIf="!email.valid && email.touched">
                <div *ngIf="email.errors?.required"> Email is required </div>
                 <div *ngIf="email.errors?.pattern"> Please input a valid email. </div>
             </div>
     </div>
-    <button class="btn btn-primary" type="submit" [disabled]="!contactForm.form.valid">Submit</button>
+    <button class="btn btn-primary" type="submit" [disabled]="!contactForm.form.valid">Add</button>
 </form>

@@ -10,7 +10,6 @@ import { faTrashAlt } from '@fortawesome/free-regular-svg-icons';
 export class CardContactComponent implements OnInit {
   @Input() contact!: Contact;
   @Output() onDeleteContact: EventEmitter<Contact> = new EventEmitter();
-  @Output() onEditContact: EventEmitter<Contact> = new EventEmitter();
   faTrash = faTrashAlt;
 
   constructor() { }
@@ -22,10 +21,6 @@ export class CardContactComponent implements OnInit {
     if (confirm("Are you sure you want to delete this contact?")) {
       this.onDeleteContact.emit(contact);
     }
-  }
-
-  onEdit(contact: Contact) {
-    this.onEditContact.emit(contact);
   }
 
 }
