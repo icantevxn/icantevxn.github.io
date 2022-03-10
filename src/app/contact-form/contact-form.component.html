@@ -36,8 +36,12 @@
                 <div *ngIf="email.errors?.pattern"> Please input a valid email. </div>
             </div>
     </div>
-    <button *ngIf="isEdit" class="btn btn-primary" type="submit" [disabled]="!contactForm.form.valid">Edit</button>
-    <button *ngIf="isAdd"class="btn btn-primary" type="submit" [disabled]="!contactForm.form.valid">Add</button>
+    <div class="d-flex test">
+        
+        <button *ngIf="isEdit" class="btn btn-primary" type="submit" [disabled]="!contactForm.form.valid">Edit</button>
+        <button *ngIf="isAdd"class="btn btn-primary" type="submit" [disabled]="!contactForm.form.valid">Add</button>
+        <button routerLink="/home" class="btn btn-outline-primary" type="button">Cancel</button>
+    </div>
 </form>
 
 

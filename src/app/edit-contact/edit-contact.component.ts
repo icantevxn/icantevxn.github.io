@@ -18,14 +18,11 @@ export class EditContactComponent implements OnInit {
 
   isEditted = false;
   @Output() onInitEditForm: EventEmitter<boolean> = new EventEmitter();
-   id: number  = Number(this.route.snapshot.paramMap.get('id'));
-  contact: Contact = {
-    id: this.id,
-    firstName: '',
-    lastName: '',
-    phoneNumber: '',
-    email: ''
-  };
+  id: number = Number(this.route.snapshot.paramMap.get('id'));
+  
+  contact!: Contact;
+
+  contact$ = this.store.pipe(select(contactSelector(this.id)));
   
   constructor(
     private route: ActivatedRoute,
@@ -33,13 +30,20 @@ export class EditContactComponent implements OnInit {
   ) { }
   
   ngOnInit(): void {
+    this.getContact();
     this.onInitEditForm.emit(true);
   }
 
   submitEdited(contact: Contact) {
+    contact.id = this.id;
     const newContact = { ...contact };
     this.store.dispatch(updateContacts(newContact));
     this.isEditted = true;
   }
+
+  getContact() {
+    this.contact$.subscribe((contact) => this.contact = contact)
+  }
+  
 
 }

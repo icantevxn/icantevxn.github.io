@@ -12,3 +12,7 @@
 .form-control.ng-touched.ng-valid:focus{
     box-shadow: 0 0 2px 2px rgb(191, 223, 191);
 }
+
+.test{
+    justify-content: flex-end;
+}
