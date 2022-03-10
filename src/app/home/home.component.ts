@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
 import { Contact } from '../Contact';
 import { ContactService } from '../services/contact.service';
+import { getContacts, removeContacts } from '../store/actions/contact.actions';
+import { faWindowClose } from '@fortawesome/free-regular-svg-icons';
+import { ContactState } from '../store/reducers/contact.reducer';
 
 @Component({
   selector: 'app-home',
@@ -8,21 +12,22 @@ import { ContactService } from '../services/contact.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  faTrash = faWindowClose;
   contacts: Contact[] = [];
-  
-  
-  constructor(private contactService: ContactService) { }
+  contacts$ = this.store.select('contacts');
+  constructor(private contactService: ContactService, private store: Store<ContactState>) { }
   
   ngOnInit(): void {
-    this.contactService.getContacts().subscribe(
-      contacts => this.contacts = contacts
-      );
-    }
+    this.getAllContacts();
+  }
+  
+  getAllContacts() {
+    this.store.dispatch(getContacts());
+  }
     
-    deleteContact(contact: Contact) {
-      this.contactService.deleteContact(contact).subscribe(
-        () => this.contacts = this.contacts.filter((c) => c.id !== contact.id));
-      }
+  deleteContact(id: number) {
+    //this.store.dispatch(removeContacts(id));
       
-    }
+  }
+}
     

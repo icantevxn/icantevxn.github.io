@@ -3,6 +3,8 @@ import { Contact } from '../Contact';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { ContactService } from '../services/contact.service';
+import { Store } from '@ngrx/store';
+import { getContacts } from '../store/actions/contact.actions';
 
 @Component({
   selector: 'app-edit-contact',
@@ -14,6 +16,7 @@ export class EditContactComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private contactService: ContactService,
+    private  store: Store,
     private location: Location) { }
   
   ngOnInit(): void {
@@ -32,7 +35,6 @@ export class EditContactComponent implements OnInit {
 
   submitEdited(contact: Contact) {
     this.contactService.updateContact(contact).subscribe();
-    console.log(contact);
   }
   
 }
