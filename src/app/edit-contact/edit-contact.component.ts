@@ -3,8 +3,11 @@ import { Contact } from '../Contact';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { ContactService } from '../services/contact.service';
-import { Store } from '@ngrx/store';
-import { getContacts } from '../store/actions/contact.actions';
+import { select, State, Store } from '@ngrx/store';
+import { getContacts, updateContacts } from '../store/actions/contact.actions';
+import { ContactState } from '../store/reducers/contact.reducer';
+import { contactSelector, contactsSelector } from '../store/selector/contact.selector';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-edit-contact',
@@ -12,29 +15,31 @@ import { getContacts } from '../store/actions/contact.actions';
   styleUrls: ['./edit-contact.component.css']
 })
 export class EditContactComponent implements OnInit {
-  contact!: Contact;
+
+  isEditted = false;
+  @Output() onInitEditForm: EventEmitter<boolean> = new EventEmitter();
+   id: number  = Number(this.route.snapshot.paramMap.get('id'));
+  contact: Contact = {
+    id: this.id,
+    firstName: '',
+    lastName: '',
+    phoneNumber: '',
+    email: ''
+  };
+  
   constructor(
     private route: ActivatedRoute,
-    private contactService: ContactService,
-    private  store: Store,
-    private location: Location) { }
+    private store: Store<ContactState>
+  ) { }
   
   ngOnInit(): void {
-    this.getContact();
-  }
-
-  getContact() {
-    //The route.snapshot is a static image of the route information shortly after the component was created.
-    //The paramMap is a dictionary of route parameter values extracted from the URL.The "id" key returns the id of the contact to fetch.
-    //Route parameters are always strings. The JavaScript Number function converts the string to a number, which is what a contact id should be.
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.contactService.getContact(id).subscribe(
-      contact => this.contact = contact
-    );
+    this.onInitEditForm.emit(true);
   }
 
   submitEdited(contact: Contact) {
-    this.contactService.updateContact(contact).subscribe();
+    const newContact = { ...contact };
+    this.store.dispatch(updateContacts(newContact));
+    this.isEditted = true;
   }
-  
+
 }

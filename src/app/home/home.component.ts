@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Store } from '@ngrx/store';
+import { select, Store } from '@ngrx/store';
 import { Contact } from '../Contact';
-import { ContactService } from '../services/contact.service';
-import { getContacts, removeContacts } from '../store/actions/contact.actions';
+import { deleteContacts, getContacts } from '../store/actions/contact.actions';
 import { faWindowClose } from '@fortawesome/free-regular-svg-icons';
 import { ContactState } from '../store/reducers/contact.reducer';
+import { contactsSelector } from '../store/selector/contact.selector';
 
 @Component({
   selector: 'app-home',
@@ -13,9 +13,8 @@ import { ContactState } from '../store/reducers/contact.reducer';
 })
 export class HomeComponent implements OnInit {
   faTrash = faWindowClose;
-  contacts: Contact[] = [];
-  contacts$ = this.store.select('contacts');
-  constructor(private contactService: ContactService, private store: Store<ContactState>) { }
+  contacts$ = this.store.pipe(select(contactsSelector));
+  constructor(private store: Store<ContactState>) { }
   
   ngOnInit(): void {
     this.getAllContacts();
@@ -26,7 +25,9 @@ export class HomeComponent implements OnInit {
   }
     
   deleteContact(id: number) {
-    //this.store.dispatch(removeContacts(id));
+    if (confirm("Are you sure you want to delete this contact?")) {
+      this.store.dispatch(deleteContacts(id));
+    };
       
   }
 }

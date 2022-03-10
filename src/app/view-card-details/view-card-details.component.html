@@ -1,1 +1,13 @@
-<p>it works</p>
+<div class="container" *ngFor="let contact of contact$ | async">
+        <h1 class="pb-4">{{contact.firstName}}'s Details</h1>
+                <div class="card">
+                        <div class="card-body">
+                                <h5 class="card-title">{{contact.id}}</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Full Name: {{contact.firstName}} {{contact.lastName}}</h6>
+                                <p class="card-text">Phone Number: {{contact.phoneNumber}} </p>
+                                <p class="card-text">Email: {{contact.email}} </p>
+                                <a routerLink="/edit/{{contact.id}}" class="card-link">Edit Contact</a>
+                                <a routerLink="/home" class="card-link" >Go Back</a>
+                        </div>
+                </div>
+        </div>

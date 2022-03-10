@@ -1,24 +1,17 @@
 {
   "contacts": [
     {
-      "id": 2,
-      "firstName": "Test",
-      "lastName": "World",
-      "phoneNumber": "6086669999",
-      "email": "eee@bed.com"
-    },
-    {
       "id": 3,
-      "firstName": "Hello",
-      "lastName": "World",
-      "phoneNumber": "6086669999",
-      "email": "eee@bed.com"
-    },
-    {
-      "firstName": "Test",
+      "firstName": "Evangeline Yuik Wern",
       "lastName": "World",
       "phoneNumber": "6086224272",
-      "email": "elim28@wisc.edu",
+      "email": "evanlimyw@gmail.com"
+    },
+    {
+      "firstName": "Evangeline Yuik Wern",
+      "lastName": "Lim",
+      "phoneNumber": "6086224272",
+      "email": "eee@bed.com",
       "id": 4
     }
   ]

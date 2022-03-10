@@ -9,7 +9,7 @@ import { ViewCardDetailsComponent } from './view-card-details/view-card-details.
 const routes: Routes = [
   { path: '', redirectTo: "/home" , pathMatch: "full"},
   { path: 'home', component: HomeComponent },
-  { path: 'routing/:id', component: ViewCardDetailsComponent },
+  { path: 'details/:id', component: ViewCardDetailsComponent },
   { path: 'add', component: AddContactComponent },
   { path: 'edit/:id', component: EditContactComponent },
   { path: '**', component: PageNotFoundComponent },

@@ -1,4 +1,5 @@
 <div class="container">
-    <h1>Edit {{contact.firstName}} Details</h1>
-    <app-contact-form [contact]="contact" (onSubmitEdited)="submitEdited(contact)"></app-contact-form>
+    <h1>Edit Details</h1>
+    <app-contact-form [isEdit]= "true" [contact]="contact" (onSubmitEdited)="submitEdited(contact)"></app-contact-form>
+    <p *ngIf="isEditted">Details Edited!</p>
 </div>

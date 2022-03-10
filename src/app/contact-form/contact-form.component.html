@@ -36,11 +36,12 @@
                 <div *ngIf="email.errors?.pattern"> Please input a valid email. </div>
             </div>
     </div>
-    <button class="btn btn-primary" type="submit" [disabled]="!contactForm.form.valid">Add</button>
+    <button *ngIf="isEdit" class="btn btn-primary" type="submit" [disabled]="!contactForm.form.valid">Edit</button>
+    <button *ngIf="isAdd"class="btn btn-primary" type="submit" [disabled]="!contactForm.form.valid">Add</button>
 </form>
 
 
-<!--form floating-->
+<!--form floating
 <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm.value)">
     
     <div class="form-row">
@@ -80,3 +81,4 @@
     </div>
     <button class="btn btn-primary" type="submit" [disabled]="!contactForm.form.valid">Add</button>
 </form>
+-->
