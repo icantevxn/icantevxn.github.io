@@ -4,11 +4,8 @@ import { ContactState } from "../reducers/contact.reducer";
 
 export const contactsSelector = createSelector(
     (state: ContactState) => state.contacts,
-    (contacts: ReadonlyArray<Contact>) => {
-        console.log(contacts);
-        return contacts;
-    }
-    );
+    (contacts: ReadonlyArray<Contact>) => contacts);
+    
     
     export const contactSelector = (id: number) => createSelector(
         contactsSelector,

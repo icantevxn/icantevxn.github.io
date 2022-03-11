@@ -12,6 +12,7 @@ const routes: Routes = [
   { path: 'details/:id', component: ViewCardDetailsComponent },
   { path: 'add', component: AddContactComponent },
   { path: 'edit/:id', component: EditContactComponent },
+  { path: 'pagenotfound', component: PageNotFoundComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
 

@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Contact } from '../Contact';
-import { delay } from 'rxjs/operators';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -33,7 +32,7 @@ export class ContactService {
 
   deleteContact(id: number): Observable<Contact> {
     const url = `${this.apiUrl}/${id}`;
-    return this.http.delete<Contact>(url).pipe(delay(2000));
+    return this.http.delete<Contact>(url);
   }
   
   updateContact(contact: Contact): Observable<Contact>{

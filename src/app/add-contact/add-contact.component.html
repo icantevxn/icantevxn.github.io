@@ -1,5 +1,5 @@
 <div class="container">
     <h1>Add New Contact</h1>
-    <app-contact-form [isAdd]= "true" [contact]="contact" (onSubmitAdded)="submitAdded(contact)"></app-contact-form>
+    <app-contact-form [isAdd]= "true" [contact]="contact" (onSubmitAdded)="submitAdded($event)"></app-contact-form>
     <p *ngIf="isAdded">New contact submitted!</p>
 </div>
