@@ -1,17 +1,19 @@
 {
   "contacts": [
     {
-      "firstName": "Evangeline ",
+      "firstName": "Evangelin",
       "lastName": "Lim",
-      "phoneNumber": "1234567890",
+      "phoneNumber": "1234567891",
       "email": "evangeline.lim@allata.com",
+      "isFavorited": true,
       "id": 1
     },
     {
-      "firstName": "Yuik Wern",
-      "lastName": "World",
-      "phoneNumber": "6086224272",
-      "email": "evangeline.lim@allata.com",
+      "firstName": "Evangelin",
+      "lastName": "Lim",
+      "phoneNumber": "1234567891",
+      "email": "evan@allata.com",
+      "isFavorited": true,
       "id": 2
     },
     {
@@ -19,6 +21,7 @@
       "lastName": "World",
       "phoneNumber": "6086224272",
       "email": "evangeline.lim@allata.com",
+      "isFavorited": false,
       "id": 3
     },
     {
@@ -26,6 +29,7 @@
       "lastName": "World",
       "phoneNumber": "6086224272",
       "email": "evangeline.lim@allata.com",
+      "isFavorited": false,
       "id": 4
     },
     {
@@ -33,7 +37,24 @@
       "lastName": "World",
       "phoneNumber": "6086224272",
       "email": "evangeline.lim@allata.com",
+      "isFavorited": false,
       "id": 5
+    },
+    {
+      "firstName": "Evangeline Yuik Wern",
+      "lastName": "Fav",
+      "phoneNumber": "6086224272",
+      "email": "evangeline.lim@allata.com",
+      "isFavorited": false,
+      "id": 6
+    },
+    {
+      "firstName": "one more",
+      "lastName": "test",
+      "phoneNumber": "1231243234",
+      "email": "evan1208lim@gmail.com",
+      "isFavorited": true,
+      "id": 8
     }
   ]
 }

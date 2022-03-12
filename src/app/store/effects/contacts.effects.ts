@@ -2,9 +2,7 @@ import { Injectable } from "@angular/core";
 import { createEffect, Actions, ofType } from "@ngrx/effects";
 import { ContactService } from "src/app/services/contact.service";
 import * as ContactActions from "../actions/contact.actions";
-import { catchError, concatMap, exhaustMap, map, mergeMap } from "rxjs/operators";
-import { EMPTY } from "rxjs";
-import { ActionType } from "@ngrx/store";
+import { concatMap, exhaustMap, map, mergeMap } from "rxjs/operators";
 
 @Injectable()
 export class ContactEffects{
@@ -14,14 +12,13 @@ export class ContactEffects{
         ofType(ContactActions.getContacts),
         exhaustMap(
             () => this.contactService.getContacts().pipe(
-                map((contacts) => (ContactActions.getContactsSuccess(contacts))),
-                catchError(()=> EMPTY)
+                map((contacts) => (ContactActions.getContactsSuccess(contacts)))
             )
         )
     )
     );
 
-    //TODO: study about maps | settimeout
+    //TODO: study more into maps
     addContact$ = createEffect(() => this.action$.pipe(
         ofType(ContactActions.addContact),
         concatMap(

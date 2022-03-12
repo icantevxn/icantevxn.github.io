@@ -24,7 +24,7 @@
         <input required [(ngModel)]="contact.phoneNumber" name="phoneNumber" #phoneNumber="ngModel" id="phoneNumber" type="tel" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" class="form-control" placeholder="Example: 1234567890">
         <div class="alert alert-danger" *ngIf="phoneNumber.touched && !phoneNumber.valid">
             <div *ngIf="phoneNumber.errors?.required"><fa-icon [icon]="faWarning" aria-label="warning-input-error"></fa-icon> Phone Number is required.</div> 
-            <div *ngIf="phoneNumber.errors?.pattern"><fa-icon [icon]="faWarning" aria-label="warning-input-error"></fa-icon> Phone Number should be in the 1234567890 format.</div>
+            <div *ngIf="phoneNumber.errors?.pattern"><fa-icon [icon]="faWarning" aria-label="warning-input-error"></fa-icon> Not a valid 10-digit US phone number (must not include spaces or special characters).</div>
         </div>
     </div>
 

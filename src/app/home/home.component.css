@@ -112,8 +112,8 @@ h1{
 }
 .content .actions{
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: space-between;
+  align-items: center;
   margin-top: .5rem;
   text-align: right;
   margin-right: .5rem;
@@ -124,3 +124,11 @@ h1{
   border: none;
   margin: none;
 }
+
+.content .actions .btn-outline-danger{
+  background: none;
+  border: none;
+  margin: none;
+}
+
+

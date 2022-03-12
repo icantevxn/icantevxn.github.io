@@ -16,7 +16,8 @@ export class AddContactComponent implements OnInit {
     firstName: '',
     lastName: '',
     phoneNumber: '',
-    email: ''
+    email: '',
+    isFavorited: false,
   };
 
   constructor(private store: Store<ContactState>) { }
@@ -25,7 +26,8 @@ export class AddContactComponent implements OnInit {
     this.contact;
   }
 
-  submitAdded(contact:Contact) {
+  submitAdded(contact: Contact) {
+    contact.isFavorited = false;
     this.store.dispatch(addContact(contact));
     this.isAdded = true;
   }

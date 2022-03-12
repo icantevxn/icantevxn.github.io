@@ -7,7 +7,7 @@ import { select, State, Store } from '@ngrx/store';
 import { getContacts, updateContacts } from '../store/actions/contact.actions';
 import { ContactState } from '../store/reducers/contact.reducer';
 import { contactSelector, contactsSelector } from '../store/selector/contact.selector';
-import { take } from 'rxjs/operators';
+import { take, takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'app-edit-contact',
@@ -21,7 +21,6 @@ export class EditContactComponent implements OnInit {
   id: number = Number(this.route.snapshot.paramMap.get('id'));
   
   contact!: Contact;
-
   contact$ = this.store.pipe(select(contactSelector(this.id)));
   
   constructor(
@@ -30,20 +29,15 @@ export class EditContactComponent implements OnInit {
   ) { }
   
   ngOnInit(): void {
-    this.getContact();
+    this.contact$.subscribe((data) => (this.contact = JSON.parse(JSON.stringify(data))));
     this.onInitEditForm.emit(true);
   }
 
   submitEdited(contact: Contact) {
     contact.id = this.id;
-    const newContact = { ...contact };
-    this.store.dispatch(updateContacts(newContact));
+    this.store.dispatch(updateContacts(contact));
     this.isEditted = true;
   }
 
-  getContact() {
-    this.contact$.subscribe((contact) => this.contact = contact)
-  }
-  
 
 }

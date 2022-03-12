@@ -8,7 +8,7 @@
                                         <div class="content-header">
                                                 <div class="content-title-wrapper">
                                                         <div class="content-circle">
-                                                                <span class="content-initial">{{contact.firstName.charAt(0)}}{{contact.lastName.charAt(0)}}</span>
+                                                                <span class="content-initial">{{contact.firstName.charAt(0) | uppercase }}{{contact.lastName.charAt(0) | uppercase}}</span>
                                                         </div>
                                                         <div class="content-full-name">
                                                                 <span class="text-muted content-first-name">{{contact.firstName | uppercase}}</span>
