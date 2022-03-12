@@ -1,14 +1,15 @@
 .home{
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
  .container{
-    margin-top: 5rem;
+   margin-left: none;
+    margin: 1rem;
     border-radius: 16px;
     background-color: #F4F7FD;
     height: 100%;
-    max-width: 90%;
+    min-width: 500px;
     box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.2);
     -webkit-box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.2);
     -moz-box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.2);

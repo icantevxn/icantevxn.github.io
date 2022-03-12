@@ -4,11 +4,11 @@
 
 
 :root{
-    --body-color: #fff;
+    --body-color: #F4F7FD;
     --primary-color: #1834cc;
-    --primary-colo-light: #4e73e5;
+    --primary-color-light: #4e73e5;
     --sidebar-color: #EEF1FF;
-    --toggle-color: #ddd;
+    --toggle-color: rgb(51, 51, 51);
     --text-color: #3c4142;
     --border-color: #e6e4e9;
     
@@ -23,20 +23,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 ::selection{
     background-color: var(--primary-color);
     color: #fff;
-}
-
-body.dark{
-    --body-color: #18191a;
-    --sidebar-color: #242526;
-    --primary-color: #3a3b3c;
-    --primary-color-light: #3a3b3c;
-    --toggle-color: #fff;
-    --text-color: #ccc;
 }
 
 
@@ -48,10 +39,21 @@ body{
     scroll-snap-type: y mandatory;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    overflow-x: scroll;
 }
 
 body::-webkit-scrollbar{
     display: none;
+}
+
+
+body.dark{
+    --body-color: #18191a;
+    --sidebar-color: #242526;
+    --primary-color: #3a3b3c;
+    --primary-color-light: #3a3b3c;
+    --toggle-color: #fff;
+    --text-color: #ccc;
 }
 
 a{
@@ -59,6 +61,6 @@ a{
 }
 
 a:hover{
-    color: var(--secondary-color);
+    color: var(----toggle-color);
     
 }

@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 import { AddContactComponent } from './add-contact/add-contact.component';
 import { HomeComponent } from './home/home.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
@@ -24,13 +24,13 @@ import { ContactEffects } from './store/effects/contacts.effects';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { ErrorInterceptor } from './interceptors/error.interceptors';
 import { LoadingInterceptor } from './interceptors/loading.interceptor';
-import { TrialAndErrorComponent } from './trial-and-error/trial-and-error.component';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
+    SidebarComponent,
     AddContactComponent,
     HomeComponent,
     ContactFormComponent,
@@ -38,7 +38,7 @@ import { TrialAndErrorComponent } from './trial-and-error/trial-and-error.compon
     ViewCardDetailsComponent,
     FooterComponent,
     PageNotFoundComponent,
-    TrialAndErrorComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

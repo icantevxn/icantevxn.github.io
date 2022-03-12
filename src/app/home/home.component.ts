@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Contact } from '../Contact';
 import { deleteContacts, getContacts } from '../store/actions/contact.actions';
-import { faEdit, faTrashAlt, faEye } from '@fortawesome/free-regular-svg-icons';
-import { faPhoneAlt, faAngleRight, faEllipsisV } from '@fortawesome/free-solid-svg-icons';
+import { faEdit, faTrashAlt, faEye, faPlusSquare } from '@fortawesome/free-regular-svg-icons';
+import { faPhoneAlt, faPlus, faEllipsisV } from '@fortawesome/free-solid-svg-icons';
 import { ContactState } from '../store/reducers/contact.reducer';
 import { contactsSelector } from '../store/selector/contact.selector';
 
@@ -15,10 +15,10 @@ import { contactsSelector } from '../store/selector/contact.selector';
 export class HomeComponent implements OnInit {
   faTrash = faTrashAlt;
   faEdit = faEdit;
-  faPlus = faEye;
+  faViewMore = faEye;
   faToggle = faEllipsisV;
-  faViewMore = faAngleRight;
   faPhone = faPhoneAlt;
+  faPlus = faPlus;
   contacts$ = this.store.pipe(select(contactsSelector));
   constructor(private store: Store<ContactState>) { }
   

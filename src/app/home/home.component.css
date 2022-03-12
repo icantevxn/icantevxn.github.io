@@ -7,6 +7,12 @@ h1{
   margin-left: 1.5rem;
 }
 
+.btn-add{
+  margin-left: 1.5rem;
+  margin-right: 1rem;
+  border-style: dashed;
+}
+
 .row{
   margin: 1rem;
 }
@@ -24,9 +30,8 @@ h1{
   position: relative;
   display: flex;
   flex-direction: column;
-  min-width: 0;
+  min-width: 200px;
   word-wrap: break-word;
-  background-color: var(--body-color);
   background-clip: border-box;
   border: 1px solid var(--border-color);
   border-radius: 16px;
@@ -43,9 +48,6 @@ h1{
   align-items: center;
   min-height: 50px;
 }
-.card-header:first-child {
-  border-radius: calc(8px - 1px) calc(8px - 1px) 0 0;
-}
 
 .content .content-header{
   display: flex;
@@ -55,7 +57,7 @@ h1{
 }
 
 .content .content-header .content-title-wrapper {
-display: flex;
+  display: flex;
   align-items: center;
 }
 
@@ -84,7 +86,7 @@ display: flex;
 }
 
 .content .content-header .content-title-wrapper .content-full-name .content-first-name {
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 .content .content-header .content-title-wrapper .content-full-name .content-last-name {
@@ -95,7 +97,7 @@ display: flex;
 .content .content-header .dropdown ul{
   font-weight: 400;
   font-size: 14px;
-
+  
 }
 
 .content .content-phoneNumber {
