@@ -1,0 +1,64 @@
+/* Google Font Import - Poppins */
+@import 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap'; 
+
+
+:root{
+    --body-color: #fff;
+    --primary-color: #1834cc;
+    --primary-colo-light: #4e73e5;
+    --sidebar-color: #EEF1FF;
+    --toggle-color: #ddd;
+    --text-color: #3c4142;
+    --border-color: #e6e4e9;
+    
+    --trans-02: 0.2s ease;
+    --trans-03: 0.3s ease;
+    --trans-04: 0.4s ease;
+    --trans-05: 0.5s ease; 
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+::selection{
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+body.dark{
+    --body-color: #18191a;
+    --sidebar-color: #242526;
+    --primary-color: #3a3b3c;
+    --primary-color-light: #3a3b3c;
+    --toggle-color: #fff;
+    --text-color: #ccc;
+}
+
+
+body{
+    min-height: 100vh;
+    background-color: #fff;
+    transition: var(--tran-05);
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+a{
+    color: var(--primary-color);
+}
+
+a:hover{
+    color: var(--secondary-color);
+    
+}

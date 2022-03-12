@@ -1,0 +1,124 @@
+body{
+  background: #F4F7FD;
+  margin-top:20px;
+}
+
+h1{
+  margin-left: 1.5rem;
+}
+
+.row{
+  margin: 1rem;
+}
+
+
+.card-margin {
+  margin-bottom: 1.875rem;
+}
+
+.card {
+  box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+  -ms-box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: var(--body-color);
+  background-clip: border-box;
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+}
+
+.card .card-header.no-border {
+  border: 0;
+}
+.card .card-header {
+  background: none;
+  padding: 0 0.9375rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  min-height: 50px;
+}
+.card-header:first-child {
+  border-radius: calc(8px - 1px) calc(8px - 1px) 0 0;
+}
+
+.content .content-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.content .content-header .content-title-wrapper {
+display: flex;
+  align-items: center;
+}
+
+.content .content-header .content-title-wrapper .content-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--sidebar-color);
+  min-width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.content .content-header .content-title-wrapper .content-circle .content-initial {
+  color: var(--primary-color);
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.content .content-header .content-title-wrapper .content-full-name {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+
+.content .content-header .content-title-wrapper .content-full-name .content-first-name {
+  font-size: 14px;
+}
+
+.content .content-header .content-title-wrapper .content-full-name .content-last-name {
+  color: var(--text-color);
+  font-size: 16px;
+}
+
+.content .content-header .dropdown ul{
+  font-weight: 400;
+  font-size: 14px;
+
+}
+
+.content .content-phoneNumber {
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 1rem;
+  margin-left: .5rem;
+}
+
+.content .content-phoneNumber .phone-icon {
+  margin-right: .5rem;
+}
+.content .actions{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-top: .5rem;
+  text-align: right;
+  margin-right: .5rem;
+}
+
+.content .actions .action-btn{
+  background: none;
+  border: none;
+  margin: none;
+}

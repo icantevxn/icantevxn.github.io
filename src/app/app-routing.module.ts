@@ -4,6 +4,7 @@ import { AddContactComponent } from './add-contact/add-contact.component';
 import { EditContactComponent } from './edit-contact/edit-contact.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { TrialAndErrorComponent } from './trial-and-error/trial-and-error.component';
 import { ViewCardDetailsComponent } from './view-card-details/view-card-details.component';
 
 const routes: Routes = [

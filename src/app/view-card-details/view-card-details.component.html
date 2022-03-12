@@ -1,13 +1,39 @@
-<div class="container" >
-        <h1 class="pb-4">{{contact.firstName}}'s Details</h1>
-                <div class="card">
+
+<div class="pt-5 ms-5 me-5">
+        
+        <ng-container class="container">
+                <div class="card card-margin">
                         <div class="card-body">
-                                <h5 class="card-title">{{contact.id}}</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Full Name: {{contact.firstName}} {{contact.lastName}}</h6>
-                                <p class="card-text">Phone Number: {{contact.phoneNumber}} </p>
-                                <p class="card-text">Email: {{contact.email}} </p>
-                                <a routerLink="/edit/{{contact.id}}" class="card-link">Edit Contact</a>
-                                <a routerLink="/home" class="card-link" >Go Back</a>
+                                <div class="content">
+                                        <div class="content-header">
+                                                
+                                                <div class="content-title-wrapper">
+                                                        <div class="content-circle">
+                                                                <span class="content-initial">{{contact.lastName.charAt(0)}}</span>
+                                                        </div>
+                                                        <div class="content-full-name">
+                                                                <span class="text-muted content-first-name">{{contact.firstName | uppercase}}</span>
+                                                                <span class="content-last-name">{{contact.lastName| uppercase}}</span>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        
+                                        <div class="content-phoneNumber text-muted">
+                                                <span><fa-icon [icon]="faPhone" class="phone-icon" aria-label="phone-number"></fa-icon>{{contact.phoneNumber}}</span>
+                                        </div>
+                                        <div class="actions">
+                                                <button class="action-btn" (click)="deleteContact(contact.id!)">
+                                                        <fa-icon [ngStyle]="{color: 'red'}" [icon]="faTrash" aria-label="delete-contact"></fa-icon>
+                                                </button>
+                                        </div>
+                                </div>
                         </div>
                 </div>
+        </ng-container>
+
+        <div class="d-flex justify-content-end ms-3">
+                <button class="btn btn-primary" aria-label="go-back" routerLink="/edit/{{contact.id}}">Edit Contact</button>
+                <button class="btn btn-outline-primary" aria-label="go-back" routerLink="/home">Go back</button>
+
         </div>
+</div>

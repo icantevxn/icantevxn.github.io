@@ -1,12 +1,15 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Contact } from '../Contact';
-import { faCamera } from '@fortawesome/free-solid-svg-icons';
+import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: 'app-contact-form',
   templateUrl: './contact-form.component.html',
   styleUrls: ['./contact-form.component.css']
 })
 export class ContactFormComponent implements OnInit {
+
+  faWarning = faExclamationCircle;
   @Input() contact!: Contact;
   @Input() isEdit: boolean = false;
   @Input() isAdd: boolean = false;

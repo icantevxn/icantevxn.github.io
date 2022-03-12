@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { select, Store } from '@ngrx/store';
-import { Contact } from '../Contact';
 import { deleteContacts, getContacts } from '../store/actions/contact.actions';
 import { faEdit, faTrashAlt, faEye } from '@fortawesome/free-regular-svg-icons';
 import { faPhoneAlt, faAngleRight, faEllipsisV } from '@fortawesome/free-solid-svg-icons';
@@ -8,11 +7,11 @@ import { ContactState } from '../store/reducers/contact.reducer';
 import { contactsSelector } from '../store/selector/contact.selector';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-trial-and-error',
+  templateUrl: './trial-and-error.component.html',
+  styleUrls: ['./trial-and-error.component.css']
 })
-export class HomeComponent implements OnInit {
+export class TrialAndErrorComponent implements OnInit {
   faTrash = faTrashAlt;
   faEdit = faEdit;
   faPlus = faEye;
@@ -37,4 +36,3 @@ export class HomeComponent implements OnInit {
       
   }
 }
-    

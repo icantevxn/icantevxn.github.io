@@ -1,54 +1,56 @@
 <!-- regular form-->
-<form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm.value)">
+<div class="container">
 
-    <div class="form-row">
+    <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm.value)">
+        
+        <div class="row">
         <div class="col-md-4 mb-3">
             <label for="firstName">First Name 
             </label>
             <input required [(ngModel)]="contact.firstName" name="firstName" #firstName="ngModel" id="firstName" type="text" class="form-control">
             <div class="alert alert-danger" *ngIf="!firstName.valid && firstName.touched">
-                 First name is required
+                <fa-icon [icon]="faWarning" aria-label="warning-input-error"></fa-icon>  First name is required.
             </div>
         </div>
         <div class="col-md-4 mb-3">
             <label for="firstName" >Last Name</label>
             <input aria-label="last name" required [(ngModel)]="contact.lastName" name="lastName" #lastName="ngModel" id="" type="text" class="form-control">
             <div class="alert alert-danger" *ngIf="!lastName.valid && lastName.touched">
-                 Last name is required
+                <fa-icon [icon]="faWarning" aria-label="warning-input-error"></fa-icon> Last name is required.
             </div>
         </div>
     </div>
-    <div class="form-group">
+    <div class="form-group md-4 mb-3">
         <label for="phoneNumber">Phone Number </label>
         <input required [(ngModel)]="contact.phoneNumber" name="phoneNumber" #phoneNumber="ngModel" id="phoneNumber" type="tel" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" class="form-control" placeholder="Example: 1234567890">
         <div class="alert alert-danger" *ngIf="phoneNumber.touched && !phoneNumber.valid">
-            <div *ngIf="phoneNumber.errors?.required"> Phone Number is required</div> 
-            <div *ngIf="phoneNumber.errors?.pattern"> Phone Number should be in the 1234567890 format</div>
+            <div *ngIf="phoneNumber.errors?.required"><fa-icon [icon]="faWarning" aria-label="warning-input-error"></fa-icon> Phone Number is required.</div> 
+            <div *ngIf="phoneNumber.errors?.pattern"><fa-icon [icon]="faWarning" aria-label="warning-input-error"></fa-icon> Phone Number should be in the 1234567890 format.</div>
         </div>
     </div>
 
-    <div class="form-group">
-        <label for="email">Email
+    <div class="form-group md-4 mb-3">
+        <label for="email">Email 
         </label>
         <input required [(ngModel)]="contact.email" name="email" #email="ngModel" id="email" type="email" class="form-control" pattern="^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$">
         <div class="alert alert-danger" *ngIf="!email.valid && email.touched">
-               <div *ngIf="email.errors?.required"> Email is required </div>
-                <div *ngIf="email.errors?.pattern"> Please input a valid email. </div>
+               <div *ngIf="email.errors?.required"><fa-icon [icon]="faWarning" aria-label="warning-input-error"></fa-icon> Email is required. </div>
+                <div *ngIf="email.errors?.pattern"><fa-icon [icon]="faWarning" aria-label="warning-input-error"></fa-icon> Please input a valid email. </div>
             </div>
-    </div>
-    <div class="d-flex test">
-        
-        <button *ngIf="isEdit" class="btn btn-primary" type="submit" [disabled]="!contactForm.form.valid">Edit</button>
+        </div>
+    <div class="button-group">
+        <button *ngIf="isEdit" class="btn btn-primary" type="submit" [disabled]="!contactForm.form.dirty">Edit</button>
         <button *ngIf="isAdd"class="btn btn-primary" type="submit" [disabled]="!contactForm.form.valid">Add</button>
         <button routerLink="/home" class="btn btn-outline-primary" type="button">Cancel</button>
     </div>
 </form>
+</div>
 
 
 <!--form floating
-<form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm.value)">
+    <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm.value)">
     
-    <div class="form-row">
+        <div class="form-row">
     <div class="form-floating col-md-4 mb-3">
             <input required [(ngModel)]="contact.firstName" name="firstName" #firstName="ngModel" id="firstName" type="text" placeholder="First Name" class="form-control">
             <label for="firstName">First Name 

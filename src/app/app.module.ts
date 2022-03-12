@@ -24,6 +24,7 @@ import { ContactEffects } from './store/effects/contacts.effects';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { ErrorInterceptor } from './interceptors/error.interceptors';
 import { LoadingInterceptor } from './interceptors/loading.interceptor';
+import { TrialAndErrorComponent } from './trial-and-error/trial-and-error.component';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { LoadingInterceptor } from './interceptors/loading.interceptor';
     ViewCardDetailsComponent,
     FooterComponent,
     PageNotFoundComponent,
+    TrialAndErrorComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,7 +50,7 @@ import { LoadingInterceptor } from './interceptors/loading.interceptor';
     NgxSpinnerModule,
     StoreModule.forRoot({contacts: contactReducer},),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
-    EffectsModule.forRoot([ContactEffects])
+    EffectsModule.forRoot([ContactEffects, ])
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },

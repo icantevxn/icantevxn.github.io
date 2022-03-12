@@ -1,42 +1,4 @@
-header{
-    display: flex;
-    align-items: center;
-    margin-left: 3%;
-}
-
-img{
-    width: 45%;
-    height: 45%;
-}
-
-.sidebar{
-    background-color: #fff;
-    top: 0;
-    left: 0;
+.container{
     height: 100%;
-    width: 250px;
-    position: fixed;
-
-}
-.sidebar .logo{
-    width: 4em;
-    border-radius: 6px;
-}
-
-.sidebar .top{
-    display: flex;
-    align-items: center;
-}
-
-.sidebar .text{
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-
-    
-}
-
-header .top .header-text{
-    display: flex;
-    flex-direction: column;
+    background-color: #fff;
 }
