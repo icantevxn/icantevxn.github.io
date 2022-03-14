@@ -14,13 +14,12 @@ const httpOptions = {
 })
 export class ContactService {
 
+  //TODO: hide api url
   private apiUrl = 'http://localhost:5000/contacts';
 
   constructor(private http: HttpClient) {
-    
    }
   
-
   getContacts(): Observable<Contact[]>{
     return this.http.get<Contact[]>(this.apiUrl);
   }

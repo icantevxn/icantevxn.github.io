@@ -25,6 +25,8 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { ErrorInterceptor } from './interceptors/error.interceptors';
 import { LoadingInterceptor } from './interceptors/loading.interceptor';
 import { HeaderComponent } from './header/header.component';
+import { FavouriteContactsComponent } from './favourite-contacts/favourite-contacts.component';
+import { CardLayoutComponent } from './card-layout/card-layout.component';
 
 
 @NgModule({
@@ -38,7 +40,9 @@ import { HeaderComponent } from './header/header.component';
     ViewCardDetailsComponent,
     FooterComponent,
     PageNotFoundComponent,
-    HeaderComponent
+    HeaderComponent,
+    FavouriteContactsComponent,
+    CardLayoutComponent
   ],
   imports: [
     BrowserModule,

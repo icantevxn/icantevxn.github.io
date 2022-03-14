@@ -4,7 +4,7 @@
         
         <div class="row">
         <div class="col-md-4 mb-3">
-            <label for="firstName">First Name 
+            <label for="firstName">First Name *
             </label>
             <input required [(ngModel)]="contact.firstName" name="firstName" #firstName="ngModel" id="firstName" type="text" class="form-control">
             <div class="alert alert-danger" *ngIf="!firstName.valid && firstName.touched">

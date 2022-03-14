@@ -7,7 +7,7 @@ export const contactsSelector = createSelector(
     (contacts: ReadonlyArray<Contact>) => contacts);
     
     
-    export const contactSelector = (id: number) => createSelector(
+export const contactSelector = (id: number) => createSelector(
         contactsSelector,
         (contacts => 
             contacts.find((contact) => contact.id == id)!

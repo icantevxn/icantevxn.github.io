@@ -1,7 +1,7 @@
 /* Google Font Import - Poppins */
 @import 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap';
 @import 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap'; 
-
+@import '~animate.css/animate.min.css';
 
 :root{
     --body-color: #F4F7FD;
@@ -18,22 +18,16 @@
     --trans-05: 0.5s ease; 
 }
 
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-::selection{
-    background-color: var(--primary-color);
-    color: #fff;
-}
 
 
 body{
     min-height: 100vh;
-    background-color: #fff;
     transition: var(--tran-05);
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
@@ -47,7 +41,7 @@ body::-webkit-scrollbar{
 }
 
 
-body.dark{
+[data-theme = "dark"]{
     --body-color: #18191a;
     --sidebar-color: #242526;
     --primary-color: #3a3b3c;

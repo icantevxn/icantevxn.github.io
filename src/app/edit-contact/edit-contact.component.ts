@@ -35,6 +35,7 @@ export class EditContactComponent implements OnInit {
 
   submitEdited(contact: Contact) {
     contact.id = this.id;
+    contact.isFavorited = this.contact.isFavorited;
     this.store.dispatch(updateContacts(contact));
     this.isEditted = true;
   }

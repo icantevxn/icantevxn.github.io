@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { LoadingService } from './services/loading.service';
 
 @Component({
   selector: 'app-root',
@@ -8,16 +7,12 @@ import { LoadingService } from './services/loading.service';
 })
 export class AppComponent implements OnInit{
 
-  constructor(private loadingService: LoadingService) {
+  constructor() {
     
   }
 
   ngOnInit(): void {
-    this.loadingService.loading();
-
-    setTimeout(() =>
-      this.loadingService.idle(),
-      1000);
+   
   }
  
 }

@@ -4,8 +4,6 @@ import { Contact } from "src/app/Contact";
 
 export const getContacts = createAction('[Contact] Get contacts');
 export const getContactsSuccess = createAction('[Contact] Get contacts success', ((contacts: ReadonlyArray<Contact>) => ({ contacts })));
-
-//TODO: figure out why contact cannot be returned as  an object
 export const addContact = createAction('[Contact] Add contacts',((contact: Contact) => ({contact})));
 export const addContactSuccess = createAction('[Contact] Add contacts success', ((contact: Contact)=> ({contact})));
 export const updateContacts = createAction('[Contact] Update contacts',  ((contact: Contact)=> ({contact})));

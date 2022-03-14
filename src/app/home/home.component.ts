@@ -1,9 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { select, Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
 import { Contact } from '../Contact';
 import { deleteContacts, getContacts, updateContacts } from '../store/actions/contact.actions';
-import { faEdit, faTrashAlt, faEye, faHeart } from '@fortawesome/free-regular-svg-icons';
-import { faPhoneAlt, faPlus, faEllipsisV, faHeart as faFavorited } from '@fortawesome/free-solid-svg-icons';
 import { ContactState } from '../store/reducers/contact.reducer';
 import { contactsSelector } from '../store/selector/contact.selector';
 
@@ -13,17 +12,10 @@ import { contactsSelector } from '../store/selector/contact.selector';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  faTrash = faTrashAlt;
-  faEdit = faEdit;
-  faHeart = faHeart;
-  faFavorited = faFavorited;
-  faViewMore = faEye;
-  faToggle = faEllipsisV;
-  faPhone = faPhoneAlt;
-  faPlus = faPlus;
-  
-  isNotFavorited = false;
+  @Output() onGetContacts: EventEmitter<Contact[]> = new EventEmitter();
   contacts$ = this.store.pipe(select(contactsSelector));
+  contacts: Contact[] = [];
+
   constructor(private store: Store<ContactState>) { }
   
   ngOnInit(): void {
@@ -32,19 +24,9 @@ export class HomeComponent implements OnInit {
   
   getAllContacts() {
     this.store.dispatch(getContacts());
+    this.contacts$.subscribe((contacts) => this.contacts = [...contacts]);
+    this.onGetContacts.emit(this.contacts);
+
   }
   
-  deleteContact(id: number) {
-    if (confirm("Are you sure you want to delete this contact?")) {
-      this.store.dispatch(deleteContacts(id));
-    };   
-  }
-  
-  onClickFavorite(contact: Contact) {
-    this.isNotFavorited = contact.isFavorited;
-    this.isNotFavorited = !this.isNotFavorited;
-    const newContact = { ...contact };
-    newContact.isFavorited = this.isNotFavorited;
-    this.store.dispatch(updateContacts(newContact));
-  }
 }
