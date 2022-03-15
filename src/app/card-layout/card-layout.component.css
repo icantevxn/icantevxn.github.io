@@ -1,19 +1,24 @@
-body{
-  margin-top:20px;
-}
 
-h1{
-  margin-left: 1.5rem;
-}
 
 .btn-add{
   margin-left: 1.5rem;
   margin-right: 1rem;
   border-style: dashed;
+  color: var(--text-color);
+  border-color: var(--text-color);
+}
+
+.btn-add:hover{
+  border-color: var(--primary-color);
+  background-color: var(--primary-color);
 }
 
 .row{
   margin: 1rem;
+}
+
+.col-lg-4{
+  padding-left: 8px;
 }
 
 
@@ -32,8 +37,8 @@ h1{
   min-width: 200px;
   word-wrap: break-word;
   background-clip: border-box;
-  border: 1px solid var(--border-color);
   border-radius: 16px;
+  background-color: var(--sidebar-color);
 }
 
 .card .card-header.no-border {
@@ -41,11 +46,11 @@ h1{
 }
 .card .card-header {
   background: none;
-  padding: 0 0.9375rem;
+  padding: 0 1rem;
   font-weight: 500;
   display: flex;
   align-items: center;
-  min-height: 50px;
+  min-height: 48px;
 }
 
 .content .content-header{
@@ -65,7 +70,7 @@ h1{
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: var(--sidebar-color);
+  background-color: var(--accent-color);
   min-width: 4rem;
   height: 4rem;
   border-radius: 50%;
@@ -93,15 +98,23 @@ h1{
   font-size: 16px;
 }
 
-.content .content-header .dropdown ul{
+
+
+.content .content-header .dropdown ul {
   font-weight: 400;
-  font-size: 14px;
-  
+  font-size: 16px;
+  background-color: var(--sidebar-color);
+}
+.content .content-header .dropdown ul .dropdown-item{
+  color: var(--text-color);
+}
+.content .content-header .dropdown ul .dropdown-item:hover{
+  background-color: var(--body-color);
 }
 
 .content .content-phoneNumber {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   margin-top: 1rem;
   margin-left: .5rem;
 }

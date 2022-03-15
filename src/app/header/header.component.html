@@ -1,7 +1,16 @@
-<div class="d-flex flex-column flex-md-row justify-content-between align-items-center p-3 px-md-4 mb-3">
-  <a routerLink="/home" class="my-0 mr-md-auto"><img src="assets/visa_logo.png" alt="visa-logo" aria-label="visa-logo"></a>
+<div class="header-nav">
+  <div>
+    <a routerLink="/home">
+      <img src="assets/visa_logo_blue.png" alt="logo" aria-label="logo">
+      <!-- <img *ngIf="newTheme==('dark')" src="assets/visa_logo_white.png" alt="logo" aria-label="logo"> -->
+    </a>
+  </div>
   
   <div class="form-check form-switch">
-    <input class="form-check-input" (click)="onToggle()" type="checkbox" id="darkSwitch">
+    <input class="form-check-input" (click)="onToggleTheme()" type="checkbox" id="darkSwitch">
+    <label for="input">
+
+      <fa-icon [icon]="faMoon"></fa-icon>
+    </label>
   </div>
 </div>

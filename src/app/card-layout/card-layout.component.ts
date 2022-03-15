@@ -1,11 +1,12 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { select, Store } from '@ngrx/store';
+import { Store } from '@ngrx/store';
 import { Contact } from '../Contact';
 import { deleteContacts, getContacts, updateContacts } from '../store/actions/contact.actions';
 import { faEdit, faTrashAlt, faEye, faHeart } from '@fortawesome/free-regular-svg-icons';
 import { faPhoneAlt, faPlus, faEllipsisV, faHeart as faFavorited } from '@fortawesome/free-solid-svg-icons';
 import { ContactState } from '../store/reducers/contact.reducer';
-import { contactsSelector } from '../store/selector/contact.selector';
+import { UiService } from '../services/ui.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-card-layout',
@@ -22,13 +23,15 @@ export class CardLayoutComponent implements OnInit {
   faPhone = faPhoneAlt;
   faPlus = faPlus;
   
-isNotFavorited = false;
-  
-  @Input() contacts: Contact[] = [];
-  constructor(private store: Store<ContactState>) { }
+  isNotFavorited = false;
+  theme: string = '';
+  isDark= false;
+  @Input() contacts$!: Observable<ReadonlyArray<Contact>>;
+  constructor(private store: Store<ContactState>, private uiService: UiService) { }
   
   ngOnInit(): void {
   }
+
   
   deleteContact(id: number) {
     if (confirm("Are you sure you want to delete this contact?")) {

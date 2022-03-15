@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
 import { Contact } from '../Contact';
 import { ContactService } from '../services/contact.service';
 import { addContact } from '../store/actions/contact.actions';
@@ -11,7 +12,6 @@ import { ContactState } from '../store/reducers/contact.reducer';
   styleUrls: ['./add-contact.component.css']
 })
 export class AddContactComponent implements OnInit {
-  isAdded = false;
   contact: Contact = {
     firstName: '',
     lastName: '',
@@ -19,17 +19,16 @@ export class AddContactComponent implements OnInit {
     email: '',
     isFavorited: false,
   };
-
   constructor(private store: Store<ContactState>) { }
 
   ngOnInit(): void {
-    this.contact;
   }
 
   submitAdded(contact: Contact) {
     contact.isFavorited = false;
     this.store.dispatch(addContact(contact));
-    this.isAdded = true;
+    alert("Contact edited successfully!");
+
   }
 
 }

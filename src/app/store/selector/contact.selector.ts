@@ -7,10 +7,15 @@ export const contactsSelector = createSelector(
     (contacts: ReadonlyArray<Contact>) => contacts);
     
     
-export const contactSelector = (id: number) => createSelector(
+ export const favContactsSelector = createSelector(
         contactsSelector,
         (contacts => 
-            contacts.find((contact) => contact.id == id)!
+            contacts.filter((c) => c.isFavorited == true)));
+            
+
+    export const singleContactSelector = (id: number) => createSelector(
+        contactsSelector,
+        (contacts => contacts.find((contact) => contact.id == id)!
         ));
         
         

@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ContactState } from '../store/reducers/contact.reducer';
 import { select, Store } from '@ngrx/store';
-import { contactSelector } from '../store/selector/contact.selector';
+import { contactsSelector, singleContactSelector } from '../store/selector/contact.selector';
 import { Contact } from '../Contact';
 import { faEdit, faTrashAlt, faEye } from '@fortawesome/free-regular-svg-icons';
 import { faPhoneAlt, faAngleRight, faEllipsisV } from '@fortawesome/free-solid-svg-icons';
-import { deleteContacts } from '../store/actions/contact.actions';
+import { deleteContacts, getContact } from '../store/actions/contact.actions';
 
 @Component({
   selector: 'app-view-card-details',
@@ -14,7 +14,7 @@ import { deleteContacts } from '../store/actions/contact.actions';
   styleUrls: ['./view-card-details.component.css']
 })
 export class ViewCardDetailsComponent implements OnInit {
-  contact!: Contact;
+  
   faTrash = faTrashAlt;
   faEdit = faEdit;
   faPlus = faEye;
@@ -22,24 +22,29 @@ export class ViewCardDetailsComponent implements OnInit {
   faViewMore = faAngleRight;
   faPhone = faPhoneAlt;
 
+  isDeleted: boolean = false;
+  
   id: number  = Number(this.route.snapshot.paramMap.get('id'));
-  contact$ = this.store.pipe(select(contactSelector(this.id)));
+  contact$ = this.store.select(singleContactSelector(this.id));
   
   constructor(private store: Store<ContactState>, private route: ActivatedRoute) { }
   
   ngOnInit(): void {
     this.getContact();
   }
-
+  
   getContact() {
-    this.contact$.subscribe((contact) => this.contact = contact)
+    this.store.dispatch(getContact(this.id));
   }
   
-  deleteContact(id: number) {
+  deleteContact() {
     if (confirm("Are you sure you want to delete this contact?")) {
-      this.store.dispatch(deleteContacts(id));
-    };
-      
+      this.store.dispatch(deleteContacts(this.id));
+      setTimeout(() => {
+        
+        alert("Contact deleted!")
+      }, 1000);
+    }
   }
   
 }

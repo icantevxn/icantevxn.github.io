@@ -1,5 +1,17 @@
-img{
-    width: 45%;
-    height: 45%;
+.header-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    overflow: visible;
+    margin-bottom: 1rem;
+    min-width: 100vh;
 }
 
+.header-nav .input+:checked{
+    color: var(--primary-color);
+}
+
+.header-nav img{
+    width: 8rem;
+}

@@ -24,8 +24,6 @@ export class HomeComponent implements OnInit {
   
   getAllContacts() {
     this.store.dispatch(getContacts());
-    this.contacts$.subscribe((contacts) => this.contacts = [...contacts]);
-    this.onGetContacts.emit(this.contacts);
 
   }
   

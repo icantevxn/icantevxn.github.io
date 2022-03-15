@@ -27,6 +27,7 @@ import { LoadingInterceptor } from './interceptors/loading.interceptor';
 import { HeaderComponent } from './header/header.component';
 import { FavouriteContactsComponent } from './favourite-contacts/favourite-contacts.component';
 import { CardLayoutComponent } from './card-layout/card-layout.component';
+import { StoreRouterConnectingModule } from '@ngrx/router-store';
 
 
 @NgModule({
@@ -52,9 +53,10 @@ import { CardLayoutComponent } from './card-layout/card-layout.component';
     FontAwesomeModule,
     HttpClientModule,
     NgxSpinnerModule,
-    StoreModule.forRoot({contacts: contactReducer},),
+    StoreModule.forRoot({contacts: contactReducer}),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
-    EffectsModule.forRoot([ContactEffects, ])
+    EffectsModule.forRoot([ContactEffects, ]),
+    StoreRouterConnectingModule.forRoot()
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },

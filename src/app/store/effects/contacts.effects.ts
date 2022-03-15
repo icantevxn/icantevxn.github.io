@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { createEffect, Actions, ofType } from "@ngrx/effects";
 import { ContactService } from "src/app/services/contact.service";
 import * as ContactActions from "../actions/contact.actions";
-import { concatMap, exhaustMap, map, mergeMap } from "rxjs/operators";
+import { concatMap, exhaustMap, map, mergeMap, skipWhile, switchMap } from "rxjs/operators";
 
 @Injectable()
 export class ContactEffects{
@@ -17,6 +17,16 @@ export class ContactEffects{
         )
     )
     );
+    
+    getContact$ = createEffect(() => this.action$.pipe(
+        ofType(ContactActions.getContact),
+        mergeMap(
+            ({ contactId }) => this.contactService.getContact(contactId).pipe(
+                map((contact) =>  ContactActions.getContactSuccess(contact)
+                )
+            )
+        )
+    ));
 
     //TODO: study more into maps
     addContact$ = createEffect(() => this.action$.pipe(
@@ -37,6 +47,7 @@ export class ContactEffects{
             )
         )
     ));
+    
 
     updateContact$ = createEffect( () => this.action$.pipe(
             ofType(ContactActions.updateContacts),

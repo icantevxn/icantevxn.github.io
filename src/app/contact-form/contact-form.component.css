@@ -19,6 +19,14 @@
 
 }
 
+label{
+    font-size: 16px;
+}
+
+input{
+    width: 30rem;
+    margin-right: 1.5rem;
+}
 .button-group .btn{
     margin-left: 1rem;
 }

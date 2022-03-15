@@ -1,13 +1,13 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Contact } from '../Contact';
 import { ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common';
-import { ContactService } from '../services/contact.service';
-import { select, State, Store } from '@ngrx/store';
-import { getContacts, updateContacts } from '../store/actions/contact.actions';
+import { Store } from '@ngrx/store';
+import { getContact, updateContacts } from '../store/actions/contact.actions';
 import { ContactState } from '../store/reducers/contact.reducer';
-import { contactSelector, contactsSelector } from '../store/selector/contact.selector';
-import { take, takeUntil } from 'rxjs/operators';
+import { singleContactSelector } from '../store/selector/contact.selector';
+import { Subject, Subscription } from 'rxjs';
+import { delay, takeUntil } from 'rxjs/operators';
+import { LoadingService } from '../services/loading.service';
 
 @Component({
   selector: 'app-edit-contact',
@@ -15,30 +15,55 @@ import { take, takeUntil } from 'rxjs/operators';
   styleUrls: ['./edit-contact.component.css']
 })
 export class EditContactComponent implements OnInit {
-
-  isEditted = false;
   @Output() onInitEditForm: EventEmitter<boolean> = new EventEmitter();
   id: number = Number(this.route.snapshot.paramMap.get('id'));
-  
-  contact!: Contact;
-  contact$ = this.store.pipe(select(contactSelector(this.id)));
+  contacts: Contact[] = [];
+  contact: Contact = {
+    firstName: '',
+    lastName: '',
+    phoneNumber: '',
+    email: '',
+    isFavorited: false,
+  };
+  done = new Subject();
+  contact$ = this.store.select(singleContactSelector(this.id));
+  subscription!: Subscription;
   
   constructor(
     private route: ActivatedRoute,
-    private store: Store<ContactState>
-  ) { }
-  
-  ngOnInit(): void {
-    this.contact$.subscribe((data) => (this.contact = JSON.parse(JSON.stringify(data))));
-    this.onInitEditForm.emit(true);
+    private store: Store<ContactState>,
+    private loadingService: LoadingService
+    ) { }
+    
+    ngOnInit(): void {
+      this.getContact();
+      this.onInitEditForm.emit(true);
+    }
+    
+    getContact() {
+    this.store.dispatch(getContact(this.id));
+     this.subscription = this.contact$
+        .subscribe((data) => {
+          if (data) {
+            this.loadingService.idle();
+            return this.contact = JSON.parse(JSON.stringify(data));
+          }
+          this.loadingService.loading();
+      }
+      );
+    }
+    
+    
+    submitEdited(contact: Contact) {
+      contact.isFavorited = this.contact.isFavorited;
+      contact.id = this.id;
+      this.store.dispatch(updateContacts(contact));
+      alert("Contact edited successfully!");
+    }
+    
+    ngOnDestroy(): void {
+      this.subscription.unsubscribe();
+    }
+    
+    
   }
-
-  submitEdited(contact: Contact) {
-    contact.id = this.id;
-    contact.isFavorited = this.contact.isFavorited;
-    this.store.dispatch(updateContacts(contact));
-    this.isEditted = true;
-  }
-
-
-}

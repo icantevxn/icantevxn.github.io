@@ -1,26 +1,24 @@
-.container{
-    height: 100vh;
-    background-color: #fff;
-    padding-top: 2rem ;
-    margin-right: 2rem;
-    
-}
-
-
-.container .nav-layout{
+.nav-layout{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     flex-shrink: 0;
+    padding-top: 2rem ;
+    margin-left: 1rem;
+    margin-right: 1rem;
     width: 4.5rem;
 }
 
-.container .nav-layout .options{
-    margin-bottom: 100vh;
+.nav-layout .nav-pills .nav-link{
+    color: var(--primary-color);
 }
 
-.isActive:focus{
-    color: var(--text-color);
-    border-radius: 16px;
-    border-color: var(--primary-color);
+.nav-layout .nav-pills .nav-link:hover .fa-lg{
+    color: var(--toggle-color);
+    transition: .5s ease;
+
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    color: var(--toggle-color) !important;
+    background: none !important;
 }

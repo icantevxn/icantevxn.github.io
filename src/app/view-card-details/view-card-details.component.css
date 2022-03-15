@@ -1,6 +1,5 @@
 body{
-  background: #F4F7FD;
-  margin-top:20px;
+  background: var(--background-color);
 }
 
 .card-margin {
@@ -29,15 +28,15 @@ body{
 }
 .card .card-header {
   background: none;
-  padding: 0 0.9375rem;
+  padding: 0 1rem;
   font-weight: 500;
   display: flex;
   align-items: center;
-  min-height: 50px;
+  min-height: 48px;
 }
 .table{
   overflow-x: scroll;
-  min-width: 200px;
+  min-width: 240px;
   max-width: 800px;
   font-size: 16px;
 }
@@ -50,7 +49,7 @@ body{
 }
 
 .content .content-header .content-title-wrapper {
-display: flex;
+  display: flex;
   align-items: center;
 }
 
@@ -59,7 +58,7 @@ display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: var(--sidebar-color);
+  background-color: var(--accent-color);
   min-width: 4rem;
   height: 4rem;
   border-radius: 50%;
@@ -79,7 +78,7 @@ display: flex;
 }
 
 .content .content-header .content-title-wrapper .content-full-name .content-first-name {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .content .content-header .content-title-wrapper .content-full-name .content-last-name {

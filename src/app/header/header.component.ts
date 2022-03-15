@@ -1,34 +1,26 @@
 import { Component, OnInit } from '@angular/core';
-
+import { LoadingService } from '../services/loading.service';
+import { UiService } from '../services/ui.service';
+import { faMoon } from '@fortawesome/free-regular-svg-icons';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  constructor() { }
+  newTheme: any;
+  faMoon = faMoon;
+  constructor(private loadingService: LoadingService, private uiService: UiService) { }
   
   ngOnInit(): void {
     this.getTheme();
   }
-
+  
   getTheme() {
-    var computerTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-    if (computerTheme) {
-      document.documentElement.setAttribute('data-theme', computerTheme);
-    }
+    this.newTheme = this.uiService.getInitialTheme();
   }
-
-  onToggle() {
-    var currentTheme = document.documentElement.getAttribute("data-theme");
-    var newTheme = "light";
-
-    if (currentTheme === "light") {
-      newTheme = "dark";
-    }
-
-    document.documentElement.setAttribute("data-theme", newTheme);
-    localStorage.setItem('theme', newTheme);
-
+  
+  onToggleTheme() {
+    this.newTheme = this.uiService.onToggleTheme();
   }
 }
