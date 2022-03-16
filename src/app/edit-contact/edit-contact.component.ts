@@ -53,7 +53,6 @@ export class EditContactComponent implements OnInit {
       );
     }
     
-    
     submitEdited(contact: Contact) {
       contact.isFavorited = this.contact.isFavorited;
       contact.id = this.id;

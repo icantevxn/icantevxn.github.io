@@ -14,7 +14,6 @@ export class ErrorInterceptor implements HttpInterceptor{
                 if (error) {
                     switch (error.status) {
                         case (error.status == 404):
-                            
                             this.router.navigateByUrl('/pagenotfound');
                             break;
                             

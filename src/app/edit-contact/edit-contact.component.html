@@ -1,4 +1,15 @@
 <div class="container">
-    <h1>Edit Details</h1>
-    <app-contact-form [isEdit]= "true" [contact]="contact" (onSubmitEdited)="submitEdited($event)"></app-contact-form>   
-</div>
+  
+  <img src="assets/removed.png" alt="">
+  <div class="modal-dialog" role="form">
+    <div class="modal-content">
+      <div class="modal-header border-bottom-0">
+        <h1>Edit Contact</h1>
+      </div>
+      <div class="modal-body p-5 pt-2">
+        <app-contact-form [isEdit]= "true" [contact]="contact" (onSubmitEdited)="submitEdited($event)"></app-contact-form>
+      </div>
+    </div>
+  </div>
+  
+  <!-- <a href='https://www.freepik.com/vectors/job'>Job vector created by freepik - www.freepik.com</a> -->

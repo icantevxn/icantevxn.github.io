@@ -1,0 +1,9 @@
+.modal-header{
+    justify-content: center;
+}
+
+.modal-content{
+background-color: var(--body-color);
+border: none;
+box-shadow: none;
+}

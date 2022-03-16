@@ -1,10 +1,11 @@
-.container{
-  margin-left: 1rem;
+.home{
+  width: 100%;
+  min-width: 400px;
 }
 h1{
   margin-left: 1.5rem;
 }
 
-.card-component{
+.card___component{
   margin-left: none;
 }

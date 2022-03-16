@@ -1,15 +1,7 @@
 {
   "contacts": [
     {
-      "firstName": "Hello",
-      "lastName": "World",
-      "phoneNumber": "1234567890",
-      "email": "test@gmail.com",
-      "isFavorited": false,
-      "id": 2
-    },
-    {
-      "firstName": "test",
+      "firstName": "tegt",
       "lastName": "World",
       "phoneNumber": "1234567890",
       "email": "test@gmail.com",
@@ -29,7 +21,7 @@
       "lastName": "World",
       "phoneNumber": "1234567890",
       "email": "test@gmail.com",
-      "isFavorited": false,
+      "isFavorited": true,
       "id": 5
     },
     {

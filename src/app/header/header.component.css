@@ -1,17 +1,22 @@
-.header-nav{
+.header__nav{  
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2rem;
     overflow: visible;
     margin-bottom: 1rem;
-    min-width: 100vh;
+    width: 100%;
+    min-width: 600px;
 }
 
-.header-nav .input+:checked{
+.form-check{
+    display: block;
+}
+
+.input+:checked{
     color: var(--primary-color);
 }
 
-.header-nav img{
-    width: 8rem;
+img{
+    width: 6.5rem;
 }

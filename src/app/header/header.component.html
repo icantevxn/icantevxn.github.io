@@ -1,5 +1,5 @@
-<div class="header-nav">
-  <div>
+<nav class="header__nav navbar">
+  <div class="logo">
     <a routerLink="/home">
       <img src="assets/visa_logo_blue.png" alt="logo" aria-label="logo">
       <!-- <img *ngIf="newTheme==('dark')" src="assets/visa_logo_white.png" alt="logo" aria-label="logo"> -->
@@ -9,8 +9,7 @@
   <div class="form-check form-switch">
     <input class="form-check-input" (click)="onToggleTheme()" type="checkbox" id="darkSwitch">
     <label for="input">
-
       <fa-icon [icon]="faMoon"></fa-icon>
     </label>
   </div>
-</div>
+</nav>
