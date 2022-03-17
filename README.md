@@ -39,50 +39,41 @@ The application will manipulate a contact list. Requirements for the application
   </li>
   <li>
     Contact information should consist of:
-    <ul><li></li></ul>
-    </li
-</ol>
+    <ul>
+    <li>First name</li>
+    <li>Last name</li>
+    <li>Phone number</li>
+    <li>Email address</li>
+    </ul>
+  </li>
+<li>
+ Initially the user should be viewing a page with a list of existing contacts. In the contacts list, a contact should be shown with a card style layout. Each card should consist of:
+<ul>
+    <li>First name</li>
+    <li>Last name</li>
+    <li>Phone number</li>
+    </ul>
+</li>
 
-2. 
-
-First name
-Last name
-Phone number
-Email address
-
-
-3. Initially the user should be viewing a page with a list of existing contacts. In the contacts list, a contact should be shown with a card style layout. Each card should consist of:
-
-First name
-Last name
-Phone number
- 
-
-4. From the Contact Listing page, the user should be able to:
-
-Edit an existing contact
-All fields are editable
-Create a separate page for editing
- 
-
-View a contact
-i. Expand a contact to view all information
- 
-
-Delete an existing use
-A simple delete with a confirmation popup. Are you sure you want to delete “Contact”
-
+<li>From the Contact Listing page, the user should be able to:</li>
+<ol>
+ <li>Edit an existing contact</li>
+ <li>All fields are editable</li>
+<li>Create a separate page for editing</li>
+<li>View a contact
+<ul>
+<li>Expand a contact to view all information<li>
+</ul>
+</li>
+<li>Delete an existing use </li>
+<li>A simple delete with a confirmation popup. Are you sure you want to delete “Contact”?</li>
+<li>
 Create a new contact
-i.                   Create a separate page for creating
-
-
-After any contact actions have been performed, the list must update to reflect any changes
-
-
-
-
-## Install npm packages
-Run `npm i` at the project root.
+<ul><li>Create a separate page for creating</li>
+</ul></li>
+</ol>
+<li>After any contact actions have been performed, the list must update to reflect any changes</li>
+</ol>
 
 ## Development server
 Run `json-server --watch db.json --port 5000` at your project root to run the mock json-server.
@@ -170,7 +161,7 @@ _Below is an example of how you can instruct your audience on installing and set
    ```sh
    git clone https://github.com/your_username_/Project-Name.git
    ```
-3. Install NPM packages
+3. Install NPM packages at project root
    ```sh
    npm install
    ```
