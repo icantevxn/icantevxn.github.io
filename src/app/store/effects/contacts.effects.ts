@@ -2,7 +2,8 @@ import { Injectable } from "@angular/core";
 import { createEffect, Actions, ofType } from "@ngrx/effects";
 import { ContactService } from "src/app/services/contact.service";
 import * as ContactActions from "../actions/contact.actions";
-import { concatMap, exhaustMap, map, mergeMap } from "rxjs/operators";
+import { concatMap, exhaustMap, map, mergeMap, switchMap, withLatestFrom } from "rxjs/operators";
+import { contactsSelector } from "../selector/contact.selector";
 
 @Injectable()
 export class ContactEffects{
@@ -12,54 +13,53 @@ export class ContactEffects{
         exhaustMap(
             () => this.contactService.getContacts().pipe(
                 map((contacts) => (ContactActions.getContactsSuccess(contacts)))
-            )
-        )
-    )
-    );
-    
-    getContact$ = createEffect(() => this.action$.pipe(
-        ofType(ContactActions.getContact),
-        mergeMap(
-            ({ contactId }) => this.contactService.getContact(contactId).pipe(
-                map((contact) =>  ContactActions.getContactSuccess(contact)
                 )
-            )
-        )
-    ));
-
-    //TODO: study more into maps
-    addContact$ = createEffect(() => this.action$.pipe(
-        ofType(ContactActions.addContact),
-        concatMap(
-            ({contact}) => this.contactService.addContact(contact).pipe(
-                map((contact) => ContactActions.addContactSuccess(contact))
-            )
-        )
-    )
-    );
-
-    deleteContact$ = createEffect(() => this.action$.pipe(
-        ofType(ContactActions.deleteContacts),
-        mergeMap(
-            ({ contactId }) => this.contactService.deleteContact(contactId).pipe(
-                map(() => ContactActions.deleteContactsSuccess(contactId))
-            )
-        )
-    ));
-    
-
-    updateContact$ = createEffect( () => this.action$.pipe(
-            ofType(ContactActions.updateContacts),
-            concatMap(
-                ({ contact }) => this.contactService.updateContact(contact).pipe(
-                    map(()=> ContactActions.updateContactsSuccess(contact))
                 )
-            )
-        )
-    )
-
-    constructor(private action$: Actions, private contactService: ContactService) { 
-        
-    }
-
-}
+                )
+                );
+                
+                getContact$ = createEffect(() => this.action$.pipe(
+                    ofType(ContactActions.getContact),
+                    mergeMap(
+                        ({ contactId }) => this.contactService.getContact(contactId).pipe(
+                            map((contact) =>  ContactActions.getContactSuccess(contact)
+                            )
+                            )
+                            )
+                            ));
+    
+                            //TODO: study more into maps
+                            addContact$ = createEffect(() => this.action$.pipe(
+                                ofType(ContactActions.addContact),
+                                concatMap(
+                                    ({contact}) => this.contactService.addContact(contact).pipe(
+                                        map((contact) => ContactActions.addContactSuccess(contact))
+                                        )
+                                        )
+                                        )
+                                        );
+                                        
+                                        deleteContact$ = createEffect(() => this.action$.pipe(
+                                            ofType(ContactActions.deleteContacts),
+                                            mergeMap(
+                                                ({ contactId }) => this.contactService.deleteContact(contactId).pipe(
+                                                    map(() => ContactActions.deleteContactsSuccess(contactId))
+                                                    )
+                                                    )
+                                        ));
+    
+                                                    updateContact$ = createEffect( () => this.action$.pipe(
+                                                        ofType(ContactActions.updateContacts),
+                                                        concatMap(
+                                                            ({ contact }) => this.contactService.updateContact(contact).pipe(
+                                                                map(()=> ContactActions.updateContactsSuccess(contact))
+                                                                )
+                                                                )
+                                                                )
+                                                                )
+                                                                
+                                                                constructor(private action$: Actions, private contactService: ContactService) { 
+                                                                    
+                                                                }
+                                                                
+                                                            }

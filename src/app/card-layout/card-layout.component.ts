@@ -7,6 +7,7 @@ import { faPhoneAlt, faPlus, faEllipsisV, faHeart as faFavorited } from '@fortaw
 import { ContactState } from '../store/reducers/contact.reducer';
 import { UiService } from '../services/ui.service';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-card-layout',
@@ -25,7 +26,8 @@ export class CardLayoutComponent implements OnInit {
   
   isNotFavorited = false;
   theme: string = '';
-  isDark= false;
+  isDark = false;
+  contacts: Contact[]=[];
   @Input() contacts$!: Observable<ReadonlyArray<Contact>>;
   constructor(private store: Store<ContactState>, private uiService: UiService) { }
   
@@ -38,6 +40,7 @@ export class CardLayoutComponent implements OnInit {
       this.store.dispatch(deleteContacts(id));
     };   
   }
+
   
   onClickFavorite(contact: Contact) {
     this.isNotFavorited = contact.isFavorited;

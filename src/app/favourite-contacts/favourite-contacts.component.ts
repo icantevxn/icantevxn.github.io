@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { Store } from '@ngrx/store';
+import { select, Store } from '@ngrx/store';
 import { Contact } from '../Contact';
 import { getContacts } from '../store/actions/contact.actions';
 import { ContactState } from '../store/reducers/contact.reducer';
@@ -12,7 +12,7 @@ import { favContactsSelector } from '../store/selector/contact.selector';
 })
 export class FavouriteContactsComponent implements OnInit {
 
-  contacts$ = this.store.select(favContactsSelector);
+  contacts$ = this.store.pipe(select(favContactsSelector));
   contacts: Contact[] = [];
 
   constructor(private store: Store<ContactState>) { }

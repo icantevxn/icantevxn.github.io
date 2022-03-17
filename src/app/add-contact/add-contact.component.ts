@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { Store } from '@ngrx/store';
-import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
+import { select, Store } from '@ngrx/store';
+import { Observable, Subscription } from 'rxjs';
 import { Contact } from '../Contact';
 import { ContactService } from '../services/contact.service';
-import { addContact } from '../store/actions/contact.actions';
+import { LoadingService } from '../services/loading.service';
+import { addContact, getContact } from '../store/actions/contact.actions';
 import { ContactState } from '../store/reducers/contact.reducer';
+import { singleContactSelector } from '../store/selector/contact.selector';
 
 @Component({
   selector: 'app-add-contact',
@@ -19,16 +22,18 @@ export class AddContactComponent implements OnInit {
     email: '',
     isFavorited: false,
   };
-  constructor(private store: Store<ContactState>) { }
+  contact$ = this.store.pipe(select(singleContactSelector(this.contact.id!)));
+  constructor(private store: Store<ContactState>, private loadingService: LoadingService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
   submitAdded(contact: Contact) {
+    this.contact = contact;
     contact.isFavorited = false;
     this.store.dispatch(addContact(contact));
-    alert("Contact edited successfully!");
 
+    alert("Contact added successfully!");
   }
 
 }

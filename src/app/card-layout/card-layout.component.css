@@ -19,7 +19,6 @@
   -webkit-box-shadow: 0px 0px 10px 0px rgba(var(--box-shadow), 0.1);
   -moz-box-shadow: 0px 0px 10px 0px rgba(var(--box-shadow), 0.1);
   -ms-box-shadow: 0px 0px 10px 0px rgba(var(--box-shadow), 0.1);
-  position: relative;
   display: flex;
   flex-direction: column;
   min-width: 200px;
@@ -115,7 +114,7 @@
   margin-right: .5rem;
 }
 
-.btn--add{
+.btn__add{
   margin-left: 1.5rem;
   margin-right: 1rem;
   border-style: dashed;
@@ -123,7 +122,7 @@
   border-color: var(--text-color);
 }
 
-.btn--add:hover{
+.btn__add:hover{
   border-color: var(--primary-color);
   background-color: var(--primary-color);
 }
@@ -132,12 +131,13 @@
   background: none;
   border: none;
   margin: none;
+  padding: none;
 }
 
 .btn-outline-danger{
   background: none;
   border: none;
-  margin: none;
+  margin: .5rem;
   padding: none;
 }
 
@@ -148,5 +148,8 @@
 }
 
 .btn__dropdown{
-  color: var(--text-color);
+  color: var(--text-color-muted);
+}
+.btn__dropdown:hover{
+  color: var(--toggle-color);
 }

@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 import { ContactState } from '../store/reducers/contact.reducer';
 import { select, Store } from '@ngrx/store';
-import { contactsSelector, singleContactSelector } from '../store/selector/contact.selector';
+import { singleContactSelector } from '../store/selector/contact.selector';
+import { faEdit, faTrashAlt, faEye, faHeart } from '@fortawesome/free-regular-svg-icons';
+import { faPhoneAlt, faAngleRight, faEllipsisV, faHeart as faFullHeart} from '@fortawesome/free-solid-svg-icons';
+import { deleteContacts, getContact, updateContacts } from '../store/actions/contact.actions';
 import { Contact } from '../Contact';
-import { faEdit, faTrashAlt, faEye } from '@fortawesome/free-regular-svg-icons';
-import { faPhoneAlt, faAngleRight, faEllipsisV } from '@fortawesome/free-solid-svg-icons';
-import { deleteContacts, getContact } from '../store/actions/contact.actions';
 
 @Component({
   selector: 'app-view-card-details',
@@ -14,7 +14,8 @@ import { deleteContacts, getContact } from '../store/actions/contact.actions';
   styleUrls: ['./view-card-details.component.css']
 })
 export class ViewCardDetailsComponent implements OnInit {
-  
+  faIsFav = faFullHeart;
+  faNotFav = faHeart;
   faTrash = faTrashAlt;
   faEdit = faEdit;
   faPlus = faEye;
@@ -25,9 +26,10 @@ export class ViewCardDetailsComponent implements OnInit {
   isDeleted: boolean = false;
   
   id: number  = Number(this.route.snapshot.paramMap.get('id'));
-  contact$ = this.store.select(singleContactSelector(this.id));
+  contact$ = this.store.pipe(select(singleContactSelector(this.id)));
+  isNotFavorited: any;
   
-  constructor(private store: Store<ContactState>, private route: ActivatedRoute) { }
+  constructor(private store: Store<ContactState>, private route: ActivatedRoute, private router: Router) { }
   
   ngOnInit(): void {
     this.getContact();
@@ -38,13 +40,22 @@ export class ViewCardDetailsComponent implements OnInit {
   }
   
   deleteContact() {
-    if (confirm("Are you sure you want to delete this contact?")) {
+    if (confirm("Are you sure you want to delete this contact?")== true) {
       this.store.dispatch(deleteContacts(this.id));
       setTimeout(() => {
-        
         alert("Contact deleted!")
       }, 1000);
+      this.router.navigateByUrl('/home');
     }
+    
+  }
+
+   onClickFavorite(contact: Contact) {
+    this.isNotFavorited = contact.isFavorited;
+    this.isNotFavorited = !this.isNotFavorited;
+    const newContact = { ...contact };
+    newContact.isFavorited = this.isNotFavorited;
+    this.store.dispatch(updateContacts(newContact));
   }
   
 }

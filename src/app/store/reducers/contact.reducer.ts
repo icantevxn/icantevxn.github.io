@@ -1,9 +1,11 @@
+import { RouterReducerState } from "@ngrx/router-store";
 import { createReducer, on } from "@ngrx/store";
 import { Contact } from "../../Contact";
 import { addContactSuccess, deleteContactsSuccess, updateContactsSuccess, getContactsSuccess, getContactSuccess, } from '../actions/contact.actions';
 
 export interface ContactState{
     contacts: ReadonlyArray<Contact>;
+    router: RouterReducerState<any>; 
 }
 
 

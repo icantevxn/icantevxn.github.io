@@ -17,6 +17,8 @@
                                                 </div>
                                         </div>
                                         
+                                        
+                                        
                                         <table class="table table-borderless table-hover mt-3">
                                                 <tbody>
                                                         <tr tabindex="0">
@@ -38,8 +40,12 @@
                                                 </tbody>
                                         </table>
                                         <div class="actions">
-                                                <button routerLink="/home" class="action-btn" (click)="deleteContact()">
-                                                        <fa-icon class="fa-lg"[ngStyle]="{color: 'red'}" [icon]="faTrash" aria-label="delete-contact"></fa-icon>
+                                                <button class="btn btn-outline-danger" (click)="onClickFavorite(contact)">
+                                                        <fa-icon class="fa-lg" *ngIf="contact.isFavorited == false" [icon]="faNotFav" aria-label="favorite-contact"></fa-icon>
+                                                        <fa-icon class="fa-lg"*ngIf="contact.isFavorited == true" [icon]="faIsFav" aria-label="favorite-contact"></fa-icon>
+                                                </button>
+                                                <button class="action__btn" (click)="deleteContact()">
+                                                        <fa-icon class="fa-lg" [ngStyle]="{color: '#DC3546'}" [icon]="faTrash" aria-label="delete-contact"></fa-icon>
                                                 </button>
                                         </div>
                                 </div>

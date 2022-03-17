@@ -1,5 +1,10 @@
 body{
   background: var(--background-color);
+  
+}
+
+h1{
+  word-break: break-all;
 }
 
 .card-margin {
@@ -37,6 +42,8 @@ body{
 .content__title-wrapper {
   display: flex;
   align-items: center;
+  word-break: break-all;
+  
 }
 
 .content__circle {
@@ -75,21 +82,36 @@ body{
 
 .contact__information{
   color: var(--text-color-muted);
+  word-break: break-all;
+  
 }
 
 .actions{
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: space-between;
+  align-items: center ;
   margin-top: .5rem;
   text-align: right;
   margin-right: .5rem;
 }
 
-.actions .action-btn{
+.action__btn{
   background: none;
   border: none;
   margin: none;
+}
+
+.btn-outline-danger{
+  background: none;
+  border: none;
+  margin: none;
+  padding: none;
+}
+
+.btn-outline-danger:hover{
+  background: none;
+  border: none;
+  color: var(--text-color);
 }
 
 .edit-back-buttons{

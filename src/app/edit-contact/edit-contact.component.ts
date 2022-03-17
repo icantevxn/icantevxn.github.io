@@ -1,7 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Contact } from '../Contact';
 import { ActivatedRoute } from '@angular/router';
-import { Store } from '@ngrx/store';
+import { select, Store } from '@ngrx/store';
 import { getContact, updateContacts } from '../store/actions/contact.actions';
 import { ContactState } from '../store/reducers/contact.reducer';
 import { singleContactSelector } from '../store/selector/contact.selector';
@@ -24,7 +24,7 @@ export class EditContactComponent implements OnInit {
     email: '',
     isFavorited: false,
   };
-  contact$ = this.store.select(singleContactSelector(this.id));
+  contact$ = this.store.pipe(select(singleContactSelector(this.id)));
   subscription!: Subscription;
   
   constructor(

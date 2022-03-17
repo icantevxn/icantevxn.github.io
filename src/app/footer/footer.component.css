@@ -1,4 +1,5 @@
 footer{
+    align-items: center;
     margin-left: none;
     margin: .5rem;
     background-color: var(--body-color);
@@ -7,6 +8,7 @@ footer{
     padding-left: 1.5rem;
     padding-right: 1.5rem;
 }
+
 
 a{
     color: var(--text-color-muted);
@@ -22,6 +24,14 @@ small{
 .row{
     margin-bottom: 2rem;
 }
+
+.col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
 
 img{
     width: 6.5rem;
