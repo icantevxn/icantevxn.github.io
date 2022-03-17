@@ -8,38 +8,26 @@ import { catchError } from "rxjs/operators";
 export class ErrorInterceptor implements HttpInterceptor{
     constructor(private router: Router){}
     
-    intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-        return next.handle(req).pipe(
+    intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
+        return next.handle(request).pipe(
             catchError(error => {
                 if (error) {
-                    switch (error.status) {
-                        case (error.status == 404):
-                            this.router.navigateByUrl('/pagenotfound');
-                            break;
-                            
-                        case (error.status == 400): {
-                            this.router.navigateByUrl('/pagenotfound');
-                            break;
-                        }
-                        case (error.status == 401): {
-                            this.router.navigateByUrl('/pagenotfound');
-                            break;
-                        }
-                        case (error.status == 502): {
-                            this.router.navigateByUrl('/pagenotfound');
-                            break;
-                        }
-                        case (error.status == 500): {
-                            this.router.navigateByUrl('/pagenotfound');
-                            break;
-                        }
-                          
-                            default:  return throwError(error);
+                    if (error.status === 400) {
+                        this.router.navigateByUrl('/page-not-found');
+                    }
+                    if (error.status === 401) {
+                        this.router.navigateByUrl('/page-not-found');
+                    }
+                    if (error.status === 404) {
+                        this.router.navigateByUrl('/page-not-found');
+                    }
+                    if (error.status == 500) {
+                        this.router.navigateByUrl('/page-not-found');
                     }
                 }
-                return EMPTY;
+                return throwError(error);
             })
-        );
+            );
         }
-        
     }
+    

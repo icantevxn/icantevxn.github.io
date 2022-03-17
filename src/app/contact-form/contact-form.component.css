@@ -19,8 +19,16 @@
 
 }
 
-label{
-    font-size: .825rem;
+.phone-number__layout input{
+    max-width: 480px;
+}
+
+.alert{
+ max-width: 480px;
+}
+
+.email__layout input{
+    max-width: 480px;
 }
 
 .button-group .btn{

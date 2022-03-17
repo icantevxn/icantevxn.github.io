@@ -2,11 +2,10 @@ import { Injectable } from "@angular/core";
 import { createEffect, Actions, ofType } from "@ngrx/effects";
 import { ContactService } from "src/app/services/contact.service";
 import * as ContactActions from "../actions/contact.actions";
-import { concatMap, exhaustMap, map, mergeMap, skipWhile, switchMap } from "rxjs/operators";
+import { concatMap, exhaustMap, map, mergeMap } from "rxjs/operators";
 
 @Injectable()
 export class ContactEffects{
-
     //TODO: Catch error
     loadContacts$ = createEffect(() => this.action$.pipe(
         ofType(ContactActions.getContacts),

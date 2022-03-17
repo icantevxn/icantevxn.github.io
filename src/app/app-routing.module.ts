@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'add', component: AddContactComponent },
   { path: 'edit/:id', component: EditContactComponent },
   { path: 'favorites', component: FavouriteContactsComponent },
-  { path: 'pagenotfound', component: PageNotFoundComponent },
+  { path: 'page-not-found', component: PageNotFoundComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
 

@@ -1,43 +1,46 @@
 
-    <form class="form__layout" id="contact-form" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
-        <div class="row">
+<form class="form__layout" id="contact-form" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+    <div class="row">
         <div class="col mb-3">
             <label for="firstName">First Name*
             </label>
             <input required name="firstName" #firstName="ngModel" id="firstName" aria-label="first-name-input" type="text" class="form-control" [(ngModel)]="contact.firstName">
             <div tabindex="0" class="alert alert-danger" *ngIf="!firstName.valid && firstName.touched">
-                <fa-icon [icon]="faWarning" aria-label="warning-input-error"></fa-icon>  First name is required.
+                <small><fa-icon [icon]="faWarning" aria-label="warning-input-error"></fa-icon>  First name is required.</small>
             </div>
         </div>
         <div class="col mb-3">
             <label for="firstName" >Last Name*</label>
             <input required [(ngModel)]="contact.lastName" name="lastName" #lastName="ngModel" aria-label="last-name-input" type="text" class="form-control">
             <div tabindex="0" class="alert alert-danger" *ngIf="!lastName.valid && lastName.touched">
-                <fa-icon [icon]="faWarning" aria-label="warning-input-error"></fa-icon> Last name is required.
+                <small><fa-icon [icon]="faWarning" aria-label="warning-input-error"></fa-icon> Last name is required.</small>
             </div>
         </div>
     </div>
-    <div class="form-group mb-3">
+    <div class="form-group mb-3 phone-number__layout">
         <label for="phoneNumber">Phone Number*</label>
         <input required [(ngModel)]="contact.phoneNumber" name="phoneNumber" #phoneNumber="ngModel" aria-label="phone-number-input" type="tel" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" class="form-control">
         <div tabindex="0" class="alert alert-danger" *ngIf="phoneNumber.touched && !phoneNumber.valid">
-            <div *ngIf="phoneNumber.errors?.required"><fa-icon [icon]="faWarning" aria-label="warning-input-error"></fa-icon> Phone Number is required.</div> 
-            <div *ngIf="phoneNumber.errors?.pattern"><fa-icon [icon]="faWarning" aria-label="warning-input-error"></fa-icon> Not a valid 10-digit US phone number (must not include spaces or special characters).</div>
+            <div *ngIf="phoneNumber.errors?.required"><small><fa-icon [icon]="faWarning" aria-label="warning-input-error"></fa-icon> Phone Number is required.</small></div> 
+            <div *ngIf="phoneNumber.errors?.pattern"><small>
+                <fa-icon [icon]="faWarning" aria-label="warning-input-error"></fa-icon> Not a valid 10-digit US phone number (must not include spaces or special characters).
+            </small>
         </div>
     </div>
+</div>
 
-    <div class="form-group mb-3">
-        <label for="email">Email* 
-        </label>
-        <input required [(ngModel)]="contact.email" name="email" #email="ngModel" aria-label="email-input" type="email" class="form-control" pattern="^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$">
-        <div tabindex="0" class="alert alert-danger" *ngIf="!email.valid && email.touched">
-               <div *ngIf="email.errors?.required"><fa-icon [icon]="faWarning" aria-label="warning-input-error"></fa-icon> Email is required. </div>
-                <div *ngIf="email.errors?.pattern"><fa-icon [icon]="faWarning" aria-label="warning-input-error"></fa-icon> Please input a valid email. </div>
-            </div>
-        </div>
-    <div class="button-group">
-        <button *ngIf="isEdit" class="btn btn-primary" type="submit" [disabled]="!contactForm.form.dirty || !contactForm.form.valid">Edit</button>
-        <button *ngIf="isAdd"class="btn btn-primary" type="submit" [disabled]="!contactForm.form.valid">Add</button>
-        <button routerLink="/home" class="btn btn-outline-primary" type="button">Cancel</button>
+<div class="form-group mb-3 email__layout">
+    <label for="email">Email* 
+    </label>
+    <input required [(ngModel)]="contact.email" name="email" #email="ngModel" aria-label="email-input" type="email" class="form-control" pattern="^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$">
+    <div tabindex="0" class="alert alert-danger" *ngIf="!email.valid && email.touched">
+        <div *ngIf="email.errors?.required"><small><fa-icon [icon]="faWarning" aria-label="warning-input-error"></fa-icon> Email is required.</small> </div>
+        <div *ngIf="email.errors?.pattern"><small><fa-icon [icon]="faWarning" aria-label="warning-input-error"></fa-icon> Please input a valid email. </small></div>
     </div>
+</div>
+<div class="button-group">
+    <button *ngIf="isEdit" class="btn btn-primary" type="submit" [disabled]="!contactForm.form.dirty || !contactForm.form.valid">Save</button>
+    <button *ngIf="isAdd"class="btn btn-primary" type="submit" [disabled]="!contactForm.form.valid">Add</button>
+    <button routerLink="/home" class="btn btn-outline-primary" type="button">Cancel</button>
+</div>
 </form>

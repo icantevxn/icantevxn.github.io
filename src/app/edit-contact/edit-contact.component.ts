@@ -38,14 +38,12 @@ export class EditContactComponent implements OnInit {
     }
     
     getContact() {
-    this.store.dispatch(getContact(this.id));
-     this.subscription = this.contact$
-        .subscribe((data) => {
-          if (data) {
-            this.loadingService.idle();
-            return this.contact = JSON.parse(JSON.stringify(data));
-          }
-          this.loadingService.loading();
+      this.store.dispatch(getContact(this.id));
+      this.subscription = this.contact$
+      .subscribe((data) => {
+        if (data) {
+          return this.contact = JSON.parse(JSON.stringify(data));
+        }
       }
       );
     }

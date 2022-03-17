@@ -19,6 +19,7 @@
   -webkit-box-shadow: 0px 0px 10px 0px rgba(var(--box-shadow), 0.1);
   -moz-box-shadow: 0px 0px 10px 0px rgba(var(--box-shadow), 0.1);
   -ms-box-shadow: 0px 0px 10px 0px rgba(var(--box-shadow), 0.1);
+  position: relative;
   display: flex;
   flex-direction: column;
   min-width: 200px;
@@ -72,11 +73,13 @@
   font-size: 1rem;
   font-weight: 400;
   color: var(--text-color-muted);
+  word-break: break-all;
 }
 
 .content__last-name {
   font-size: 1rem;
   color: var(--text-color);
+  word-break: break-all;
 }
 
 .dropdown ul {

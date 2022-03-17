@@ -1,5 +1,14 @@
 {
   "contacts": [
+    
+    {
+      "firstName": "Evangeline Yuik Wern LOOOOOOOONNNNNG name",
+      "lastName": "LOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOONG name",
+      "phoneNumber": "6086224272",
+      "email": "evangeline.lim@allata.com",
+      "isFavorited": false,
+      "id": 1
+    },
     {
       "firstName": "tegt",
       "lastName": "World",
