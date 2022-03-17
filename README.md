@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Run `npm i` at the project root.
 
 ## Development server
-Run `npm i json-server --save`.
+Run `npm i -g json-server --save`.
 
 Run `json-server --watch db.json --port 5000` at your project root to run the mock json-server.
 
