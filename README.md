@@ -62,7 +62,7 @@ The application will manipulate a contact list. Requirements for the application
 <li>Create a separate page for editing</li>
 <li>View a contact
 <ul>
-<li>Expand a contact to view all information<li>
+<li>Expand a contact to view all information</li>
 </ul>
 </li>
 <li>Delete an existing use </li>
