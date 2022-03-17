@@ -11,7 +11,7 @@
 }
 
 .nav-layout .nav-pills .nav-link{
-    color: var(--primary-color);
+    color: var(--sidebar-color);
 }
 
 .nav-layout .nav-pills .nav-link:hover .fa-lg{

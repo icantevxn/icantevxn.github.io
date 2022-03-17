@@ -8,6 +8,17 @@ footer{
     padding-right: 1.5rem;
 }
 
+a{
+    color: var(--text-color-muted);
+}
+small{
+    
+    color: var(--text-color-muted);
+}
+.header{
+    display: none;
+}
+
 .row{
     margin-bottom: 2rem;
 }
@@ -19,5 +30,5 @@ img{
 }
 
 .icon{
-    color: grey;
+    color: var(--text-color-muted);
 }

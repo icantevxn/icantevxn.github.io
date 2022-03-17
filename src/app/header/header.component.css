@@ -9,8 +9,8 @@
     min-width: 600px;
 }
 
-.form-check{
-    display: block;
+.toggle_layout{
+    position: absolute;
 }
 
 .input+:checked{
@@ -19,4 +19,8 @@
 
 img{
     width: 6.5rem;
+}
+
+.donotdisplay{
+    display: none;
 }

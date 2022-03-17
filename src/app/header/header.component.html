@@ -1,15 +1,23 @@
 <nav class="header__nav navbar">
   <div class="logo">
-    <a routerLink="/home">
-      <img src="assets/visa_logo_blue.png" alt="logo" aria-label="logo">
-      <!-- <img *ngIf="newTheme==('dark')" src="assets/visa_logo_white.png" alt="logo" aria-label="logo"> -->
+    <a routerLink="/home" role="link">
+      <img *ngIf="newTheme===('light')" src="assets/visa_logo_blue.png" alt="visa-logo" aria-label="visa-logo">
+      <img *ngIf="newTheme===('dark')" src="assets/visa_logo_white.png" alt="visa-logo" aria-label="visa-logo">
     </a>
   </div>
   
+  <div class="toggle__layout">
+    <!-- <div class="sun__icon">
+      <label for="input">
+        <fa-icon [icon]="faSun"></fa-icon>
+      </label>
+    </div> -->
   <div class="form-check form-switch">
-    <input class="form-check-input" (click)="onToggleTheme()" type="checkbox" id="darkSwitch">
+
+    <input aria-label="toggle-dark-mode" role="button" class="form-check-input" (click)="onToggleTheme()" type="checkbox" id="darkSwitch">
     <label for="input">
       <fa-icon [icon]="faMoon"></fa-icon>
     </label>
+  </div>
   </div>
 </nav>

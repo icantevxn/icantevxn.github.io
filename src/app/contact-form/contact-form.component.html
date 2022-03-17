@@ -1,27 +1,26 @@
 
-    <form class="form__layout" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm.value)">
+    <form class="form__layout" id="contact-form" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
         <div class="row">
         <div class="col mb-3">
             <label for="firstName">First Name*
             </label>
-            <input required [(ngModel)]="contact.firstName" name="firstName" #firstName="ngModel" id="firstName" type="text" class="form-control">
-            <div class="alert alert-danger" *ngIf="!firstName.valid && firstName.touched">
+            <input required name="firstName" #firstName="ngModel" id="firstName" aria-label="first-name-input" type="text" class="form-control" [(ngModel)]="contact.firstName">
+            <div tabindex="0" class="alert alert-danger" *ngIf="!firstName.valid && firstName.touched">
                 <fa-icon [icon]="faWarning" aria-label="warning-input-error"></fa-icon>  First name is required.
             </div>
         </div>
         <div class="col mb-3">
             <label for="firstName" >Last Name*</label>
-            <input aria-label="last name" required [(ngModel)]="contact.lastName" name="lastName" #lastName="ngModel" id="" type="text" class="form-control">
-            <div class="alert alert-danger" *ngIf="!lastName.valid && lastName.touched">
+            <input required [(ngModel)]="contact.lastName" name="lastName" #lastName="ngModel" aria-label="last-name-input" type="text" class="form-control">
+            <div tabindex="0" class="alert alert-danger" *ngIf="!lastName.valid && lastName.touched">
                 <fa-icon [icon]="faWarning" aria-label="warning-input-error"></fa-icon> Last name is required.
             </div>
         </div>
     </div>
     <div class="form-group mb-3">
         <label for="phoneNumber">Phone Number*</label>
-        <input required [(ngModel)]="contact.phoneNumber" name="phoneNumber" #phoneNumber="ngModel" id="phoneNumber" type="tel" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" class="form-control" placeholder="Example: 1234567890">
-
-        <div class="alert alert-danger" *ngIf="phoneNumber.touched && !phoneNumber.valid">
+        <input required [(ngModel)]="contact.phoneNumber" name="phoneNumber" #phoneNumber="ngModel" aria-label="phone-number-input" type="tel" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" class="form-control" placeholder="Example: 1234567890">
+        <div tabindex="0" class="alert alert-danger" *ngIf="phoneNumber.touched && !phoneNumber.valid">
             <div *ngIf="phoneNumber.errors?.required"><fa-icon [icon]="faWarning" aria-label="warning-input-error"></fa-icon> Phone Number is required.</div> 
             <div *ngIf="phoneNumber.errors?.pattern"><fa-icon [icon]="faWarning" aria-label="warning-input-error"></fa-icon> Not a valid 10-digit US phone number (must not include spaces or special characters).</div>
         </div>
@@ -30,8 +29,8 @@
     <div class="form-group mb-3">
         <label for="email">Email* 
         </label>
-        <input required [(ngModel)]="contact.email" name="email" #email="ngModel" id="email" type="email" class="form-control" pattern="^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$">
-        <div class="alert alert-danger" *ngIf="!email.valid && email.touched">
+        <input required [(ngModel)]="contact.email" name="email" #email="ngModel" aria-label="email-input" type="email" class="form-control" pattern="^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$">
+        <div tabindex="0" class="alert alert-danger" *ngIf="!email.valid && email.touched">
                <div *ngIf="email.errors?.required"><fa-icon [icon]="faWarning" aria-label="warning-input-error"></fa-icon> Email is required. </div>
                 <div *ngIf="email.errors?.pattern"><fa-icon [icon]="faWarning" aria-label="warning-input-error"></fa-icon> Please input a valid email. </div>
             </div>

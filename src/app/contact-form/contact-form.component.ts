@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Contact } from '../Contact';
 import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 import { Observable } from 'rxjs';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-form',
@@ -26,7 +26,9 @@ export class ContactFormComponent implements OnInit {
   }
 
 
-  onSubmit(contact: Contact) {
+  onSubmit(contactForm: NgForm) {
+    const contact = contactForm.value;
+    contactForm.resetForm();
     this.onSubmitEdited.emit(contact);
     this.onSubmitAdded.emit(contact);
   }

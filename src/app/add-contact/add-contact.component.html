@@ -1,9 +1,7 @@
-<div class="modal-dialog" role="form">
-    <div class="modal-content rounded-5">
-        <div class="modal-header border-bottom-0">
-            <h1>Add New Contact</h1>
-        </div>
-    <div class="modal-body p-5 pt-0">
-        <app-contact-form [isAdd]= "true" [contact]="contact" (onSubmitAdded)="submitAdded($event)"></app-contact-form>
-    </div>
+<div class="container">
+  <img class="image--hidden" src="assets/contact.png" alt="contact-form-image">
+  <div class="d-flex align-items-center flex-column justify-content-center">
+    <h1 tabindex="0">Add New Contact</h1>
+    <app-contact-form [isAdd]= "true" [contact]="contact" (onSubmitAdded)="submitAdded($event)"></app-contact-form>
+  </div>
 </div>

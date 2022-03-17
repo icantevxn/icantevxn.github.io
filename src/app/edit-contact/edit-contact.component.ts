@@ -15,7 +15,6 @@ import { LoadingService } from '../services/loading.service';
   styleUrls: ['./edit-contact.component.css']
 })
 export class EditContactComponent implements OnInit {
-  @Output() onInitEditForm: EventEmitter<boolean> = new EventEmitter();
   id: number = Number(this.route.snapshot.paramMap.get('id'));
   contacts: Contact[] = [];
   contact: Contact = {
@@ -25,7 +24,6 @@ export class EditContactComponent implements OnInit {
     email: '',
     isFavorited: false,
   };
-  done = new Subject();
   contact$ = this.store.select(singleContactSelector(this.id));
   subscription!: Subscription;
   
@@ -37,7 +35,6 @@ export class EditContactComponent implements OnInit {
     
     ngOnInit(): void {
       this.getContact();
-      this.onInitEditForm.emit(true);
     }
     
     getContact() {

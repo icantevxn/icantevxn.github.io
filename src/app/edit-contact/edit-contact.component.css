@@ -1,18 +1,16 @@
 .container{
     display: flex;
-    justify-content: space-evenly;
-}
-
-img{
-    width: 30%;
-    height: 30%;
-}
-.modal-header{
     justify-content: center;
+    align-items: center;
 }
 
-.modal-content{
-background-color: var(--body-color);
-border: none;
-box-shadow: none;
+.image--hidden{
+    margin-left: 2rem;
+    width: 45%;
+    overflow: hidden;
+}
+@media screen and (max-width: 992px) {
+    .image--hidden{
+        display: none;
+    }
 }

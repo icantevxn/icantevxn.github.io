@@ -2,10 +2,10 @@
 
 <ng-container>
     <ngx-spinner type="square-jelly-box"><h3>Loading...</h3></ngx-spinner>
-    <app-header></app-header>
+    <app-header (onEmitTheme)="getNewTheme($event)"></app-header>
     <app-sidebar></app-sidebar>
     <div class="container pt-5">
         <router-outlet></router-outlet>
-        <app-footer></app-footer>
+        <app-footer [newTheme]="newTheme"></app-footer>
     </div>
 </ng-container>

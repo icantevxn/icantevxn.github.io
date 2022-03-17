@@ -1,45 +1,43 @@
-<div>
-         <button class="btn btn-add btn-outline-primary mt-3" routerLink="/add"><fa-icon [icon]="faPlus"></fa-icon> Add New Contact</button>
+<div class="card__component">
+        <button class="btn btn--add btn-outline-primary mt-3" routerLink="/add"><fa-icon [icon]="faPlus"></fa-icon> Add New Contact</button>
         <div class="row pt-3 animate__animated animate__fadeInUp animate__delay-1s" >
-                <ng-container *ngFor="let contact of contacts$ | async">
-                        <div class="col-lg-4">
+                <ng-container *ngFor="let contact of contacts$ | async; let i=index">
+                        <div tabindex="0" class="col-lg-4"  aria-label="contact-card">
                                 <div class="card card-margin">
                                         <div class="card-body">
-                                                <div class="content">
-                                                        <div class="content-header">
-                                                                <div class="content-title-wrapper">
-                                                                        <div class="content-circle">
-                                                                                <span class="content-initial">{{contact.firstName.charAt(0) | uppercase}}{{contact.lastName.charAt(0)| uppercase}}</span>
+                                                        <div class="content__header">
+                                                                <div class="content__title--wrapper">
+                                                                        <div class="content__circle">
+                                                                                <span class="content__initials">{{contact.firstName.charAt(0) | uppercase}}{{contact.lastName.charAt(0)| uppercase}}</span>
                                                                         </div>
-                                                                        <div class="content-full-name">
-                                                                                <span class="text-muted content-first-name">{{contact.firstName | uppercase}}</span>
-                                                                                <span class="content-last-name">{{contact.lastName| uppercase}}</span>
+                                                                        <div tabindex="0" aria-label="first-and-last-name" class="content__full-name">
+                                                                                <span tabindex="0" class="content__first-name">{{contact.firstName | uppercase}}</span>
+                                                                                <span tabindex="0" class="content__last-name">{{contact.lastName| uppercase}}</span>
                                                                         </div>
                                                                 </div>
                                                                 <div class="dropdown">
-                                                                        <a class="btn text-muted" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-label="toggle-menu" aria-expanded="false">
+                                                                        <button class="btn btn__dropdown" href=# id="dropdownMenuLink" data-bs-toggle="dropdown" aria-label="contact-menu-options" role="button" aria-expanded="false">
                                                                                 <fa-icon [icon]="faToggle"></fa-icon>
-                                                                        </a>
+                                                                        </button>
                                                                         <ul class ="dropdown-menu"  aria-labelledby="dropdownMenuLink">
-                                                                                <li><button class="dropdown-item action-btn" routerLink="/edit/{{contact.id}}"><fa-icon [icon]="faEdit" aria-label="edit-icon"></fa-icon> Edit Details</button></li>
-                                                                                <li><a routerLink="/details/{{contact.id}}" class="dropdown-item"><fa-icon [icon]="faViewMore" aria-label="view-icon"></fa-icon> View More</a></li>
+                                                                                <li><a class="dropdown-item action-btn" routerLink="/edit/{{contact.id}}" role="link"><fa-icon [icon]="faEdit" aria-label="edit-icon"></fa-icon> Edit Details</a></li>
+                                                                                <li><a routerLink="/details/{{contact.id}}" class="dropdown-item" role="link"><fa-icon [icon]="faViewMore" aria-label="view-icon"></fa-icon> View More</a></li>
                                                                         </ul>
                                                                 </div>
                                                         </div>
                                                         
-                                                        <div class="content-phoneNumber text-muted">
-                                                                <span><fa-icon [icon]="faPhone" class="phone-icon" aria-label="phone-number"></fa-icon>+1 ({{contact.phoneNumber.substring(0,3)}}) {{contact.phoneNumber.substring(3,6)}}-{{contact.phoneNumber.substring(6,10)}}</span>
+                                                        <div class="content__phoneNumber">
+                                                                <span tabindex="0"><fa-icon [icon]="faPhone" class="phone__icon" aria-label="phone-number"></fa-icon>+1 ({{contact.phoneNumber.substring(0,3)}}) {{contact.phoneNumber.substring(3,6)}}-{{contact.phoneNumber.substring(6,10)}}</span>
                                                         </div>
                                                         <div class="actions">
                                                                 <button class="btn btn-outline-danger" (click)="onClickFavorite(contact)">
                                                                         <fa-icon *ngIf="contact.isFavorited == false" [icon]="faHeart" aria-label="favorite-contact"></fa-icon>
                                                                         <fa-icon *ngIf="contact.isFavorited == true" [icon]="faFavorited" aria-label="favorite-contact"></fa-icon>
                                                                 </button>
-                                                                <button class="action-btn" (click)="deleteContact(contact.id!)">
+                                                                <button class="action__btn" (click)="deleteContact(contact.id!)">
                                                                         <fa-icon [ngStyle]="{color: '#DC3546'}" [icon]="faTrash" aria-label="delete-contact"></fa-icon>
                                                                 </button>
                                                         </div>
-                                                </div>
                                         </div>
                                 </div>
                         </div>

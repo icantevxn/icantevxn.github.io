@@ -1,33 +1,40 @@
 <footer class="pt-5 pb-3">
-        <div class="row">
-            <div class="col">
-                <h5>About</h5>
-                <ul class="list-unstyled text-small">
-                    <li><a class="link-secondary" href="#">Cool stuff</a></li>
-                    <li><a class="link-secondary" href="#">Random feature</a></li>
-                    <li><a class="link-secondary" href="#">Team feature</a></li>
-                </ul>
-            </div>
-            <div class="col">
-                <h5>Resources</h5>
-                <ul class="list-unstyled text-small">
-                    <li><a class="link-secondary" href="#">Business</a></li>
-                    <li><a class="link-secondary" href="#">Education</a></li>
-                    <li><a class="link-secondary" href="#">Government</a></li>
-                    <li><a class="link-secondary" href="#">Gaming</a></li>
-                </ul>
-            </div>
-            
-            <div class="col">
-                <img src="assets/visa_logo_blue.png" alt=" logo">
-                <small class="d-block mb-3 text-muted" aria-label="copyright">© Evangeline Lim 2022</small>
-            </div>
-        </div>
-        <div class="d-flex justify-content-around p-2">
-            <a href="https://www.facebook.com/VisaUnitedStates"><fa-icon class="fa-3x mr-4 icon" [icon]="faFacebook"></fa-icon></a>
-            <a href="https://twitter.com/Visa"><fa-icon class="fa-3x mr-4 icon" [icon]="faTwitter"></fa-icon></a>
-             <a href="https://www.linkedin.com/company/visa/"><fa-icon class="fa-3x mr-4 icon" [icon]="faLinkedIn"></fa-icon></a>
-             <a href="https://www.instagram.com/visa_us/"><fa-icon class="fa-3x mr-4 icon" [icon]="faInstagram"></fa-icon></a>
-        </div>
-</footer>
-
+    <div class="row">
+        <div class="col">
+            <h5>About Visa</h5>
+            <ul class="list-unstyled text-small">
+                <li><a role="link" class="link-secondary" href="https://usa.visa.com/content/VISA/usa/englishlanguagemaster/en_US/home/our-purpose/leading-by-example.html">
+                    Leading By Example</a></li>
+                    <li><a role="link" class="link-secondary" href="https://usa.visa.com/content/VISA/usa/englishlanguagemaster/en_US/home/about-visa.html">
+                        What We Do</a></li>
+                        <li><a role="link" class="link-secondary" href="https://usa.visa.com/content/VISA/usa/englishlanguagemaster/en_US/home/careers.html">
+                            Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h5>Our Values</h5>
+                        <ul class="list-unstyled text-small">
+                            <li><a role="link" class="link-secondary" href="https://usa.visa.com/content/VISA/usa/englishlanguagemaster/en_US/home/about-visa/esg.html">
+                                ESG + Responsibility</a></li>
+                                <li><a role="link" class="link-secondary" href="https://usa.visa.com/content/VISA/usa/englishlanguagemaster/en_US/home/about-visa/social-impact.html">
+                                    Social Impact</a></li>
+                                    <li><a role="link" class="link-secondary" href="https://usa.visa.com/content/VISA/usa/englishlanguagemaster/en_US/home/about-visa/diversity-inclusion.html">
+                                        Inclusion + Diversity</a></li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="col">
+                                    <img *ngIf="newTheme===('light')" src="assets/visa_logo_blue.png" alt="visa-logo" aria-label="visa-logo">
+                                    <img *ngIf="newTheme===('dark')" src="assets/visa_logo_white.png" alt="visa-logo" aria-label="visa-logo">
+                                    <small class="d-block mb-3" aria-label="copyright">© Evangeline Lim 2022</small>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-around p-2">
+                                <a role="link" aria-label="facebook-link" href="https://www.facebook.com/VisaUnitedStates"><fa-icon class="fa-3x mr-4 icon" [icon]="faFacebook"></fa-icon></a>
+                                <a role="link" aria-label="twitter-link"href="https://twitter.com/Visa"><fa-icon class="fa-3x mr-4 icon" [icon]="faTwitter"></fa-icon></a>
+                                <a role="link"aria-label="linkedin-link" href="https://www.linkedin.com/company/visa/"><fa-icon class="fa-3x mr-4 icon" [icon]="faLinkedIn"></fa-icon></a>
+                                <a role="link"aria-label="instagram-link" href="https://www.instagram.com/visa_us/"><fa-icon class="fa-3x mr-4 icon" [icon]="faInstagram"></fa-icon></a>
+                            </div>
+                        </footer>
+                        
+                        

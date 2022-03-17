@@ -1,23 +1,24 @@
 
-  <aside class="nav-layout"> 
+  <aside class="nav-layout" role="navigation"> 
     <ul class="nav nav-pills nav-flush flex-column text-center">
       <li class="nav-item">
-        <a routerLink="/home" routerLinkActive="active" class="nav-link py-4" aria-current="page" title="Home" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
+        <a routerLink="/home" routerLinkActive="active" class="nav-link py-4" aria-current="page" title="Home" aria-label="home-button" role="button" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
           <fa-icon class="fa-lg pt-2 pb-2" aria-label="Home" [icon]="faHome"></fa-icon>
         </a>
       </li>
       <li class="nav-item">
-        <a routerLink="/add" routerLinkActive="active" class="nav-link py-4" title="Add Contact" data-bs-toggle="tooltip" data-bs-placement="right">
+        <a routerLink="/add" routerLinkActive="active" class="nav-link py-4" title="Add Contact" aria-label="add-contact-button" role="button" data-bs-toggle="tooltip" data-bs-placement="right">
           <fa-icon class="fa-lg pt-2 pb-2" aria-label="add contact" [icon]="faAdd"></fa-icon>
         </a>
       </li>
       <li class="nav-item">
-        <a routerLink="/favorites" routerLinkActive="active" routerLinkActive="active" class="nav-link py-4" title="Favorites" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Favorites">
+        <a routerLink="/favorites" routerLinkActive="active" routerLinkActive="active" class="nav-link py-4" aria-label="view-favorite-contacts-button" role="button" title="Favorites" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Favorites">
           <fa-icon class="fa-lg pt-2 pb-2" aria-label="add contact" [icon]="faHeart"></fa-icon>  
         </a>
       </li>
       <li class="nav-item">
         <a href="https://usa.visa.com/support.html" target="_blank" rel="noopener noreferrer" 
+        aria-label="get-support-button" role="button" 
         routerLinkActive="active" class="nav-link py-4" title="Support" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Support">
           <fa-icon class="fa-lg pt-2 pb-2" aria-label="add contact" [icon]="faQuestion"></fa-icon>  
         </a>

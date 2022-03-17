@@ -37,8 +37,40 @@
       "lastName": "World",
       "phoneNumber": "6086224272",
       "email": "eee@bed.com",
-      "isFavorited": false,
+      "isFavorited": true,
       "id": 7
+    },
+    {
+      "firstName": "Evangeline Yuik Wern",
+      "lastName": "World",
+      "phoneNumber": "6086224272",
+      "email": "evangeline.lim@allata.com",
+      "isFavorited": false,
+      "id": 8
+    },
+    {
+      "firstName": "Promise",
+      "lastName": "The World",
+      "phoneNumber": "9990002222",
+      "email": "test@gmail.com",
+      "isFavorited": false,
+      "id": 9
+    },
+    {
+      "firstName": "Evangeline Yuik Wern",
+      "lastName": "World",
+      "phoneNumber": "6086224272",
+      "email": "evangeline.lim@allata.com",
+      "isFavorited": false,
+      "id": 10
+    },
+    {
+      "firstName": "Evangeline Yuik Wern",
+      "lastName": "test",
+      "phoneNumber": "6086224272",
+      "email": "elim28@wisc.edu",
+      "isFavorited": false,
+      "id": 11
     }
   ]
 }

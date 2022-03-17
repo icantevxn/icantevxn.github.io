@@ -1,49 +1,39 @@
 
-<div class="pt-5 ms-5 me-5" *ngIf="contact$ | async as contact">
-        
-        <div *ngIf="isDeleted" class="container">
-                <div class="inner cover">
-                        <h1 class="d-flex justify-content-center">Contact Deleted!</h1>
-                        <p class="lead d-flex justify-content-center">View all contacts?</p>
-                        <p class="lead d-flex justify-content-center">
-            <a routerLink="/home" class="btn btn-lg btn-outline-primary">Go Home</a>
-        </p>
-                </div>
-        </div>
+<div tabindex="0" class="pt-5 ms-5 me-5" *ngIf="contact$ | async as contact">
         <h1>{{contact.firstName}}'s Details</h1>
         <ng-container class="container">
                 <div class="card card-margin">
                         <div class="card-body">
                                 <div class="content">
-                                        <div class="content-header">
-                                                <div class="content-title-wrapper">
-                                                        <div class="content-circle">
-                                                                <span class="content-initial">{{contact.firstName.charAt(0) | uppercase }}{{contact.lastName.charAt(0) | uppercase}}</span>
+                                        <div class="content__header">
+                                                <div class="content__title-wrapper">
+                                                        <div class="content__circle">
+                                                                <span class="content__initials">{{contact.firstName.charAt(0) | uppercase }}{{contact.lastName.charAt(0) | uppercase}}</span>
                                                         </div>
-                                                        <div class="content-full-name">
-                                                                <span class="text-muted content-first-name">{{contact.firstName | uppercase}}</span>
-                                                                <span class="content-last-name">{{contact.lastName| uppercase}}</span>
+                                                        <div class="content__full-name">
+                                                                <span class="content__first-name">{{contact.firstName | uppercase}}</span>
+                                                                <span class="content__last-name">{{contact.lastName| uppercase}}</span>
                                                         </div>
                                                 </div>
                                         </div>
                                         
                                         <table class="table table-borderless table-hover mt-3">
                                                 <tbody>
-                                                        <tr>
+                                                        <tr tabindex="0">
                                                                 <td>First Name</td>
-                                                                <td class="text-muted">{{contact.firstName}}</td>
+                                                                <td class="contact__information">{{contact.firstName}}</td>
                                                         </tr>
-                                                        <tr>
+                                                        <tr tabindex="0">
                                                                 <td>Last Name</td>
-                                                                <td class="text-muted">{{contact.lastName}}</td>
+                                                                <td class="contact__information">{{contact.lastName}}</td>
                                                         </tr>
-                                                        <tr>
+                                                        <tr tabindex="0">
                                                                 <td>Phone Number</td>
-                                                                <td class="text-muted">+1 ({{contact.phoneNumber.substring(0,3)}}) {{contact.phoneNumber.substring(3,6)}}-{{contact.phoneNumber.substring(6,10)}}</td>
-                                                        </tr>
-                                                        <tr>
+                                                                <td class="contact__information">+1 ({{contact.phoneNumber.substring(0,3)}}) {{contact.phoneNumber.substring(3,6)}}-{{contact.phoneNumber.substring(6,10)}}</td>
+                                                        </tr >
+                                                        <tr tabindex="0">
                                                                 <td>Email</td>
-                                                                <td class="text-muted">{{contact.email}}</td>
+                                                                <td class="contact__information">{{contact.email}}</td>
                                                         </tr>
                                                 </tbody>
                                         </table>
@@ -58,7 +48,7 @@
         </ng-container>
         
         <div class="edit-back-buttons">
-                <button class="btn btn-primary" aria-label="go-back" routerLink="/edit/{{contact.id}}">Edit Contact</button>
+                <button class="btn btn-primary" aria-label="edit-contact-details" routerLink="/edit/{{contact.id}}">Edit Contact</button>
                 <button class="btn btn-outline-primary" aria-label="go-back" routerLink="/home">Go back</button>
                 
         </div>
