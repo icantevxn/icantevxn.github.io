@@ -26,7 +26,7 @@ export class ViewCardDetailsComponent implements OnInit {
   isDeleted: boolean = false;
   
   id: number  = Number(this.route.snapshot.paramMap.get('id'));
-  contact$ = this.store.pipe(select(singleContactSelector(this.id)));
+  contact$ = this.store.pipe(select(singleContactSelector));
   isNotFavorited: any;
   
   constructor(private store: Store<ContactState>, private route: ActivatedRoute, private router: Router) { }
@@ -36,8 +36,8 @@ export class ViewCardDetailsComponent implements OnInit {
   }
   
   getContact() {
-    this.store.dispatch(getContact(this.id));
-  }
+
+    }
   
   deleteContact() {
     if (confirm("Are you sure you want to delete this contact?")== true) {

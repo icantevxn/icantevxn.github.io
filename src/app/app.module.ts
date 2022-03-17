@@ -28,6 +28,8 @@ import { HeaderComponent } from './header/header.component';
 import { FavouriteContactsComponent } from './favourite-contacts/favourite-contacts.component';
 import { CardLayoutComponent } from './card-layout/card-layout.component';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
+import { appReducer } from './store/appState';
+import { RouterSerializer } from './store/routerSerializer';
 
 
 @NgModule({
@@ -44,7 +46,7 @@ import { StoreRouterConnectingModule } from '@ngrx/router-store';
     HeaderComponent,
     FavouriteContactsComponent,
     CardLayoutComponent,
-    SortByLastNamePipe
+    SortByLastNamePipe,
   ],
   imports: [
     BrowserModule,
@@ -54,10 +56,10 @@ import { StoreRouterConnectingModule } from '@ngrx/router-store';
     FontAwesomeModule,
     HttpClientModule,
     NgxSpinnerModule,
-    StoreModule.forRoot({contacts: contactReducer}),
+    StoreModule.forRoot(appReducer),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
-    EffectsModule.forRoot([ContactEffects, ]),
-    StoreRouterConnectingModule.forRoot()
+    EffectsModule.forRoot([ContactEffects]),
+    StoreRouterConnectingModule.forRoot({serializer: RouterSerializer})
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },

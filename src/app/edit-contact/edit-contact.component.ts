@@ -1,6 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Contact } from '../Contact';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { select, Store } from '@ngrx/store';
 import { getContact, updateContacts } from '../store/actions/contact.actions';
 import { ContactState } from '../store/reducers/contact.reducer';
@@ -15,8 +15,6 @@ import { LoadingService } from '../services/loading.service';
   styleUrls: ['./edit-contact.component.css']
 })
 export class EditContactComponent implements OnInit {
-  id: number = Number(this.route.snapshot.paramMap.get('id'));
-  contacts: Contact[] = [];
   contact: Contact = {
     firstName: '',
     lastName: '',
@@ -24,13 +22,11 @@ export class EditContactComponent implements OnInit {
     email: '',
     isFavorited: false,
   };
-  contact$ = this.store.pipe(select(singleContactSelector(this.id)));
+  contact$ = this.store.pipe(select(singleContactSelector));
   subscription!: Subscription;
   
   constructor(
-    private route: ActivatedRoute,
-    private store: Store<ContactState>,
-    private loadingService: LoadingService
+    private store: Store<ContactState>, private router: Router
     ) { }
     
     ngOnInit(): void {
@@ -38,7 +34,6 @@ export class EditContactComponent implements OnInit {
     }
     
     getContact() {
-      this.store.dispatch(getContact(this.id));
       this.subscription = this.contact$
       .subscribe((data) => {
         if (data) {
@@ -50,9 +45,9 @@ export class EditContactComponent implements OnInit {
     
     submitEdited(contact: Contact) {
       contact.isFavorited = this.contact.isFavorited;
-      contact.id = this.id;
+      contact.id = this.contact.id;
       this.store.dispatch(updateContacts(contact));
-      alert("Contact edited successfully!");
+      this.router.navigateByUrl('/details/' + contact.id);
     }
     
     ngOnDestroy(): void {

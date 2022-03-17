@@ -44,7 +44,7 @@
         <button routerLink="/details/{{contact.id}}" class="btn btn-outline-primary" type="button">Cancel</button>
     </div>
     <div *ngIf="isAdd">
-        <button class="btn btn-primary" type="submit" [disabled]="!contactForm.form.valid">Add</button>
+        <button routerLink="/home" class="btn btn-primary" type="submit" [disabled]="!contactForm.form.valid">Add</button>
         <button routerLink="/home" class="btn btn-outline-primary" type="button">Cancel</button>
     </div>
 </div>

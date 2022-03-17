@@ -5,9 +5,7 @@ import { addContactSuccess, deleteContactsSuccess, updateContactsSuccess, getCon
 
 export interface ContactState{
     contacts: ReadonlyArray<Contact>;
-    router: RouterReducerState<any>; 
 }
-
 
 
 const initialState: ReadonlyArray<Contact> = [];

@@ -1,6 +1,8 @@
 import { createSelector } from "@ngrx/store";
 import { Contact } from "src/app/Contact";
 import { ContactState } from "../reducers/contact.reducer";
+import { RouterStateUrl } from "../routerSerializer";
+import { getCurrentRoute } from "./router.selector";
 
 export const contactsSelector = createSelector(
     (state: ContactState) => state.contacts,
@@ -13,10 +15,12 @@ export const contactsSelector = createSelector(
             contacts.filter((c) => c.isFavorited == true)));
             
 
-    export const singleContactSelector = (id: number) => createSelector(
+    export const singleContactSelector = createSelector(
         contactsSelector,
-        (contacts => contacts.find((contact) => contact.id == id)!
-        ));
+        getCurrentRoute,
+        (contacts, route: RouterStateUrl) => contacts.find((contact) => contact.id == route.params['id'])
+        );
         
+
         
         

@@ -6,7 +6,6 @@ import { Contact } from "./Contact";
 })
 export class SortByLastNamePipe implements PipeTransform {
     transform(array: any, lastName: string): any[] {
-        console.log(lastName);
         var newArray = [...array];
         
         newArray.sort((a: any, b: any) => {
@@ -22,7 +21,6 @@ export class SortByLastNamePipe implements PipeTransform {
             }
         });
         
-        console.log(newArray);
         return newArray;
     }
     

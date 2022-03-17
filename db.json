@@ -105,14 +105,6 @@
       "id": 18
     },
     {
-      "firstName": "sd",
-      "lastName": "d",
-      "phoneNumber": "1235646546",
-      "email": "sfsdf@df.com",
-      "isFavorited": true,
-      "id": 19
-    },
-    {
       "firstName": "d",
       "lastName": "e",
       "phoneNumber": "1234567890",
@@ -122,11 +114,75 @@
     },
     {
       "firstName": "a reeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
-      "lastName": "aaaalllllllllllllllllllllllllllllllllyyyyyyyyyyyyyyyy long",
+      "lastName": "aaaalllllllllllllllllllllllllllllllyyyyyyyyyyyyyyyy long",
       "phoneNumber": "1234567890",
-      "email": "test@gmail.com",
+      "email": "test@gmail.co",
       "isFavorited": true,
       "id": 21
+    },
+    {
+      "firstName": "Evangeline Yuik Wern",
+      "lastName": "s",
+      "phoneNumber": "6086224272",
+      "email": "evangeline.lim@allata.com",
+      "isFavorited": false,
+      "id": 22
+    },
+    {
+      "firstName": "I",
+      "lastName": "did it",
+      "phoneNumber": "1234567899",
+      "email": "youdid@mmm.com",
+      "isFavorited": true,
+      "id": 23
+    },
+    {
+      "firstName": "almost",
+      "lastName": "there",
+      "phoneNumber": "6086224272",
+      "email": "evangeline.lim@allata.com",
+      "isFavorited": false,
+      "id": 24
+    },
+    {
+      "firstName": "d",
+      "lastName": "ds",
+      "phoneNumber": "6086224272",
+      "email": "evan1208lim@gmail.com",
+      "isFavorited": false,
+      "id": 25
+    },
+    {
+      "firstName": "Evangeline Yuik Wern",
+      "lastName": "Lim",
+      "phoneNumber": "6086224272",
+      "email": "evangeline.lim@allata.com",
+      "isFavorited": false,
+      "id": 26
+    },
+    {
+      "firstName": "Evangeline Yuik Wern",
+      "lastName": "World",
+      "phoneNumber": "6086224272",
+      "email": "evangeline.lim@allata.com",
+      "isFavorited": false,
+      "id": 27
+    },
+    {
+      "firstName": "Evangeline Yuik Wern",
+      "lastName": "aaaalllllllllllllllllllllllllllllllllyyyyyyyyyyyyyyyy long",
+      "phoneNumber": "6086224272",
+      "email": "evan1208lim@gmail.com",
+      "isFavorited": false,
+      "id": 28
+    },
+    {
+      "firstName": "Evangeline Yuik Wern",
+      "lastName": "Lim",
+      "phoneNumber": "6086224272",
+      "email": "evangeline.lim@allata.com",
+      "isFavorited": false,
+      "id": 29
     }
   ]
 }

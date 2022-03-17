@@ -22,18 +22,20 @@ export class AddContactComponent implements OnInit {
     email: '',
     isFavorited: false,
   };
-  contact$ = this.store.pipe(select(singleContactSelector(this.contact.id!)));
-  constructor(private store: Store<ContactState>, private loadingService: LoadingService, private router: Router) { }
+  
+  contact$ = this.store.pipe(select(singleContactSelector));
 
+  constructor(private store: Store<ContactState>) { }
+  
   ngOnInit(): void {
   }
-
+  
   submitAdded(contact: Contact) {
     this.contact = contact;
+    console.log(contact);
     contact.isFavorited = false;
-    this.store.dispatch(addContact(contact));
-
-    alert("Contact added successfully!");
+    this.store.dispatch(addContact(contact)); 
   }
 
+  
 }
