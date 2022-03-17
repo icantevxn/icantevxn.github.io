@@ -2,8 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.6.
 
-##Install npm packages
-RUn `npm i`
+## Install npm packages
+Run `npm i` at the project root.
 
 ## Development server
 Run `json-server --watch db.json --port 5000` at your root file.
