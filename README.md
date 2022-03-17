@@ -2,9 +2,15 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.6.
 
-## Development server
+## Install npm packages
+Run `npm i` at the project root.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Development server
+Run `npm i json-server --save`.
+
+Run `json-server --watch db.json --port 5000` at your project root to run the mock json-server.
+
+If you are in your project root, run `cd src` and then `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
