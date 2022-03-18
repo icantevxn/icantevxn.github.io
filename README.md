@@ -139,8 +139,9 @@ For running `-g` global installs, you may need to use the <b>`sudo` command for 
    ```sh
    git clone https://github.com/icantevxn/visa.git 
    ```
-2. Install NPM packages at project root
+2. Install NPM packages at your project root
    ```sh
+   cd visa
    npm install
    ```
 3. Run
