@@ -16,5 +16,11 @@
   .container {
     min-width: 88rem;
   }
+}
 
+@media screen and (max-width: 992px) {
+  .container{
+    max-width: 80%;
+  }
+  
 }

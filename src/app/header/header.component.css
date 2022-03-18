@@ -12,3 +12,22 @@
 img {
     width: 6.5rem;
 }
+
+.form-switch{
+    display: grid;
+}
+
+label{
+    padding-top: 2px;
+    grid-column: 2;
+}
+
+input {
+    height: 1.25rem;
+    grid-column: 1;
+}
+
+input:checked {
+    background-color: var(--primary-color);
+    border-color: var(--toggle-color) ;
+}
