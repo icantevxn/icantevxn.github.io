@@ -155,8 +155,7 @@ For running `-g` global installs, you may need to use the <b>`sudo` command for 
    npm run server
    ```
    at your project root to run the mock json-server.
-4. Navigate to `tsconfig.json` in your project files and ensure `strict` is set to `false`.
-5. If you are in your project root, run
+4. If you are in your project root, run
    ```sh
    cd src
    ```
@@ -165,7 +164,7 @@ For running `-g` global installs, you may need to use the <b>`sudo` command for 
    ng serve -o
    ```
    to serve app on a dev server. `-o` command is to open the app on your browser immediately once the app is done compiling.
-6. Navigate to `http://localhost:4200/` if page does not automatically open. The app will automatically reload if you change any of the source files.
+5. Navigate to `http://localhost:4200/` if page does not automatically open. The app will automatically reload if you change any of the source files.
 
 ### Further help
 
