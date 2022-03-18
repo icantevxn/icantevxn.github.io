@@ -121,15 +121,15 @@ For running `-g` global installs, you may need to use the <b>`sudo` command for 
 * [node v12.20.0](https://nodejs.dev/learn/how-to-install-nodejs)
   If you are using a package manager, you may run
   ```sh
-  nvm install 12.20.0 -g
+  nvm install 12.20.0
   ``` 
 * json-server
   ```sh
-  npm install json-server -g
+  npm install -g json-server
   ```
 * @angular/cli v13.2.6
   ```sh
-  npm install -g @angular/cli@13.2.6 -g
+  npm install -g @angular/cli@13.2.6
   ```
 
 ### Installation and Running The App
