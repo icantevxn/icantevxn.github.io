@@ -1,5 +1,37 @@
 {
   "contacts": [
+     {
+      "firstName": "ABC",
+      "lastName": "Z As a last name",
+      "phoneNumber": "1234567890",
+      "email": "test@gmail.com",
+      "isFavorited": false,
+      "id": 1
+    },
+     {
+      "firstName": "ZYW",
+      "lastName": "ABC",
+      "phoneNumber": "1234567890",
+      "email": "test@gmail.com",
+      "isFavorited": false,
+      "id": 2
+    },
+     {
+      "firstName": "www",
+      "lastName": "speci@l char@cters 0k!",
+      "phoneNumber": "1234567890",
+      "email": "test@gmail.com",
+      "isFavorited": false,
+      "id": 3
+    },
+     {
+      "firstName": "Hello",
+      "lastName": "World",
+      "phoneNumber": "1234567890",
+      "email": "test@gmail.com",
+      "isFavorited": false,
+      "id": 4
+    },
     {
       "firstName": "Hello",
       "lastName": "World",
@@ -9,11 +41,11 @@
       "id": 5
     },
     {
-      "firstName": "Evangeline Yuik",
+      "firstName": "Evangeline",
       "lastName": "Lim",
       "phoneNumber": "6086224272",
       "email": "blah@gmail.com",
-      "isFavorited": true,
+      "isFavorited": false,
       "id": 6
     },
     {
@@ -26,163 +58,27 @@
     },
     {
       "firstName": "Evangeline Yuik Wern",
-      "lastName": "World",
+      "lastName": "Reallylonglastname",
       "phoneNumber": "6086224272",
-      "email": "evangeline.lim@allata.com",
+      "email": "evangeline.lim@yopmail.com",
       "isFavorited": false,
       "id": 8
     },
     {
-      "firstName": "Promise",
-      "lastName": "The World",
+      "firstName": "lower",
+      "lastName": "case",
       "phoneNumber": "9990002222",
       "email": "test@gmail.com",
       "isFavorited": false,
       "id": 9
     },
     {
-      "firstName": "Evangeline Yuik Wern",
-      "lastName": "World",
+      "firstName": "WERN",
+      "lastName": "WORLD",
       "phoneNumber": "6086224272",
-      "email": "evangeline.lim@allata.com",
+      "email": "evan@test.com",
       "isFavorited": false,
       "id": 10
-    },
-    {
-      "firstName": "Evangeline Yuik Wern",
-      "lastName": "test",
-      "phoneNumber": "6086224272",
-      "email": "elim28@wisc.edu",
-      "isFavorited": false,
-      "id": 11
-    },
-    {
-      "firstName": "jerry",
-      "lastName": "park",
-      "phoneNumber": "1234567890",
-      "email": "abc@123.com",
-      "isFavorited": false,
-      "id": 13
-    },
-    {
-      "firstName": "test",
-      "lastName": "world",
-      "phoneNumber": "1234567890",
-      "email": "evangeline.lim@allata.com",
-      "isFavorited": false,
-      "id": 14
-    },
-    {
-      "firstName": "van",
-      "lastName": "yy",
-      "phoneNumber": "1231437445",
-      "email": "sdaadajs@ssd.com",
-      "isFavorited": false,
-      "id": 15
-    },
-    {
-      "firstName": "j",
-      "lastName": "p",
-      "phoneNumber": "1234444444",
-      "email": "hhh@hhh.com",
-      "isFavorited": false,
-      "id": 16
-    },
-    {
-      "firstName": "n",
-      "lastName": "f",
-      "phoneNumber": "1234567890",
-      "email": "abc@123.com",
-      "isFavorited": true,
-      "id": 17
-    },
-    {
-      "firstName": "a",
-      "lastName": "s",
-      "phoneNumber": "6086224272",
-      "email": "test@gmail.com",
-      "isFavorited": false,
-      "id": 18
-    },
-    {
-      "firstName": "d",
-      "lastName": "e",
-      "phoneNumber": "1234567890",
-      "email": "eee@bbb.co",
-      "isFavorited": false,
-      "id": 20
-    },
-    {
-      "firstName": "a reeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
-      "lastName": "aaaalllllllllllllllllllllllllllllllyyyyyyyyyyyyyyyy long",
-      "phoneNumber": "1234567890",
-      "email": "test@gmail.co",
-      "isFavorited": true,
-      "id": 21
-    },
-    {
-      "firstName": "Evangeline Yuik Wern",
-      "lastName": "s",
-      "phoneNumber": "6086224272",
-      "email": "evangeline.lim@allata.com",
-      "isFavorited": false,
-      "id": 22
-    },
-    {
-      "firstName": "I",
-      "lastName": "did it",
-      "phoneNumber": "1234567899",
-      "email": "youdid@mmm.com",
-      "isFavorited": true,
-      "id": 23
-    },
-    {
-      "firstName": "almost",
-      "lastName": "there",
-      "phoneNumber": "6086224272",
-      "email": "evangeline.lim@allata.com",
-      "isFavorited": false,
-      "id": 24
-    },
-    {
-      "firstName": "d",
-      "lastName": "ds",
-      "phoneNumber": "6086224272",
-      "email": "evan1208lim@gmail.com",
-      "isFavorited": false,
-      "id": 25
-    },
-    {
-      "firstName": "Evangeline Yuik Wern",
-      "lastName": "Lim",
-      "phoneNumber": "6086224272",
-      "email": "evangeline.lim@allata.com",
-      "isFavorited": false,
-      "id": 26
-    },
-    {
-      "firstName": "Evangeline Yuik Wern",
-      "lastName": "World",
-      "phoneNumber": "6086224272",
-      "email": "evangeline.lim@allata.com",
-      "isFavorited": false,
-      "id": 27
-    },
-    {
-      "firstName": "Evangeline Yuik Wern",
-      "lastName": "aaaalllllllllllllllllllllllllllllllllyyyyyyyyyyyyyyyy long",
-      "phoneNumber": "6086224272",
-      "email": "evan1208lim@gmail.com",
-      "isFavorited": false,
-      "id": 28
-    },
-    {
-      "firstName": "Evangeline Yuik Wern",
-      "lastName": "Lim",
-      "phoneNumber": "6086224272",
-      "email": "evangeline.lim@allata.com",
-      "isFavorited": false,
-      "id": 29
     }
   ]
 }
