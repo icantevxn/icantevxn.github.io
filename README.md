@@ -101,7 +101,7 @@ The state is managed with NgRx.
 * [JQuery v3.6.0](https://jquery.com)
 * [FontAwesome v4.7.0](https://fontawesome.com/) - Free solid, regular and brand icons were used.
 * [NgRx v13.0.2](https://ngrx.io/)
-* [Node.js](https://nodejs.dev/learn/how-to-install-nodejs)
+* [Node.js v12.20.0](https://nodejs.dev/learn/how-to-install-nodejs)
 * [json-server](https://www.npmjs.com/package/json-server) - To mock a fake REST API.
 * [Image Credits](http://www.freepik.com) - Designed by pch.vector / Freepik
   
@@ -124,9 +124,15 @@ For running `-g` global installs, you may need to use the <b>`sudo` command for 
   ```sh
   nvm install lts
   ``` 
+  The app was built with node v12.20.0 but should work with the latest node version. If you face any issues, it is recommended that you install v12.20.0:
+  ```sh
+  nvm install 12.20.0
+  nvm use 12.20.0
+  ``` 
+  You may have to run `nvm use` using `sudo` or Run Powershell As Administrator. 
 * json-server
   ```sh
-  npm install -g json-server
+  npm install json-server
   ```
 * @angular/cli v13.2.6
   ```sh
@@ -146,7 +152,7 @@ For running `-g` global installs, you may need to use the <b>`sudo` command for 
    ```
 3. Run
    ```sh
-   json-server --watch db.json --port 5000
+   npm run server
    ```
    at your project root to run the mock json-server.
 4. Navigate to `tsconfig.json` in your project files and ensure `strict` is set to `false`.
