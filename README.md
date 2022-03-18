@@ -88,6 +88,8 @@ The state is managed with NgRx.
 * [FontAwesome v4.7.0](https://fontawesome.com/) - Free solid, regular and brand icons were used.
 * [NgRx v13.0.2](https://ngrx.io/)
 * [json-server](https://www.npmjs.com/package/json-server) - To mock a fake REST API.
+* [Image Credits](http://www.freepik.com) - Designed by pch.vector / Freepik
+  
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
