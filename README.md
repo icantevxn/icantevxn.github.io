@@ -29,7 +29,7 @@
 ## About The Project
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.6.
 
-The application will manipulate a contact list. Requirements for the application are as follows: 
+The fully responsive application will manipulate a contact list. Requirements for the application are as follows: 
 <ol>
   <li> You may use a set of existing contacts for the list. Hard code a list to start with. The list may reside in memory and be manipulated by the add, edit, and delete functions.
   </li>
@@ -53,22 +53,36 @@ The application will manipulate a contact list. Requirements for the application
 
 <li>From the Contact Listing page, the user should be able to:</li>
 <ol>
- <li>Edit an existing contact</li>
+ <li>Edit an existing contact
+  <ul>
  <li>All fields are editable</li>
 <li>Create a separate page for editing</li>
+  </ul>
+  </li>
 <li>View a contact
 <ul>
 <li>Expand a contact to view all information</li>
 </ul>
 </li>
-<li>Delete an existing use </li>
-<li>A simple delete with a confirmation popup. Are you sure you want to delete “Contact”?</li>
+<li>Delete an existing use 
+<ul>
+  <li>A simple delete with a confirmation popup. Are you sure you want to delete “Contact”?</li>
+  </ul>
+  </li>
 <li>
 Create a new contact
 <ul><li>Create a separate page for creating</li>
 </ul></li>
 </ol>
 <li>After any contact actions have been performed, the list must update to reflect any changes</li>
+</ol>
+
+In addition to that, here are some additional features added:
+<ol>
+  <li> Favourite Contact feature </li>
+  <li> Dark Mode </li>
+  <li> App is fully accessible via tab and <a href="https://chrome.google.com/webstore/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en">Screen Reader</a> friendly </li>
+  <li> WCAG AAA compliant </li>
 </ol>
 
 
