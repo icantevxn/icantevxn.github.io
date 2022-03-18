@@ -1,13 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Contact } from '../Contact';
-import { deleteContacts, getContacts, updateContacts } from '../store/actions/contact.actions';
+import { deleteContacts, updateContacts } from '../store/actions/contact.actions';
 import { faEdit, faTrashAlt, faEye, faHeart } from '@fortawesome/free-regular-svg-icons';
 import { faPhoneAlt, faPlus, faEllipsisV, faHeart as faFavorited } from '@fortawesome/free-solid-svg-icons';
 import { ContactState } from '../store/reducers/contact.reducer';
-import { UiService } from '../services/ui.service';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-card-layout',
@@ -23,25 +21,25 @@ export class CardLayoutComponent implements OnInit {
   faToggle = faEllipsisV;
   faPhone = faPhoneAlt;
   faPlus = faPlus;
-  
+
   isNotFavorited = false;
   theme: string = '';
   isDark = false;
-  contacts: Contact[]=[];
+  contacts: Contact[] = [];
   @Input() contacts$!: Observable<ReadonlyArray<Contact>>;
-  constructor(private store: Store<ContactState>, private uiService: UiService) { }
-  
+  constructor(private store: Store<ContactState>) { }
+
   ngOnInit(): void {
   }
 
-  
+
   deleteContact(id: number) {
-    if (confirm("Are you sure you want to delete this contact?")) {
+    if (confirm("Are you sure you want to delete this contact?") === true) {
       this.store.dispatch(deleteContacts(id));
-    };   
+    };
   }
 
-  
+
   onClickFavorite(contact: Contact) {
     this.isNotFavorited = contact.isFavorited;
     this.isNotFavorited = !this.isNotFavorited;
@@ -49,5 +47,5 @@ export class CardLayoutComponent implements OnInit {
     newContact.isFavorited = this.isNotFavorited;
     this.store.dispatch(updateContacts(newContact));
   }
-  
+
 }

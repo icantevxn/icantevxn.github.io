@@ -1,13 +1,11 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Contact } from '../Contact';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { select, Store } from '@ngrx/store';
-import { getContact, updateContacts } from '../store/actions/contact.actions';
+import { updateContacts } from '../store/actions/contact.actions';
 import { ContactState } from '../store/reducers/contact.reducer';
 import { singleContactSelector } from '../store/selector/contact.selector';
-import { Subject, Subscription } from 'rxjs';
-import { delay, takeUntil } from 'rxjs/operators';
-import { LoadingService } from '../services/loading.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-edit-contact',

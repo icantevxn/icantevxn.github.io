@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Contact } from '../Contact';
 import { getContacts } from '../store/actions/contact.actions';
@@ -21,7 +21,7 @@ export class FavouriteContactsComponent implements OnInit {
     this.getAllFavContacts();
   }
 
-  
+
   getAllFavContacts() {
     this.store.dispatch(getContacts());
   }

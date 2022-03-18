@@ -1,8 +1,8 @@
-.nav-layout{
+.nav-layout {
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
-    padding-top: 2rem ;
+    padding-top: 2rem;
     padding-right: 25px;
     position: fixed;
     z-index: 2;
@@ -10,17 +10,17 @@
     width: 4.5rem;
 }
 
-.nav-layout .nav-pills .nav-link{
+.nav-layout .nav-pills .nav-link {
     color: var(--sidebar-color);
 }
 
-.nav-layout .nav-pills .nav-link:hover .fa-lg{
+.nav-layout .nav-pills .nav-link:hover .fa-lg {
     color: var(--toggle-color);
     transition: .5s ease;
 
 }
 
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: var(--toggle-color) !important;
     background: none !important;
 }

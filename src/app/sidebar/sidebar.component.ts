@@ -15,12 +15,12 @@ export class SidebarComponent implements OnInit {
   isActive = false;
   title: string = 'Contact List';
   constructor() { }
-  
+
   ngOnInit(): void {
   }
 
   toggleIsActive() {
     this.isActive = !this.isActive;
   }
-  
+
 }

@@ -2,8 +2,7 @@ import { Injectable } from "@angular/core";
 import { createEffect, Actions, ofType } from "@ngrx/effects";
 import { ContactService } from "src/app/services/contact.service";
 import * as ContactActions from "../actions/contact.actions";
-import { concatMap, exhaustMap, filter, map, mergeMap, switchMap, withLatestFrom } from "rxjs/operators";
-import { contactsSelector } from "../selector/contact.selector";
+import { concatMap, exhaustMap, filter, map, mergeMap, switchMap } from "rxjs/operators";
 import { RouterNavigatedAction, ROUTER_NAVIGATION } from "@ngrx/router-store";
 
 @Injectable()

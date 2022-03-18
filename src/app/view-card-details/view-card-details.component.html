@@ -1,4 +1,3 @@
-
 <div tabindex="0" class="pt-5 ms-5 me-5" *ngIf="contact$ | async as contact">
         <h1>{{contact.firstName}}'s Details</h1>
         <ng-container class="container">
@@ -8,31 +7,41 @@
                                         <div class="content__header">
                                                 <div class="content__title-wrapper">
                                                         <div class="content__circle">
-                                                                <span class="content__initials">{{contact.firstName.charAt(0) | uppercase }}{{contact.lastName.charAt(0) | uppercase}}</span>
+                                                                <span class="content__initials">
+                                                                        {{contact.firstName.charAt(0) | uppercase
+                                                                        }}{{contact.lastName.charAt(0) |
+                                                                        uppercase}}</span>
                                                         </div>
                                                         <div class="content__full-name">
-                                                                <span class="content__first-name">{{contact.firstName | uppercase}}</span>
-                                                                <span class="content__last-name">{{contact.lastName| uppercase}}</span>
+                                                                <span class="content__first-name">{{contact.firstName |
+                                                                        uppercase}}</span>
+                                                                <span class="content__last-name">{{contact.lastName|
+                                                                        uppercase}}</span>
                                                         </div>
                                                 </div>
                                         </div>
-                                        
-                                        
-                                        
+
+
+
                                         <table class="table table-borderless table-hover mt-3">
                                                 <tbody>
                                                         <tr tabindex="0">
                                                                 <td>First Name</td>
-                                                                <td class="contact__information">{{contact.firstName}}</td>
+                                                                <td class="contact__information">{{contact.firstName}}
+                                                                </td>
                                                         </tr>
                                                         <tr tabindex="0">
                                                                 <td>Last Name</td>
-                                                                <td class="contact__information">{{contact.lastName}}</td>
+                                                                <td class="contact__information">{{contact.lastName}}
+                                                                </td>
                                                         </tr>
                                                         <tr tabindex="0">
                                                                 <td>Phone Number</td>
-                                                                <td class="contact__information">+1 ({{contact.phoneNumber.substring(0,3)}}) {{contact.phoneNumber.substring(3,6)}}-{{contact.phoneNumber.substring(6,10)}}</td>
-                                                        </tr >
+                                                                <td class="contact__information">+1
+                                                                        ({{contact.phoneNumber.substring(0,3)}})
+                                                                        {{contact.phoneNumber.substring(3,6)}}-{{contact.phoneNumber.substring(6,10)}}
+                                                                </td>
+                                                        </tr>
                                                         <tr tabindex="0">
                                                                 <td>Email</td>
                                                                 <td class="contact__information">{{contact.email}}</td>
@@ -40,22 +49,29 @@
                                                 </tbody>
                                         </table>
                                         <div class="actions">
-                                                <button class="btn btn-outline-danger" (click)="onClickFavorite(contact)">
-                                                        <fa-icon class="fa-lg" *ngIf="contact.isFavorited == false" [icon]="faNotFav" aria-label="favorite-contact"></fa-icon>
-                                                        <fa-icon class="fa-lg"*ngIf="contact.isFavorited == true" [icon]="faIsFav" aria-label="favorite-contact"></fa-icon>
+                                                <button class="btn btn-outline-danger"
+                                                        (click)="onClickFavorite(contact)">
+                                                        <fa-icon class="fa-lg" *ngIf="contact.isFavorited == false"
+                                                                [icon]="faNotFav" aria-label="favorite-contact">
+                                                        </fa-icon>
+                                                        <fa-icon class="fa-lg" *ngIf="contact.isFavorited == true"
+                                                                [icon]="faIsFav" aria-label="favorite-contact">
+                                                        </fa-icon>
                                                 </button>
                                                 <button class="action__btn" (click)="deleteContact()">
-                                                        <fa-icon class="fa-lg" [ngStyle]="{color: '#DC3546'}" [icon]="faTrash" aria-label="delete-contact"></fa-icon>
+                                                        <fa-icon class="fa-lg" [ngStyle]="{color: '#DC3546'}"
+                                                                [icon]="faTrash" aria-label="delete-contact"></fa-icon>
                                                 </button>
                                         </div>
                                 </div>
                         </div>
                 </div>
         </ng-container>
-        
+
         <div class="edit-back-buttons">
-                <button class="btn btn-primary" aria-label="edit-contact-details" routerLink="/edit/{{contact.id}}">Edit Contact</button>
+                <button class="btn btn-primary" aria-label="edit-contact-details" routerLink="/edit/{{contact.id}}">Edit
+                        Contact</button>
                 <button class="btn btn-outline-primary" aria-label="go-back" routerLink="/home">Go back</button>
-                
+
         </div>
 </div>

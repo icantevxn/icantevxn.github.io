@@ -5,7 +5,7 @@ import { select, Store } from '@ngrx/store';
 import { singleContactSelector } from '../store/selector/contact.selector';
 import { faEdit, faTrashAlt, faEye, faHeart } from '@fortawesome/free-regular-svg-icons';
 import { faPhoneAlt, faAngleRight, faEllipsisV, faHeart as faFullHeart} from '@fortawesome/free-solid-svg-icons';
-import { deleteContacts, getContact, updateContacts } from '../store/actions/contact.actions';
+import { deleteContacts, updateContacts } from '../store/actions/contact.actions';
 import { Contact } from '../Contact';
 
 @Component({

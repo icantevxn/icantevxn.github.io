@@ -1,5 +1,4 @@
 import { Pipe, PipeTransform } from "@angular/core";
-import { Contact } from "./Contact";
 
 @Pipe({
     name: "sortByLastName"
@@ -7,21 +6,21 @@ import { Contact } from "./Contact";
 export class SortByLastNamePipe implements PipeTransform {
     transform(array: any, lastName: string): any[] {
         var newArray = [...array];
-        
+
         newArray.sort((a: any, b: any) => {
             var element1 = a[lastName].toString().toLowerCase();
             var element2 = b[lastName].toString().toLowerCase();
-            
-            if ( element1< element2 ) {
+
+            if (element1 < element2) {
                 return -1;
-            } else if (element1 >  element2) {
+            } else if (element1 > element2) {
                 return 1;
             } else {
                 return 0;
             }
         });
-        
+
         return newArray;
     }
-    
+
 }

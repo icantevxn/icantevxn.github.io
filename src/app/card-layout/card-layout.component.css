@@ -1,12 +1,12 @@
-.row{
+.row {
   margin: 1rem;
 }
 
-.col-lg-4{
+.col-lg-4 {
   padding-left: 8px;
 }
 
-.card___component{
+.card___component {
   margin-left: none;
 }
 
@@ -28,7 +28,7 @@
   background-color: var(--card-color);
 }
 
-.content__header{
+.content__header {
   display: flex;
   background: none;
   font-weight: 500;
@@ -36,7 +36,7 @@
   justify-content: space-between;
   border: 0;
   min-height: 48px;
-  
+
 }
 
 .content__title--wrapper {
@@ -85,13 +85,16 @@
   font-weight: 400;
   font-size: 16px;
   background-color: var(--card-color);
-} 
-.dropdown ul .dropdown-item{
+}
+
+.dropdown ul .dropdown-item {
   color: var(--text-color);
 }
-.dropdown ul .dropdown-item:hover{
+
+.dropdown ul .dropdown-item:hover {
   background-color: var(--body-color);
 }
+
 .content__phoneNumber {
   font-weight: 400;
   font-size: 16px;
@@ -105,7 +108,7 @@
   color: var(--text-color);
 }
 
-.actions{
+.actions {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -114,7 +117,7 @@
   margin-right: .5rem;
 }
 
-.btn__add{
+.btn__add {
   margin-left: 1.5rem;
   margin-right: 1rem;
   border-style: dashed;
@@ -122,34 +125,35 @@
   border-color: var(--text-color);
 }
 
-.btn__add:hover{
+.btn__add:hover {
   border-color: var(--primary-color);
   background-color: var(--primary-color);
 }
 
-.action__btn{
+.action__btn {
   background: none;
   border: none;
   margin: none;
   padding: none;
 }
 
-.btn-outline-danger{
+.btn-outline-danger {
   background: none;
   border: none;
   margin: .5rem;
   padding: none;
 }
 
-.btn-outline-danger:hover{
+.btn-outline-danger:hover {
   background: none;
   border: none;
   color: var(--text-color);
 }
 
-.btn__dropdown{
+.btn__dropdown {
   color: var(--text-color-muted);
 }
-.btn__dropdown:hover{
+
+.btn__dropdown:hover {
   color: var(--toggle-color);
 }

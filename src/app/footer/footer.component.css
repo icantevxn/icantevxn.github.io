@@ -1,4 +1,4 @@
-footer{
+footer {
     align-items: center;
     margin-left: none;
     margin: .5rem;
@@ -10,22 +10,24 @@ footer{
 }
 
 
-a{
+a {
     color: var(--text-color-muted);
 }
-small{
-    
+
+small {
+
     color: var(--text-color-muted);
 }
-.header{
+
+.header {
     display: none;
 }
 
-.row{
+.row {
     margin-bottom: 2rem;
 }
 
-.col{
+.col {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,12 +35,12 @@ small{
 }
 
 
-img{
+img {
     width: 6.5rem;
     align-self: center;
     padding-bottom: .5rem;
 }
 
-.icon{
+.icon {
     color: var(--text-color-muted);
 }

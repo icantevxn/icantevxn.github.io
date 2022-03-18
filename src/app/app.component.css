@@ -1,4 +1,4 @@
-.container{
+.container {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -12,8 +12,8 @@
 
 
 @media screen and (min-width: 1700px) {
-  .container{
-    min-width:88rem ;
+  .container {
+    min-width: 88rem;
   }
-  
+
 }

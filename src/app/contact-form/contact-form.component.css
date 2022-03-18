@@ -34,35 +34,6 @@
     transition: 0.5s ease;
 }
 
-/* .btn-primary{
-  background-color: var(--primary-color);
-  border-color: var(--primary-color);
-}
-
-.btn-primary:disabled{
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-}
-
-.btn-primary:hover{
-  background-color: var(--toggle-color);
-  border-color: var(--toggle-color);
-  color: var(--primary-color-light);
-  transition: 0.5s ease;
-}
-.btn-outline-primary{
-  margin-left: .5rem;
-  color: var(--text-color);
-  border-color: var(--text-color);
-}
-.btn-outline-primary:hover{
-  margin-left: .5rem;
-  color: var(--primary-color-light);
-  background-color: var(--toggle-color);
-  border-color: var(--toggle-color);
-  transition: 0.5s ease;
-} */
-
 .phone-number__layout input {
     max-width: 480px;
 }

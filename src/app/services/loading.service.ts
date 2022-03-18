@@ -19,7 +19,7 @@ export class LoadingService {
     }
     );
   }
-  
+
   idle() {
     this.loadRequestCount--;
     if (this.loadRequestCount <= 0) {

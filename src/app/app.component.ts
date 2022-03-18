@@ -6,19 +6,19 @@ import { UiService } from './services/ui.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   newTheme: string = '';
   constructor(private uiService: UiService) {
-    
+
   }
-  
+
   ngOnInit(): void {
     this.newTheme = this.uiService.getInitialTheme();
   }
-  
-  
+
+
   getNewTheme(theme: string) {
     this.newTheme = theme;
   }
-  
+
 }

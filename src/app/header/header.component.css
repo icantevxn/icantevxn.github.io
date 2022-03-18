@@ -1,4 +1,4 @@
-.header__nav{  
+.header__nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -9,18 +9,14 @@
     min-width: 600px;
 }
 
-.toggle_layout{
-    position: absolute;
-}
-
-.input+:checked{
+.input+:checked {
     color: var(--primary-color);
 }
 
-img{
+img {
     width: 6.5rem;
 }
 
-.donotdisplay{
+.donotdisplay {
     display: none;
 }

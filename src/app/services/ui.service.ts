@@ -1,5 +1,4 @@
-import { EventEmitter, Injectable, Output } from "@angular/core";
-import { Observable } from "rxjs";
+import { Injectable } from "@angular/core";
 import { LoadingService } from "./loading.service";
 
 @Injectable({
@@ -7,17 +6,17 @@ import { LoadingService } from "./loading.service";
 })
 export class UiService {
     constructor(private loadingService: LoadingService) {
-        
+
     }
-    
-    
+
+
     getInitialTheme(): any {
-        
+
         const toggleSwitch = document.getElementById('darkSwitch') as HTMLInputElement;
         var computerTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
         if (computerTheme) {
             document.documentElement.setAttribute('data-theme', computerTheme);
-            
+
             if (computerTheme == 'dark') {
                 toggleSwitch.checked = true;
             }
@@ -27,16 +26,16 @@ export class UiService {
         }
         return computerTheme;
     }
-    
-    
-    
+
+
+
     onToggleTheme() {
         const toggleSwitch = document.getElementById('darkSwitch') as HTMLInputElement;
         this.loadingService.loading();
         var newTheme = '';
         if (toggleSwitch.checked) {
             newTheme = 'dark';
-            
+
         } else {
             newTheme = 'light';
         }
@@ -45,8 +44,8 @@ export class UiService {
             localStorage.setItem('theme', newTheme);
             this.loadingService.idle();
         }, 1000);
-        
+
         return newTheme;
     }
-    
+
 }

@@ -8,7 +8,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ViewCardDetailsComponent } from './view-card-details/view-card-details.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: "/home" , pathMatch: "full"},
+  { path: '', redirectTo: "/home", pathMatch: "full" },
   { path: 'home', component: HomeComponent },
   { path: 'details/:id', component: ViewCardDetailsComponent },
   { path: 'add', component: AddContactComponent },

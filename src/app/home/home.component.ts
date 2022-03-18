@@ -1,8 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { select, Store } from '@ngrx/store';
-import { Observable } from 'rxjs';
 import { Contact } from '../Contact';
-import { deleteContacts, getContacts, updateContacts } from '../store/actions/contact.actions';
+import { getContacts } from '../store/actions/contact.actions';
 import { ContactState } from '../store/reducers/contact.reducer';
 import { contactsSelector } from '../store/selector/contact.selector';
 
@@ -17,14 +16,14 @@ export class HomeComponent implements OnInit {
   contacts: Contact[] = [];
 
   constructor(private store: Store<ContactState>) { }
-  
+
   ngOnInit(): void {
     this.getAllContacts();
   }
-  
+
   getAllContacts() {
     this.store.dispatch(getContacts());
 
   }
-  
+
 }

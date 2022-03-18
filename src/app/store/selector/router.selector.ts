@@ -3,7 +3,7 @@ import { createFeatureSelector, createSelector } from "@ngrx/store";
 import { RouterStateUrl } from "../routerSerializer";
 
 export const routerSelector = createFeatureSelector
-<RouterReducerState<RouterStateUrl>>('router');
+    <RouterReducerState<RouterStateUrl>>('router');
 
 export const getCurrentRoute = createSelector(
     routerSelector,
