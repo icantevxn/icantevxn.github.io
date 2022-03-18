@@ -20,6 +20,7 @@
       </ul>
     </li>
     <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
 
@@ -177,6 +178,13 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 If you have any questions, concerns or issues, please contact me at:
 * Email: evan1208lim@gmail.com
 * Contact Number: +1 608 622 4272
+
+## Acknowledgements
+
+Special thanks to these resources for helping me achieve what I intended to:
+* [NgRx Fun of Heuristics](https://www.youtube.com/watch?v=8CdBWjvKEdE&list=PL4cSPhAvl8xUOt7RrCPEwzVPs8RXWsGzg)
+* [Custom Sort Pipe](https://www.itsolutionstuff.com/post/angular-pipe-for-alphabetical-order-exampleexample.html)
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
