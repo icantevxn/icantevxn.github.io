@@ -3,7 +3,7 @@
         <div class="col mb-3">
             <label for="firstName">First Name*
             </label>
-            <input required name="firstName" #firstName="ngModel" id="firstName" aria-label="first-name-input"
+            <input required name="firstName" #firstName="ngModel" id="firstName" aria-label="first-name-input-required"
                 type="text" class="form-control" [(ngModel)]="contact.firstName">
             <div tabindex="0" class="alert alert-danger" *ngIf="!firstName.valid && firstName.touched">
                 <small>
@@ -12,9 +12,9 @@
             </div>
         </div>
         <div class="col mb-3">
-            <label for="firstName">Last Name*</label>
+            <label for="lastName">Last Name*</label>
             <input required [(ngModel)]="contact.lastName" name="lastName" #lastName="ngModel"
-                aria-label="last-name-input" type="text" class="form-control">
+                aria-label="last-name-input-required" type="text" class="form-control">
             <div tabindex="0" class="alert alert-danger" *ngIf="!lastName.valid && lastName.touched">
                 <small>
                     <fa-icon [icon]="faWarning" aria-label="warning-input-error"></fa-icon> Last name is required.
@@ -25,7 +25,7 @@
     <div class="form-group mb-3 phone-number__layout">
         <label for="phoneNumber">Phone Number*</label>
         <input required [(ngModel)]="contact.phoneNumber" name="phoneNumber" #phoneNumber="ngModel"
-            aria-label="phone-number-input" type="tel" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" class="form-control">
+            aria-label="phone-number-input-required" type="tel" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" class="form-control">
         <div tabindex="0" class="alert alert-danger" *ngIf="phoneNumber.touched && !phoneNumber.valid">
             <div *ngIf="phoneNumber.errors?.required"><small>
                     <fa-icon [icon]="faWarning" aria-label="warning-input-error"></fa-icon> Phone Number is required.
@@ -41,7 +41,7 @@
     <div class="form-group mb-3 email__layout">
         <label for="email">Email*
         </label>
-        <input required [(ngModel)]="contact.email" name="email" #email="ngModel" aria-label="email-input" type="email"
+        <input required [(ngModel)]="contact.email" name="email" #email="ngModel" aria-label="email-input-required" type="email"
             class="form-control"
             pattern="^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$">
         <div tabindex="0" class="alert alert-danger" *ngIf="!email.valid && email.touched">

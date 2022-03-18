@@ -1,5 +1,5 @@
-<div tabindex="0" class="pt-5 ms-5 me-5" *ngIf="contact$ | async as contact">
-        <h1>{{contact.firstName}}'s Details</h1>
+<div class="pt-5 ms-5 me-5" *ngIf="contact$ | async as contact">
+        <h1 tabindex="0">{{contact.firstName}}'s Details</h1>
         <ng-container class="container">
                 <div class="card card-margin">
                         <div class="card-body">
@@ -55,7 +55,7 @@
                                                                 [icon]="faNotFav" aria-label="favorite-contact">
                                                         </fa-icon>
                                                         <fa-icon class="fa-lg" *ngIf="contact.isFavorited == true"
-                                                                [icon]="faIsFav" aria-label="favorite-contact">
+                                                                [icon]="faIsFav" aria-label="unfavorite-contact">
                                                         </fa-icon>
                                                 </button>
                                                 <button class="action__btn" (click)="deleteContact()">
