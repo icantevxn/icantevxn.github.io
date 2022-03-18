@@ -11,9 +11,6 @@
       <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
-      <ul>
-        <li><a href="#design-system">Design System</a></li>
-      </ul>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
@@ -95,16 +92,6 @@ The state is managed with NgRx.
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-<!-- USAGE EXAMPLES -->
-## Design System
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
 <!-- GETTING STARTED -->
 ## Getting Started
 
@@ -137,10 +124,19 @@ For running `-g` global installs, you may need to use the `sudo` command to inst
    ```sh
    npm install
    ```
-4. Run `json-server --watch db.json --port 5000` at your project root to run the mock json-server.
-5. Navigate to `tsconfig.json` and ensure `strict` is set to `false`.
-6. If you are in your project root, run `cd src` and then `ng serve -o` to serve app on a dev server. 
-7. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+3. Run
+   ```sh
+   json-server --watch db.json --port 5000
+   ```
+   at your project root to run the mock json-server.
+4. Navigate to `tsconfig.json` and ensure `strict` is set to `false`.
+5. If you are in your project root, run
+   ```sh
+   cd src
+   ng serve -o
+   ```
+   to serve app on a dev server. `-o` command is to open the app on your browser immediately once the app is done compiling.
+6. Navigate to `http://localhost:4200/` if page does not automatically open. The app will automatically reload if you change any of the source files.
 
 ### Further help
 
