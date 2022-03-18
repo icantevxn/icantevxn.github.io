@@ -62,14 +62,14 @@
                                                         </span>
                                                 </div>
                                                 <div class="actions">
-                                                        <button class="btn-outline-danger"
+                                                        <button class="btn-outline-danger" role="checkbox"
                                                                 (click)="onClickFavorite(contact)">
                                                                 <fa-icon *ngIf="contact.isFavorited == false"
                                                                         [icon]="faHeart" aria-label="favorite-contact">
                                                                 </fa-icon>
                                                                 <fa-icon *ngIf="contact.isFavorited == true"
                                                                         [icon]="faFavorited"
-                                                                        aria-label="favorite-contact"></fa-icon>
+                                                                        aria-label="unfavorite-contact"></fa-icon>
                                                         </button>
                                                         <button class="action__btn"
                                                                 (click)="deleteContact(contact.id!)">

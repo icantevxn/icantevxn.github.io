@@ -1,7 +1,5 @@
 .container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    display: grid;
 }
 
 .contact__form {
@@ -9,14 +7,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 560px;
+    width: 560px;
+    height: 560px;
+    margin: auto;
     padding-left: 6rem;
+    grid-column: 1;
 }
 
 .image--hidden {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 2rem;
-    margin: 2rem;
-    width: 35%;
+    margin: 1rem;
+    width: 25rem;
+    grid-column: 2;
     overflow: hidden;
 }
 

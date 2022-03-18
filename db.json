@@ -41,8 +41,8 @@
       "id": 5
     },
     {
-      "firstName": "Zoe",
-      "lastName": "James",
+      "firstName": "James",
+      "lastName": "Zoe",
       "phoneNumber": "6086224272",
       "email": "eee@bed.com",
       "isFavorited": false,

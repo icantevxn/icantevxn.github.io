@@ -1,7 +1,5 @@
 .container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    display: grid;
 }
 
 .contact__form {
@@ -9,19 +7,33 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 560px;
+    width: 560px;
+    height: 560px;
+    margin: auto;
     padding-left: 6rem;
+    grid-column: 1;
+}
+
+h1 {
+    margin-bottom: 2rem;
+}
+
+.image__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2;
 }
 
 .image--hidden {
     padding: 2rem;
-    margin: 2rem;
-    width: 20rem;
-    overflow: hidden;
+    margin: 1rem;
+    width: 25rem;
 }
 
 @media screen and (max-width: 992px) {
     .contact__form {
+        width: 440px;
         justify-content: center;
         padding: 0;
     }
