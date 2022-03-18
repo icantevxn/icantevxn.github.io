@@ -6,9 +6,7 @@ import { LoadingService } from "./loading.service";
 })
 export class UiService {
     constructor(private loadingService: LoadingService) {
-
     }
-
 
     getInitialTheme(): any {
 

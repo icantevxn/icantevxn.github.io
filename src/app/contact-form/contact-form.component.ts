@@ -11,7 +11,7 @@ import { NgForm } from '@angular/forms';
 export class ContactFormComponent implements OnInit {
 
   faWarning = faExclamationCircle;
-  @Input() newContact!: Contact;
+
   @Input() contact!: Contact;
   @Input() isEdit: boolean = false;
   @Input() isAdd: boolean = false;
@@ -23,7 +23,6 @@ export class ContactFormComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 
   onSubmit(contactForm: NgForm) {
     const contact = contactForm.value;

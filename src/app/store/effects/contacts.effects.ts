@@ -22,7 +22,7 @@ export class ContactEffects {
     getContact$ = createEffect(() => this.action$.pipe(
         ofType(ROUTER_NAVIGATION),
         filter((r: RouterNavigatedAction) => {
-            if (r.payload.routerState.url.startsWith('/edit') || r.payload.routerState.url.startsWith('/details/')) {
+            if (r.payload.routerState.url.startsWith('/edit/') || r.payload.routerState.url.startsWith('/details/')) {
                 return true;
             }
             else return false;

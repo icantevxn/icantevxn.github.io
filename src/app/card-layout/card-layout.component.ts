@@ -23,9 +23,9 @@ export class CardLayoutComponent implements OnInit {
   faPlus = faPlus;
 
   isNotFavorited = false;
-  theme: string = '';
   isDark = false;
-  contacts: Contact[] = [];
+  theme: string = '';
+
   @Input() contacts$!: Observable<ReadonlyArray<Contact>>;
   constructor(private store: Store<ContactState>) { }
 

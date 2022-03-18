@@ -35,10 +35,9 @@ export class EditContactComponent implements OnInit {
     this.subscription = this.contact$
       .subscribe((data) => {
         if (data) {
-          return this.contact = JSON.parse(JSON.stringify(data));
+          return this.contact = JSON.parse(JSON.stringify(data))
         }
-      }
-      );
+      });
   }
 
   submitEdited(contact: Contact) {

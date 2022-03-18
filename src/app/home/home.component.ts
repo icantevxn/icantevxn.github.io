@@ -13,7 +13,6 @@ import { contactsSelector } from '../store/selector/contact.selector';
 export class HomeComponent implements OnInit {
   @Output() onGetContacts: EventEmitter<Contact[]> = new EventEmitter();
   contacts$ = this.store.pipe(select(contactsSelector));
-  contacts: Contact[] = [];
 
   constructor(private store: Store<ContactState>) { }
 

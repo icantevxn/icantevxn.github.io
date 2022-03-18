@@ -13,7 +13,6 @@ import { favContactsSelector } from '../store/selector/contact.selector';
 export class FavouriteContactsComponent implements OnInit {
 
   contacts$ = this.store.pipe(select(favContactsSelector));
-  contacts: Contact[] = [];
 
   constructor(private store: Store<ContactState>) { }
 

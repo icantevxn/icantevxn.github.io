@@ -2,7 +2,7 @@ import { routerReducer, RouterReducerState } from "@ngrx/router-store";
 import { contactReducer, ContactState } from "./reducers/contact.reducer";
 
 export interface AppState {
-    contact?: ContactState;
+    contact: ContactState;
     router: RouterReducerState;
 }
 

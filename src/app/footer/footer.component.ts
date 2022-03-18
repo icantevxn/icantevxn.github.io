@@ -11,6 +11,7 @@ export class FooterComponent implements OnInit {
   faLinkedIn = faLinkedin;
   faTwitter = faTwitter;
   faInstagram = faInstagram;
+  
   @Input() newTheme: string = '';
 
 

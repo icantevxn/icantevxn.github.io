@@ -2,7 +2,6 @@
 @import 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap';
 @import '~animate.css/animate.min.css';
 
-/*==========================REUSABLE CSS=============================*/
 
 :root {
     --background-color: #fff;
@@ -46,6 +45,8 @@
     --box-shadow: 0, 0, 0;
 }
 
+/*==================================================================*/
+
 body {
     min-height: 100vh;
     transition: var(--tran-05);
@@ -82,4 +83,8 @@ label {
 .container {
     background-color: var(--body-color);
     height: 100%;
+}
+
+img {
+    color: var(--text-color);
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Route, Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ContactState } from '../store/reducers/contact.reducer';
 import { select, Store } from '@ngrx/store';
 import { singleContactSelector } from '../store/selector/contact.selector';
@@ -32,13 +32,9 @@ export class ViewCardDetailsComponent implements OnInit {
   constructor(private store: Store<ContactState>, private route: ActivatedRoute, private router: Router) { }
   
   ngOnInit(): void {
-    this.getContact();
   }
   
-  getContact() {
 
-    }
-  
   deleteContact() {
     if (confirm("Are you sure you want to delete this contact?")== true) {
       this.store.dispatch(deleteContacts(this.id));

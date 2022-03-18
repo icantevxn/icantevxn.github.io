@@ -9,10 +9,6 @@
     min-width: 600px;
 }
 
-.input+:checked {
-    color: var(--primary-color);
-}
-
 img {
     width: 6.5rem;
 }
