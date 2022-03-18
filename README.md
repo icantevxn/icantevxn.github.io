@@ -101,7 +101,7 @@ The state is managed with NgRx.
 * [JQuery v3.6.0](https://jquery.com)
 * [FontAwesome v4.7.0](https://fontawesome.com/) - Free solid, regular and brand icons were used.
 * [NgRx v13.0.2](https://ngrx.io/)
-* [Node.js v12.20.0](https://nodejs.dev/learn/how-to-install-nodejs)
+* [Node.js](https://nodejs.dev/learn/how-to-install-nodejs)
 * [json-server](https://www.npmjs.com/package/json-server) - To mock a fake REST API.
 * [Image Credits](http://www.freepik.com) - Designed by pch.vector / Freepik
   
@@ -118,11 +118,11 @@ For running `-g` global installs, you may need to use the <b>`sudo` command for 
 
 ### Prerequisites
 
-* [node v12.20.0](https://nodejs.dev/learn/how-to-install-nodejs)
+* [node.js](https://nodejs.dev/learn/how-to-install-nodejs)
 
   If you are using a package manager, you may run
   ```sh
-  nvm install 12.20.0
+  nvm install lts
   ``` 
 * json-server
   ```sh
