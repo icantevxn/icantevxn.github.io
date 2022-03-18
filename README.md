@@ -71,8 +71,10 @@ The fully responsive application will manipulate a contact list. Requirements fo
   </li>
 <li>
 Create a new contact
-<ul><li>Create a separate page for creating</li>
-</ul></li>
+<ul>
+<li>Create a separate page for creating</li>
+</ul>
+</li>
 </ol>
 <li>After any contact actions have been performed, the list must update to reflect any changes</li>
 </ol>
@@ -82,7 +84,7 @@ In addition to that, here are some additional features added:
   <li> Favourite Contact feature </li>
   <li> Dark Mode </li>
   <li> App is fully accessible via tab and <a href="https://chrome.google.com/webstore/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en">Screen Reader</a> friendly </li>
-  <li> WCAG AAA compliant </li>
+  <li> WCAG AA compliant </li>
 </ol>
 
 
@@ -112,14 +114,13 @@ The state is managed with NgRx.
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To ensure your app works as it should, please make sure you have all prerequisites with the right versions. Version differences may cause issues with styling.
+To ensure your app works as it should, please make sure you have all prerequisites with the right versions. Version differences may cause issues with styling and compiling.
 
-For running `-g` global installs, you may need to use the <b>`sudo` command for Mac and Linux</b> or <b>run Powershell as administrator on Windows</b> to install these packages depending on your computer permissions.
+For running `-g` global installs, you may need to use the <b>`sudo` command for Mac and Linux</b> or <b>Run Powershell as Administrator on Windows</b> to install these packages depending on your device permissions.
 
 ### Prerequisites
 
 * [node.js](https://nodejs.dev/learn/how-to-install-nodejs)
-
   If you are using a package manager, you may run
   ```sh
   nvm install lts
@@ -131,9 +132,6 @@ For running `-g` global installs, you may need to use the <b>`sudo` command for 
   ``` 
   You may have to run `nvm use` using `sudo` or Run Powershell As Administrator. 
 * json-server
-  ```sh
-  npm install json-server
-  ```
 * @angular/cli v13.2.6
   ```sh
   npm install -g @angular/cli@13.2.6
@@ -154,7 +152,11 @@ For running `-g` global installs, you may need to use the <b>`sudo` command for 
    ```sh
    npm run server
    ```
-4. Serve app on a dev server
+   *Only run this if you get a `json-server command not found` error
+   ```sh
+   npm install json-server --save
+   ```
+4. Serve the app
    ```sh
    cd src
    ng serve -o
