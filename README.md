@@ -19,11 +19,10 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#installation-and-running-the-app">Installation</a></li>
       </ul>
     </li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -75,9 +74,6 @@ Create a new contact
 <li>After any contact actions have been performed, the list must update to reflect any changes</li>
 </ol>
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -88,11 +84,13 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 This app is built with Angular using some Bootstrap classes that have dependance on Popper and JQuery.
 The state is managed with NgRx.
 
-* [Angular](https://angular.io/)
-* [Bootstrap](https://getbootstrap.com)
-* [Popper]
-* [JQuery](https://jquery.com)
-* [NgRx]
+* [Angular v13.2.6](https://angular.io/)
+* [Bootstrap v5.1.3](https://getbootstrap.com)
+* [Popper v2.11.4](https://popper.js.org/)
+* [JQuery v3.6.0](https://jquery.com)
+* [FontAwesome v4.7.0](https://fontawesome.com/) - Free solid, regular and brand icons were used.
+* [NgRx v13.0.2](https://ngrx.io/)
+* [json-server](https://www.npmjs.com/package/json-server) - To mock a fake REST API.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -107,52 +105,46 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-
-
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+To ensure your app works as it should, please make sure you have all prerequisites with the right versions. Version differences may cause issues with styling.
+
+For running `-g` global installs, you may need to use the `sudo` command to install these packages depending on your computer permissions.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
+* npm v6.14.8
   ```sh
-  npm install npm@latest -g
+  npm install npm@6.14.8 -g
+  ```
+* json-server
+  ```sh
+  npm i json-server -g
+  ```
+* @angular/cli v13.2.6
+  ```sh
+  npm install -g @angular/cli@13.2.6 -g
   ```
 
-### Installation
+### Installation and Running The App
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
    git clone https://github.com/icantevxn/visa.git 
    ```
-3. Install NPM packages at project root
+2. Install NPM packages at project root
    ```sh
    npm install
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+4. Run `json-server --watch db.json --port 5000` at your project root to run the mock json-server.
+5. Navigate to `tsconfig.json` and ensure `strict` is set to `false`.
+6. If you are in your project root, run `cd src` and then `ng serve -o` to serve app on a dev server. 
+7. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-   
-## Development server
-Run `json-server --watch db.json --port 5000` at your project root to run the mock json-server.
+### Further help
 
-If you get a json-server command not found error, please run `npm i -g json-server --save`.
-
-If you don't have angular/cli installed, run `npm i -g @angular/cli --save`
-
-If you are in your project root, run `cd src` and then `ng serve -o` for a dev server. 
-
-Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -161,27 +153,10 @@ Navigate to `http://localhost:4200/`. The app will automatically reload if you c
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
-
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+If you have any questions, concerns or issues, please contact me at:
+* Email: evan1208lim@gmail.com
+* Contact Number: +1 608 622 4272
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
 
