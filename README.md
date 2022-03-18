@@ -158,9 +158,6 @@ For running `-g` global installs, you may need to use the <b>`sudo` command for 
 4. If you are in your project root, run
    ```sh
    cd src
-   ```
-   and then
-   ```sh
    ng serve -o
    ```
    to serve app on a dev server. `-o` command is to open the app on your browser immediately once the app is done compiling.
