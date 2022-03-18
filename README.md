@@ -82,7 +82,7 @@ Create a new contact
 
 In addition to that, here are some additional features added:
 <ol>
-  <li> Favourite Contact feature </li>
+  <li> Favorite Contact feature </li>
   <li> Dark Mode </li>
   <li> App is fully accessible via tab and <a href="https://chrome.google.com/webstore/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en">Screen Reader</a> friendly </li>
   <li> WCAG AA compliant </li>
@@ -122,6 +122,7 @@ For running `-g` global installs, you may need to use the <b>`sudo` command for 
 ### Prerequisites
 
 * [node.js](https://nodejs.dev/learn/how-to-install-nodejs)
+
   If you are using a package manager, you may run
   ```sh
   nvm install lts
@@ -163,6 +164,7 @@ For running `-g` global installs, you may need to use the <b>`sudo` command for 
    ng serve -o
    ```
    `-o` command is to open the app on your browser immediately once the app is done compiling.
+   
    Navigate to `http://localhost:4200/` if page does not automatically open. The app will automatically reload if you change any of the source files.
 
 ### Further help
