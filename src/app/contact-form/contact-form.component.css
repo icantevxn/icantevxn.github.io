@@ -1,37 +1,81 @@
-.form-control.ng-touched.ng-invalid{
+.form-control.ng-touched.ng-invalid {
     border-color: red;
 }
 
-.form-control.ng-touched.ng-invalid:focus{
-    box-shadow: 0 0 2px 2px rgb(255, 181, 181); 
+.form-control.ng-touched.ng-invalid:focus {
+    box-shadow: 0 0 2px 2px rgb(255, 181, 181);
 }
 
-.form-control.ng-touched.ng-valid{
+.form-control.ng-touched.ng-valid {
     border-color: green;
 }
-.form-control.ng-touched.ng-valid:focus{
+
+.form-control.ng-touched.ng-valid:focus {
     box-shadow: 0 0 2px 2px rgb(191, 223, 191);
 }
 
-.button-group{
+.button-group {
     display: flex;
     justify-content: flex-end;
 
 }
 
-.phone-number__layout input{
+.btn-outline-primary {
+    margin-left: .5rem;
+    color: var(--button-outline-color);
+    border-color: var(--button-outline-color);
+}
+
+.btn-outline-primary:hover {
+    margin-left: .5rem;
+    color: var(--button-outline-hover-text-color);
+    background-color: var(--toggle-color);
+    border-color: var(--toggle-color);
+    transition: 0.5s ease;
+}
+
+/* .btn-primary{
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:disabled{
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover{
+  background-color: var(--toggle-color);
+  border-color: var(--toggle-color);
+  color: var(--primary-color-light);
+  transition: 0.5s ease;
+}
+.btn-outline-primary{
+  margin-left: .5rem;
+  color: var(--text-color);
+  border-color: var(--text-color);
+}
+.btn-outline-primary:hover{
+  margin-left: .5rem;
+  color: var(--primary-color-light);
+  background-color: var(--toggle-color);
+  border-color: var(--toggle-color);
+  transition: 0.5s ease;
+} */
+
+.phone-number__layout input {
     max-width: 480px;
 }
 
-.alert{
- max-width: 480px;
- max-height: min-content;
+.alert {
+    max-width: 480px;
+    max-height: min-content;
 }
 
-.email__layout input{
+.email__layout input {
     max-width: 480px;
 }
 
-.button-group .btn{
+.button-group .btn {
     margin-left: 1rem;
 }

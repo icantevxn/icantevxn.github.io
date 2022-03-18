@@ -24,35 +24,37 @@ export class EditContactComponent implements OnInit {
   };
   contact$ = this.store.pipe(select(singleContactSelector));
   subscription!: Subscription;
-  
+
   constructor(
     private store: Store<ContactState>, private router: Router
-    ) { }
-    
-    ngOnInit(): void {
-      this.getContact();
-    }
-    
-    getContact() {
-      this.subscription = this.contact$
+  ) { }
+
+  ngOnInit(): void {
+    this.getContact();
+  }
+
+  getContact() {
+    this.subscription = this.contact$
       .subscribe((data) => {
         if (data) {
           return this.contact = JSON.parse(JSON.stringify(data));
         }
       }
       );
-    }
-    
-    submitEdited(contact: Contact) {
-      contact.isFavorited = this.contact.isFavorited;
-      contact.id = this.contact.id;
-      this.store.dispatch(updateContacts(contact));
-      this.router.navigateByUrl('/details/' + contact.id);
-    }
-    
-    ngOnDestroy(): void {
-      this.subscription.unsubscribe();
-    }
-    
-    
   }
+
+  submitEdited(contact: Contact) {
+    contact.isFavorited = this.contact.isFavorited;
+    contact.id = this.contact.id;
+    this.store.dispatch(updateContacts(contact));
+    this.router.navigateByUrl('/details/' + contact.id);
+    alert("Contact edited successfully!");
+
+  }
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
+  }
+
+
+}

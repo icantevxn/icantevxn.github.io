@@ -75,33 +75,6 @@ Create a new contact
 <li>After any contact actions have been performed, the list must update to reflect any changes</li>
 </ol>
 
-## Development server
-Run `json-server --watch db.json --port 5000` at your project root to run the mock json-server.
-
-If you get a json-server command not found error, please run `npm i -g json-server --save`.
-
-If you don't have angular/cli installed, run `npm i -g @angular/cli --save`
-
-If you are in your project root, run `cd src` and then `ng serve -o` for a dev server. 
-
-Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
@@ -112,16 +85,14 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+This app is built with Angular using some Bootstrap classes that have dependance on Popper and JQuery.
+The state is managed with NgRx.
 
-* [Next.js](https://nextjs.org/)
-* [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
 * [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
 * [Bootstrap](https://getbootstrap.com)
+* [Popper]
 * [JQuery](https://jquery.com)
+* [NgRx]
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -159,7 +130,7 @@ _Below is an example of how you can instruct your audience on installing and set
 1. Get a free API Key at [https://example.com](https://example.com)
 2. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/icantevxn/visa.git 
    ```
 3. Install NPM packages at project root
    ```sh
@@ -169,6 +140,20 @@ _Below is an example of how you can instruct your audience on installing and set
    ```js
    const API_KEY = 'ENTER YOUR API';
    ```
+
+   
+## Development server
+Run `json-server --watch db.json --port 5000` at your project root to run the mock json-server.
+
+If you get a json-server command not found error, please run `npm i -g json-server --save`.
+
+If you don't have angular/cli installed, run `npm i -g @angular/cli --save`
+
+If you are in your project root, run `cd src` and then `ng serve -o` for a dev server. 
+
+Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

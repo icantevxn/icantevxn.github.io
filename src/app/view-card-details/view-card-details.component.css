@@ -1,9 +1,9 @@
-body{
+body {
   background: var(--background-color);
-  
+
 }
 
-h1{
+h1 {
   word-break: break-all;
 }
 
@@ -30,20 +30,20 @@ h1{
 }
 
 
-.content__header{
+.content__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   border: 0;
   min-height: 48px;
-  
+
 }
 
 .content__title-wrapper {
   display: flex;
   align-items: center;
   word-break: break-all;
-  
+
 }
 
 .content__circle {
@@ -80,69 +80,60 @@ h1{
   font-size: 16px;
 }
 
-.contact__information{
+.contact__information {
   color: var(--text-color-muted);
   word-break: break-all;
-  
+
 }
 
-.actions{
+.actions {
   display: flex;
   justify-content: space-between;
-  align-items: center ;
+  align-items: center;
   margin-top: .5rem;
   text-align: right;
   margin-right: .5rem;
 }
 
-.action__btn{
+.action__btn {
   background: none;
   border: none;
   margin: none;
 }
 
-.btn-outline-danger{
+.btn-outline-danger {
   background: none;
   border: none;
   margin: none;
   padding: none;
 }
 
-.btn-outline-danger:hover{
+.btn-outline-danger:hover {
   background: none;
   border: none;
   color: var(--text-color);
 }
 
-.edit-back-buttons{
+.edit-back-buttons {
   display: flex;
   justify-content: flex-end;
 }
 
+.btn-outline-primary {
+  margin-left: .5rem;
+  color: var(--button-outline-color);
+  border-color: var(--button-outline-color);
+}
 
-.btn-primary{
-  background-color: var(--primary-color);
-  border-color: var(--primary-color);
-}
-.btn-primary:hover{
-  background-color: var(--toggle-color);
-  border-color: var(--toggle-color);
-  color: var(--primary-color-light);
-  transition: 0.5s ease;
-}
-.btn-outline-primary{
+.btn-outline-primary:hover {
   margin-left: .5rem;
-  color: var(--text-color);
-  border-color: var(--text-color);
-}
-.btn-outline-primary:hover{
-  margin-left: .5rem;
-  color: var(--primary-color-light);
+  color: var(--button-outline-hover-text-color);
   background-color: var(--toggle-color);
   border-color: var(--toggle-color);
   transition: 0.5s ease;
 }
-.table{
+
+.table {
   overflow-x: scroll;
   min-width: 240px;
   max-width: 800px;
@@ -150,7 +141,7 @@ h1{
   color: var(--text-color);
 }
 
-.table-hover tbody tr:hover td{
+.table-hover tbody tr:hover td {
   background: var(--background-color) !important;
   color: var(--toggle-color) !important;
 }
