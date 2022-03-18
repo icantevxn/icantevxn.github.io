@@ -101,6 +101,7 @@ The state is managed with NgRx.
 * [JQuery v3.6.0](https://jquery.com)
 * [FontAwesome v4.7.0](https://fontawesome.com/) - Free solid, regular and brand icons were used.
 * [NgRx v13.0.2](https://ngrx.io/)
+* [Node.js v12.20.0](https://nodejs.dev/learn/how-to-install-nodejs)
 * [json-server](https://www.npmjs.com/package/json-server) - To mock a fake REST API.
 * [Image Credits](http://www.freepik.com) - Designed by pch.vector / Freepik
   
@@ -113,21 +114,29 @@ The state is managed with NgRx.
 
 To ensure your app works as it should, please make sure you have all prerequisites with the right versions. Version differences may cause issues with styling.
 
-For running `-g` global installs, you may need to use the `sudo` command to install these packages depending on your computer permissions.
+For running `-g` global installs, you may need to use the <b>`sudo` command for Mac and Linux</b> or <b>run Powershell as administrator on Windows</b> to install these packages depending on your computer permissions.
 
 ### Prerequisites
 
-* npm v6.14.8
+* [node.js](https://nodejs.dev/learn/how-to-install-nodejs)
+
+  If you are using a package manager, you may run
   ```sh
-  npm install npm@6.14.8 -g
-  ```
+  nvm install lts
+  ``` 
+  The app was built with node v12.20.0 but should work with the latest node version. If you face any issues, it is recommended that you install v12.20.0:
+  ```sh
+  nvm install 12.20.0
+  nvm use 12.20.0
+  ``` 
+  You may have to run `nvm use` using `sudo` or Run Powershell As Administrator. 
 * json-server
   ```sh
-  npm i json-server -g
+  npm install json-server
   ```
 * @angular/cli v13.2.6
   ```sh
-  npm install -g @angular/cli@13.2.6 -g
+  npm install -g @angular/cli@13.2.6
   ```
 
 ### Installation and Running The App
@@ -136,28 +145,26 @@ For running `-g` global installs, you may need to use the `sudo` command to inst
    ```sh
    git clone https://github.com/icantevxn/visa.git 
    ```
-2. Install NPM packages at project root
+2. Install NPM packages at your project root
    ```sh
+   cd visa
    npm install
    ```
-3. Run
+3. Run the mock json-server at your project root 
    ```sh
-   json-server --watch db.json --port 5000
+   npm run server
    ```
-   at your project root to run the mock json-server.
-4. Navigate to `tsconfig.json` and ensure `strict` is set to `false`.
-5. If you are in your project root, run
+4. Serve app on a dev server
    ```sh
    cd src
    ng serve -o
    ```
-   to serve app on a dev server. `-o` command is to open the app on your browser immediately once the app is done compiling.
-6. Navigate to `http://localhost:4200/` if page does not automatically open. The app will automatically reload if you change any of the source files.
+   `-o` command is to open the app on your browser immediately once the app is done compiling.
+   Navigate to `http://localhost:4200/` if page does not automatically open. The app will automatically reload if you change any of the source files.
 
 ### Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
