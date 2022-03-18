@@ -113,7 +113,7 @@ The state is managed with NgRx.
 
 To ensure your app works as it should, please make sure you have all prerequisites with the right versions. Version differences may cause issues with styling.
 
-For running `-g` global installs, you may need to use the `sudo` command to install these packages depending on your computer permissions.
+For running `-g` global installs, you may need to use the <b>`sudo` command for Mac and Linux</b> or <b>run Powershell as administrator on Windows</b> to install these packages depending on your computer permissions.
 
 ### Prerequisites
 
@@ -123,7 +123,7 @@ For running `-g` global installs, you may need to use the `sudo` command to inst
   ```
 * json-server
   ```sh
-  npm i json-server -g
+  npm install json-server -g
   ```
 * @angular/cli v13.2.6
   ```sh
@@ -157,7 +157,6 @@ For running `-g` global installs, you may need to use the `sudo` command to inst
 ### Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
