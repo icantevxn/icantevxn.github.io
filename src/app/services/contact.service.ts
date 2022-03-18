@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Contact } from '../Contact';
+import { environment } from 'src/environments/environment';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -14,8 +15,7 @@ const httpOptions = {
 })
 export class ContactService {
 
-  //TODO: hide api url
-  private apiUrl = 'http://localhost:5000/contacts';
+  private apiUrl = environment.apiUrl;
 
   constructor(private http: HttpClient) {
   }
