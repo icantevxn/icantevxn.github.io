@@ -7,7 +7,7 @@
     </ngx-spinner>
     <app-header (onEmitTheme)="getNewTheme($event)"></app-header>
     <app-sidebar></app-sidebar>
-    <div class="container pt-5">
+    <div class="container">
         <router-outlet></router-outlet>
         <app-footer [newTheme]="newTheme"></app-footer>
     </div>

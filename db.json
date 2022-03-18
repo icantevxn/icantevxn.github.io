@@ -21,7 +21,7 @@
       "lastName": "speci@l char@cters 0k!",
       "phoneNumber": "1234567890",
       "email": "test@gmail.com",
-      "isFavorited": false,
+      "isFavorited": true,
       "id": 3
     },
     {
@@ -37,7 +37,7 @@
       "lastName": "World",
       "phoneNumber": "1234567890",
       "email": "test@gmail.com",
-      "isFavorited": false,
+      "isFavorited": true,
       "id": 5
     },
     {
@@ -77,7 +77,7 @@
       "lastName": "WORLD",
       "phoneNumber": "6086224272",
       "email": "evan@test.com",
-      "isFavorited": false,
+      "isFavorited": true,
       "id": 10
     },
     {
@@ -87,6 +87,22 @@
       "email": "elim28@wisc.edu",
       "isFavorited": false,
       "id": 11
+    },
+    {
+      "firstName": "j",
+      "lastName": "e",
+      "phoneNumber": "6086224272",
+      "email": "elim28@wisc.edu",
+      "isFavorited": false,
+      "id": 12
+    },
+    {
+      "firstName": "Jerrry",
+      "lastName": "Park",
+      "phoneNumber": "6086224272",
+      "email": "test@gmail.com",
+      "isFavorited": false,
+      "id": 13
     }
   ]
 }
