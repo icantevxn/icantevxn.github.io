@@ -4,6 +4,7 @@ import { ContactService } from "src/app/services/contact.service";
 import * as ContactActions from "../actions/contact.actions";
 import { concatMap, exhaustMap, filter, map, mergeMap, switchMap } from "rxjs/operators";
 import { RouterNavigatedAction, ROUTER_NAVIGATION } from "@ngrx/router-store";
+import { Router } from "@angular/router";
 
 @Injectable()
 export class ContactEffects {
@@ -47,7 +48,7 @@ export class ContactEffects {
             ({ contact }) => this.contactService.addContact(contact).pipe(
                 map((contact) => {
                     alert("Contact added successfully!");
-
+                    this.router.navigateByUrl('/details/' + contact.id);
                     return ContactActions.addContactSuccess(contact);
                 })
             )
@@ -76,7 +77,7 @@ export class ContactEffects {
     )
     )
 
-    constructor(private action$: Actions, private contactService: ContactService) {
+    constructor(private action$: Actions, private contactService: ContactService, private router: Router) {
 
     }
 

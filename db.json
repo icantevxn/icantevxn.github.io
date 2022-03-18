@@ -1,6 +1,6 @@
 {
   "contacts": [
-     {
+    {
       "firstName": "ABC",
       "lastName": "Z As a last name",
       "phoneNumber": "1234567890",
@@ -8,7 +8,7 @@
       "isFavorited": false,
       "id": 1
     },
-     {
+    {
       "firstName": "ZYW",
       "lastName": "ABC",
       "phoneNumber": "1234567890",
@@ -16,7 +16,7 @@
       "isFavorited": false,
       "id": 2
     },
-     {
+    {
       "firstName": "www",
       "lastName": "speci@l char@cters 0k!",
       "phoneNumber": "1234567890",
@@ -24,7 +24,7 @@
       "isFavorited": false,
       "id": 3
     },
-     {
+    {
       "firstName": "Hello",
       "lastName": "World",
       "phoneNumber": "1234567890",
@@ -79,6 +79,14 @@
       "email": "evan@test.com",
       "isFavorited": false,
       "id": 10
+    },
+    {
+      "firstName": "Evangeline Yuik Wern",
+      "lastName": "Lim",
+      "phoneNumber": "6086224272",
+      "email": "elim28@wisc.edu",
+      "isFavorited": false,
+      "id": 11
     }
   ]
 }
