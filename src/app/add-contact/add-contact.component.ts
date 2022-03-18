@@ -28,7 +28,6 @@ export class AddContactComponent implements OnInit {
 
   submitAdded(contact: Contact) {
     this.contact = contact;
-    console.log(contact);
     contact.isFavorited = false;
     this.store.dispatch(addContact(contact));
   }

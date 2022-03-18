@@ -9,8 +9,23 @@
 p {
     font-size: 1rem;
     margin-bottom: 0;
+    text-align: center;
 }
 
 .btn {
     margin-top: 1rem;
+}
+
+.btn-outline-primary {
+    margin-left: .5rem;
+    color: var(--button-outline-color);
+    border-color: var(--button-outline-color);
+}
+
+.btn-outline-primary:hover {
+    margin-left: .5rem;
+    color: var(--button-outline-hover-text-color);
+    background-color: var(--toggle-color);
+    border-color: var(--toggle-color);
+    transition: 0.5s ease;
 }

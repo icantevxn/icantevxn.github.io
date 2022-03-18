@@ -42,9 +42,6 @@ export class ViewCardDetailsComponent implements OnInit {
   deleteContact() {
     if (confirm("Are you sure you want to delete this contact?")== true) {
       this.store.dispatch(deleteContacts(this.id));
-      setTimeout(() => {
-        alert("Contact deleted!")
-      }, 1000);
       this.router.navigateByUrl('/home');
     }
     
