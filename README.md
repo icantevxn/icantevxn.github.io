@@ -149,7 +149,7 @@ For running `-g` global installs, you may need to use the <b>`sudo` command for 
    json-server --watch db.json --port 5000
    ```
    at your project root to run the mock json-server.
-4. Navigate to `tsconfig.json` and ensure `strict` is set to `false`.
+4. Navigate to `tsconfig.json` in your project files and ensure `strict` is set to `false`.
 5. If you are in your project root, run
    ```sh
    cd src
