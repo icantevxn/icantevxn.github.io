@@ -5,7 +5,7 @@
       "lastName": "Colborn",
       "phoneNumber": "1234567890",
       "email": "ccolborn@visa.com",
-      "isFavorited": true,
+      "isFavorited": false,
       "id": 1
     },
     {

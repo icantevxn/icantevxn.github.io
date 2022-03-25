@@ -9,7 +9,6 @@ export class UiService {
     }
 
     getInitialTheme(): any {
-
         const toggleSwitch = document.getElementById('darkSwitch') as HTMLInputElement;
         var computerTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
         if (computerTheme) {

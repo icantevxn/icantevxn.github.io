@@ -11,7 +11,7 @@ import { contactsSelector } from '../store/selector/contact.selector';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  @Output() onGetContacts: EventEmitter<Contact[]> = new EventEmitter();
+  
   contacts$ = this.store.pipe(select(contactsSelector));
 
   constructor(private store: Store<ContactState>) { }
